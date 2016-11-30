@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">mooc</string>
+    <string name="sign_in_des">Lightweight and Straighforward</string>
+    <string name="email">Email</string>
+    <string name="password">Password</string>
+    <string name="sign_in">Sign In</string>
+    <string name="sign_up">Sign Up</string>
+    <string name="reset_password">Reset Password</string>
+</resources>
