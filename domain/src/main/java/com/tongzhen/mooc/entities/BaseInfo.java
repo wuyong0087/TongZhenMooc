@@ -4,8 +4,8 @@ package com.tongzhen.mooc.entities;
  * Created by wuyong on 2016/11/26.
  */
 public class BaseInfo {
-    private String result;
-    private String errorMsg;
+    protected String result;
+    protected String errorMsg;
 
     public String getResult() {
         return result;

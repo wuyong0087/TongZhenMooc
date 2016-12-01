@@ -6,7 +6,7 @@ import com.tongzhen.mooc.entities.UserInfo;
 /**
  * Created by wuyong on 2016/11/26.
  */
-public class LoginJson extends BaseInfo {
+public class UserInfoJson extends BaseInfo {
     private UserInfo data;
 
     public UserInfo getData() {
