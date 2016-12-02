@@ -8,4 +8,10 @@
         <item name="colorAccent">@color/colorAccent</item>
     </style>
 
+    <style name="TravelEaseToolBar" parent="ThemeOverlay.AppCompat.Dark.ActionBar">
+        <item name="android:titleTextStyle">@style/TravelEaseActionBarTitleColor</item>
+        <item name="android:background">#fefef9</item>
+    </style>
+
+    <style name="TravelEaseActionBarTitleColor" parent="@android:style/TextAppearance.Holo.Widget.ActionBar.Title"></style>
 </resources>

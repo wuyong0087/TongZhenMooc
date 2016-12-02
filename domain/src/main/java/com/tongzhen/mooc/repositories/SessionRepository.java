@@ -33,6 +33,7 @@ import rx.Observable;
  * Created by wuyong on 2016/11/26.
  */
 public interface SessionRepository {
+
     Observable<RegisterInfo> register(String username, String password, String nickname, int sex, int country, String description);
 
     Observable<UserInfo> login(String username, String password);
@@ -87,7 +88,7 @@ public interface SessionRepository {
 
     Observable<BaseInfo> user_verify(String uid, UserVerifyParams params);
 
-    Observable<UserVerifyInfo> user_verify_info(int uid);
+    Observable<UserVerifyInfo> user_verify_info(String uid);
 
     Observable<CourseListInfo> course_list(int subject, int page, int max);
 

@@ -16,7 +16,7 @@ android {
     buildToolsVersion "23.0.3"
 
     defaultConfig {
-        applicationId "com.tongzhen.mooc"
+        applicationId "com.tzhen.mooc"
         minSdkVersion 18
         targetSdkVersion 22
         versionCode 1
@@ -54,13 +54,14 @@ android {
 apt {
     arguments {
         androidManifestFile variant.outputs[0].processResources.manifestFile
-        resourcePackageName "com.payease.sampleapp"
+        resourcePackageName "com.tzhen.mooc"
     }
 }
 
 dependencies {
     compile fileTree(dir: 'libs', include: ['*.jar','*.aar'])
 
+    compile project(':data')
     compile project(':domain')
     compile 'com.github.bumptech.glide:glide:3.7.0'
     compile 'com.android.support:design:23.3.0'
