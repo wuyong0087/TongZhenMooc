@@ -28,6 +28,7 @@ import com.tongzhen.mooc.entities.WorksInfo;
 import com.tongzhen.mooc.entities.WorksListInfo;
 import com.tongzhen.mooc.entities.WorksUpLoadParams;
 import com.tzhen.mooc.entities.drupal.AnswerListInfoJson;
+import com.tzhen.mooc.entities.drupal.ChatListInfoJson;
 import com.tzhen.mooc.entities.drupal.CityListInfoJson;
 import com.tzhen.mooc.entities.drupal.CommentListInfoJson;
 import com.tzhen.mooc.entities.drupal.CountryListInfoJson;
@@ -645,6 +646,15 @@ public class SessionDataRepository implements SessionRepository {
 
     @Override
     public Observable<ChatListInfo> chat(String oid, String uid) {
-        return restApi.chat(oid, uid);
+        return restApi.chat(oid, uid).map(new Func1<ChatListInfoJson, ChatListInfo>() {
+            @Override
+            public ChatListInfo call(ChatListInfoJson chatListInfoJson) {
+                ChatListInfo chatListInfo = new ChatListInfo();
+                chatListInfo.setResult(chatListInfoJson.getResult());
+                chatListInfo.setErrorMsg(chatListInfoJson.getErrorMsg());
+                chatListInfo.setChatInfoList(chatListInfoJson.getData());
+                return chatListInfo;
+            }
+        });
     }
 }
