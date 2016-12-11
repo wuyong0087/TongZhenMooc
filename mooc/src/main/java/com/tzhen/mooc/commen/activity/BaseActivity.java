@@ -10,6 +10,9 @@ import android.widget.Toast;
 
 import com.tongzhen.common.views.View;
 import com.tzhen.mooc.R;
+import com.tzhen.mooc.commen.application.AndroidApplication;
+import com.tzhen.mooc.commen.di.ApplicationComponent;
+
 import org.androidannotations.annotations.AfterInject;
 import org.androidannotations.annotations.AfterViews;
 import org.androidannotations.annotations.EActivity;
@@ -31,9 +34,9 @@ public abstract class BaseActivity extends AppCompatActivity implements View {
     @AfterViews protected void initViews() {
     }
 
-//    public ApplicationComponent getApplicationComponent() {
-//        return ((AndroidApplication)getApplication()).getApplicationComponent();
-//    }
+    public ApplicationComponent getApplicationComponent() {
+        return ((AndroidApplication)getApplication()).getApplicationComponent();
+    }
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {

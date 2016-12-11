@@ -93,4 +93,5 @@ dependencies {
     }
 
     androidTestCompile presentationTestDependencies.robotiumVersion
+    compile project(path: ':data')
 }

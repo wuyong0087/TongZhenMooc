@@ -1,19 +1,24 @@
 package com.tzhen.mooc.sign;
 
-import android.os.Bundle;
-import android.support.annotation.Nullable;
-import android.support.v7.app.AppCompatActivity;
-
 import com.tzhen.mooc.R;
+import com.tzhen.mooc.commen.activity.BaseActivity;
+
+import org.androidannotations.annotations.EActivity;
 
 /**
  * Created by wuyong on 16/12/2.
  */
-public class RegisterActivity extends AppCompatActivity {
+@EActivity(R.layout.activity_register_step_first)
+public class RegisterActivity extends BaseActivity {
 
     @Override
-    protected void onCreate(@Nullable Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        setResult(R.layout.activity_register_step_first);
+    protected void init() {
+        super.init();
+        getApplicationComponent().inject(this);
+    }
+
+    @Override
+    protected void initViews() {
+        super.initViews();
     }
 }
