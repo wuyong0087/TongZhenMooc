@@ -11,4 +11,6 @@
     <string name="nickname">Nickname</string>
     <string name="gender">Gender</string>
     <string name="country">Country</string>
+    <string name="account_created">Account Created</string>
+    <string name="activate_the_account">Please check your email to activate the account</string>
 </resources>

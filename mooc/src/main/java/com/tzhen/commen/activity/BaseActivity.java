@@ -1,4 +1,4 @@
-package com.tzhen.mooc.commen.activity;
+package com.tzhen.commen.activity;
 
 import android.os.Bundle;
 import android.support.annotation.Nullable;
@@ -9,9 +9,10 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.tongzhen.common.views.View;
+import com.tongzhen.mooc.entities.BaseInfo;
 import com.tzhen.mooc.R;
-import com.tzhen.mooc.commen.application.AndroidApplication;
-import com.tzhen.mooc.commen.di.ApplicationComponent;
+import com.tzhen.commen.application.AndroidApplication;
+import com.tzhen.commen.di.ApplicationComponent;
 
 import org.androidannotations.annotations.AfterInject;
 import org.androidannotations.annotations.AfterViews;
@@ -20,7 +21,7 @@ import org.androidannotations.annotations.EActivity;
 import rx.Subscription;
 
 @EActivity
-public abstract class BaseActivity extends AppCompatActivity implements View {
+public abstract class BaseActivity<T extends BaseInfo> extends AppCompatActivity implements View<T> {
 
     private final String TAG = BaseActivity.class.getSimpleName();
 
@@ -120,5 +121,25 @@ public abstract class BaseActivity extends AppCompatActivity implements View {
         if(mRxSub != null && !mRxSub.isUnsubscribed()) {
             mRxSub.unsubscribe();
         }
+    }
+
+    @Override
+    public void onSuccess(BaseInfo value) {
+
+    }
+
+    @Override
+    public void showErrorView() {
+
+    }
+
+    @Override
+    public void showEmptyView() {
+
+    }
+
+    @Override
+    public void showDefaultView(BaseInfo value) {
+
     }
 }

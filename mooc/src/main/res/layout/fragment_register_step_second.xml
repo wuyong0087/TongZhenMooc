@@ -39,12 +39,12 @@
             android:paddingRight="20dp"
             android:paddingTop="10dp"
             android:paddingBottom="10dp"
-            android:hint="@string/email" />
+            android:hint="@string/nickname" />
 
         <include layout="@layout/split_layout"/>
 
-        <EditText
-            android:id="@+id/et_password"
+        <TextView
+            android:id="@+id/tv_gender"
             android:background="@null"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -52,12 +52,12 @@
             android:paddingRight="20dp"
             android:paddingTop="10dp"
             android:paddingBottom="10dp"
-            android:hint="@string/password" />
+            android:hint="@string/gender" />
 
         <include layout="@layout/split_layout"/>
 
-        <EditText
-            android:id="@+id/et_confirm_password"
+        <TextView
+            android:id="@+id/tv_country"
             android:background="@null"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -65,18 +65,18 @@
             android:paddingRight="20dp"
             android:paddingTop="10dp"
             android:paddingBottom="10dp"
-            android:hint="@string/confirm_password" />
+            android:hint="@string/country" />
     </LinearLayout>
 
     <Button
-        android:id="@+id/btn_sign_in"
+        android:id="@+id/btn_next"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginLeft="20dp"
         android:layout_marginRight="20dp"
         android:layout_marginTop="10dp"
         android:background="@drawable/shape_gray_stroke_bg"
-        android:text="@string/next"
+        android:text="@string/sign_up"
         android:textSize="16sp"
         android:textColor="@color/blue" />
 

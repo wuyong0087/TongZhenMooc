@@ -1,4 +1,4 @@
-package com.tzhen.mooc.commen.di;
+package com.tzhen.commen.di;
 
 import android.content.Context;
 
@@ -6,7 +6,7 @@ import com.tongzhen.common.presenters.UserSession;
 import com.tongzhen.common.schedulers.ObserveOn;
 import com.tongzhen.common.schedulers.SubscribeOn;
 import com.tongzhen.mooc.repositories.SessionRepository;
-import com.tzhen.mooc.commen.application.AndroidApplication;
+import com.tzhen.commen.application.AndroidApplication;
 import com.tzhen.mooc.entities.UserSessionImp;
 import com.tzhen.mooc.internal.di.DataModule;
 import com.tzhen.mooc.navigator.Navigator;

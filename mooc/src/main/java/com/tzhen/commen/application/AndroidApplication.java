@@ -1,14 +1,13 @@
-package com.tzhen.mooc.commen.application;
+package com.tzhen.commen.application;
 
 import android.app.Application;
 import android.util.Log;
 
-import com.tzhen.mooc.commen.di.ApplicationComponent;
-import com.tzhen.mooc.commen.di.ApplicationModule;
-import com.tzhen.mooc.commen.di.DaggerApplicationComponent;
+import com.tzhen.commen.di.ApplicationComponent;
+import com.tzhen.commen.di.ApplicationModule;
+import com.tzhen.commen.di.DaggerApplicationComponent;
 import com.tzhen.mooc.internal.di.DataModule;
 import com.tzhen.mooc.net.drupal.ConfigEndpoints;
-
 
 public class AndroidApplication extends Application {
     private static final String TAG = AndroidApplication.class.getSimpleName();
