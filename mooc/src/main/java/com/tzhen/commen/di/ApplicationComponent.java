@@ -1,6 +1,7 @@
 package com.tzhen.commen.di;
 
 import com.tzhen.mooc.activities.LoginActivity;
+import com.tzhen.mooc.activities.MainActivity;
 import com.tzhen.mooc.activities.RegisterActivity;
 import com.tzhen.mooc.fragments.RegisterStep1Frag;
 import com.tzhen.mooc.fragments.RegisterStep2Frag;
@@ -16,6 +17,8 @@ import dagger.Component;
 @Singleton
 @Component(modules = ApplicationModule.class)
 public interface ApplicationComponent {
+
+    void inject(MainActivity mainActivity);
 
     void inject(LoginActivity loginActivity);
 

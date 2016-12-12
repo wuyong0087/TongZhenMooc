@@ -3,7 +3,6 @@ package com.tzhen.mooc.activities;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.view.KeyEvent;
-import android.view.Menu;
 import android.view.MenuItem;
 
 import com.tongzhen.mooc.entities.BaseInfo;
