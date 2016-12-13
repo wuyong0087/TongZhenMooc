@@ -13,4 +13,18 @@
     <string name="country">Country</string>
     <string name="account_created">Account Created</string>
     <string name="activate_the_account">Please check your email to activate the account</string>
+    <string name="mlm">MLM</string>
+    <string name="qa"><![CDATA[Q&A]]></string>
+    <string name="create_empty" />
+    <string name="contacts">Contacts</string>
+    <string name="me">Me</string>
+    <string name="featured">Featured</string>
+    <string name="shared">Shared</string>
+    <string name="favorites">Favorites</string>
+    <string name="listed">Listed</string>
+    <string name="involed">Involed</string>
+    <string name="watch">Watch</string>
+    <string name="friends">Friends</string>
+    <string name="fans">Fans</string>
+    <string name="follows">Follows</string>
 </resources>

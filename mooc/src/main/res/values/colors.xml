@@ -9,4 +9,6 @@
     <color name="middle_gray">#666666</color>
     <color name="white">#ffffff</color>
     <color name="black">#000000</color>
+    <color name="tab_select">#2153b5</color>
+    <color name="tab_un_select">#666666</color>
 </resources>

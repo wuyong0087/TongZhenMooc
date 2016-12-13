@@ -20,6 +20,16 @@ public abstract class BaseFragment<T> extends Fragment implements View<T> {
     protected Intent errorIntent;
     protected Subscription mRxSub;
 
+    protected boolean isVisable;
+
+    protected boolean isPrepared;
+
+    protected boolean hasLoadData;
+
+    protected boolean isRegister;
+
+    protected boolean isRefreshing;
+
     protected int memberId;
     protected float[] location;
 
@@ -33,10 +43,6 @@ public abstract class BaseFragment<T> extends Fragment implements View<T> {
 
     protected ApplicationComponent getApplicationComponent() {
         return ((BaseActivity)getActivity()).getApplicationComponent();
-    }
-
-    protected void showMsg(String message) {
-        Toast.makeText(getActivity(), message, Toast.LENGTH_LONG).show();
     }
 
     protected void showMsg(int message) {
@@ -91,5 +97,31 @@ public abstract class BaseFragment<T> extends Fragment implements View<T> {
 
     }
 
+    @Override
+    public void setUserVisibleHint(boolean isVisibleToUser) {
+        super.setUserVisibleHint(isVisibleToUser);
+        if (getUserVisibleHint()) {
+            isVisable = true;
+            onVisibility();
+        } else {
+            isVisable = false;
+            onInvisibility();
+        }
+    }
+
+    protected void onVisibility() {
+        lazyLoad();
+    }
+
+    protected void onInvisibility() {
+    }
+
+    protected void lazyLoad(){
+
+    }
+
+    public void showMsg(String msg) {
+        Toast.makeText(getActivity(), msg, Toast.LENGTH_SHORT).show();
+    }
 }
 

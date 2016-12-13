@@ -8,6 +8,8 @@
         <option name="modules">
           <set>
             <option value="$PROJECT_DIR$" />
+            <option value="$PROJECT_DIR$/LameMP3" />
+            <option value="$PROJECT_DIR$/OriaLibs" />
             <option value="$PROJECT_DIR$/data" />
             <option value="$PROJECT_DIR$/domain" />
             <option value="$PROJECT_DIR$/mooc" />
@@ -16,6 +18,8 @@
         <option name="myModules">
           <set>
             <option value="$PROJECT_DIR$" />
+            <option value="$PROJECT_DIR$/LameMP3" />
+            <option value="$PROJECT_DIR$/OriaLibs" />
             <option value="$PROJECT_DIR$/data" />
             <option value="$PROJECT_DIR$/domain" />
             <option value="$PROJECT_DIR$/mooc" />

@@ -1,33 +1,44 @@
 package com.tzhen.mooc.activities;
 
-import android.content.Context;
+import android.support.design.widget.TabLayout;
+import android.support.v4.app.Fragment;
+import android.support.v4.app.FragmentTransaction;
+import android.support.v4.content.ContextCompat;
+import android.support.v7.widget.Toolbar;
+import android.view.View;
+import android.widget.ImageView;
+import android.widget.TextView;
+import android.widget.Toast;
 
-import com.flyco.tablayout.CommonTabLayout;
-import com.flyco.tablayout.listener.CustomTabEntity;
 import com.tongzhen.mooc.entities.BaseInfo;
 import com.tzhen.commen.activity.BaseActivity;
-import com.tzhen.commen.tabs.TabEntity;
 import com.tzhen.mooc.R;
+import com.tzhen.mooc.main.ContactsFragment_;
+import com.tzhen.mooc.main.MLMFragment_;
+import com.tzhen.mooc.main.MeFragment_;
+import com.tzhen.mooc.main.QAFragment_;
 
+import org.androidannotations.annotations.Click;
 import org.androidannotations.annotations.EActivity;
 import org.androidannotations.annotations.ViewById;
 
-import java.util.ArrayList;
-
 @EActivity(R.layout.activity_main)
-public class MainActivity extends BaseActivity<BaseInfo> {
+public class MainActivity extends BaseActivity<BaseInfo> implements TabLayout.OnTabSelectedListener {
+    private int[] unSelectIcons = {R.drawable.mlm, R.drawable.qa, R.drawable.create, R.drawable.contacts, R.drawable.me};
+    private int[] selectIcons = {R.drawable.mlm_press, R.drawable.qa_press, R.drawable.create_press, R.drawable.contacts_press, R.drawable.me_press};
+    private int[] titles = {R.string.mlm, R.string.qa, R.string.create_empty, R.string.contacts, R.string.me};
+    private final int MLM = 0;
+    private final int QA = 1;
+    private final int CREATE = 2;
+    private final int CONTACTS = 3;
+    private final int ME = 4;
 
+    @ViewById(R.id.toolbar)
+    Toolbar toolbar;
 
-    @ViewById(R.id.tl_1) CommonTabLayout mTabLayout_1;
+    @ViewById(R.id.tab_bottom)
+    TabLayout tabBottom;
 
-    private String[] mTitles = {"首页", "消息", "联系人", "更多"};
-    private int[] mIconUnselectIds = {
-            R.mipmap.ic_launcher, R.mipmap.ic_launcher,
-            R.mipmap.ic_launcher, R.mipmap.ic_launcher};
-    private int[] mIconSelectIds = {
-            R.drawable.logo, R.drawable.logo,
-            R.drawable.logo, R.drawable.logo};
-    private ArrayList<CustomTabEntity> mTabEntities = new ArrayList<>();
 
     @Override
     protected void init() {
@@ -38,14 +49,131 @@ public class MainActivity extends BaseActivity<BaseInfo> {
     @Override
     protected void initViews() {
         super.initViews();
-        for (int i = 0; i < mTitles.length; i++) {
-            mTabEntities.add(new TabEntity(mTitles[i], mIconSelectIds[i], mIconUnselectIds[i]));
-        }
 
-        mTabLayout_1.setTabData(mTabEntities);
+        initToolBar(toolbar, true);
 
-        //显示未读红点
-        mTabLayout_1.showDot(2);
+        initTabs();
+
+        attachFragment(MLM);
+
     }
 
+    private void initTabs() {
+
+        for (int i = 0; i < titles.length; i++) {
+            View view = View.inflate(this, R.layout.layout_tab, null);
+
+            ImageView ivIcon = (ImageView) view.findViewById(R.id.iv_icon);
+            TextView tvTitle = (TextView) view.findViewById(R.id.tv_title);
+            if (i == 2) {
+                ivIcon.setVisibility(View.INVISIBLE);
+            }
+
+            ivIcon.setImageResource(unSelectIcons[i]);
+            tvTitle.setText(titles[i]);
+            TabLayout.Tab tab = tabBottom.newTab().setCustomView(view).setTag(i);
+            if (i == 0){
+                tab.select();
+            }
+            tabBottom.addTab(tab);
+
+        }
+
+        tabBottom.setOnTabSelectedListener(this);
+    }
+
+    @Override
+    public void onTabSelected(TabLayout.Tab tab) {
+        updateTabState(tab, true);
+
+        updateTitle(tab);
+
+        attachFragment((int)tab.getTag());
+    }
+
+    private void attachFragment(int tag) {
+        Fragment frag = null;
+        switch (tag){
+            case MLM:
+                frag = MLMFragment_.builder().build();
+                break;
+            case QA:
+                frag = QAFragment_.builder().build();
+                break;
+            case CONTACTS:
+                frag = ContactsFragment_.builder().build();
+                break;
+            case ME:
+                frag = MeFragment_.builder().build();
+                break;
+        }
+
+        if (frag != null){
+            FragmentTransaction ft = getSupportFragmentManager().beginTransaction();
+            ft.replace(R.id.fl_container, frag).commit();
+        }
+    }
+
+    private void updateTitle(TabLayout.Tab tab) {
+        int index = (int) tab.getTag();
+        int title = -1;
+        switch (index) {
+            case MLM:
+                title = R.string.mlm;
+                break;
+            case QA:
+                title = R.string.qa;
+                break;
+            case CONTACTS:
+                title = R.string.contacts;
+                break;
+            case ME:
+                title = R.string.me;
+                break;
+        }
+        if (title > 0){
+            setToolbarTitle(getString(title));
+        }
+
+        if (index == CREATE) {
+            performClick(R.id.iv_create);
+        }
+    }
+
+    @Override
+    public void onTabUnselected(TabLayout.Tab tab) {
+        updateTabState(tab, false);
+    }
+
+    @Override
+    public void onTabReselected(TabLayout.Tab tab) {
+
+    }
+
+    private void updateTabState(TabLayout.Tab tab, boolean isSelect) {
+        View view = tab.getCustomView();
+        ImageView ivIcon = (ImageView) view.findViewById(R.id.iv_icon);
+        TextView tvTitle = (TextView) view.findViewById(R.id.tv_title);
+
+        int index = (int) tab.getTag();
+        ivIcon.setImageResource(isSelect ? selectIcons[index] : unSelectIcons[index]);
+        tvTitle.setTextColor(ContextCompat.getColor(this, isSelect ? R.color.tab_select : R.color.tab_un_select));
+    }
+
+    @Click({R.id.iv_create})
+    public void viewsClick(View view) {
+        switch (view.getId()) {
+            case R.id.iv_create:
+                Toast.makeText(this, "asq12", Toast.LENGTH_SHORT).show();
+                break;
+        }
+
+    }
+
+    public void performClick(int viewId) {
+        View view = findViewById(viewId);
+        if (view != null) {
+            view.performClick();
+        }
+    }
 }

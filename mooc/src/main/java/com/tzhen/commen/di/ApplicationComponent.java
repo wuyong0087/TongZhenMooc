@@ -6,6 +6,11 @@ import com.tzhen.mooc.activities.RegisterActivity;
 import com.tzhen.mooc.fragments.RegisterStep1Frag;
 import com.tzhen.mooc.fragments.RegisterStep2Frag;
 import com.tzhen.mooc.fragments.RegisterStep3Frag;
+import com.tzhen.mooc.main.ContactsFragment;
+import com.tzhen.mooc.main.MLMFragment;
+import com.tzhen.mooc.main.MeFragment;
+import com.tzhen.mooc.main.QAFragment;
+import com.tzhen.mooc.main.WorksListFragment;
 
 import javax.inject.Singleton;
 
@@ -29,4 +34,14 @@ public interface ApplicationComponent {
     void inject(RegisterStep2Frag registerStep2Frag);
 
     void inject(RegisterStep3Frag registerStep3Frag);
+
+    void inject(MLMFragment mlmFragment);
+
+    void inject(QAFragment qaFragment);
+
+    void inject(ContactsFragment contactsFragment);
+
+    void inject(MeFragment meFragment);
+
+    void inject(WorksListFragment worksListFragment);
 }

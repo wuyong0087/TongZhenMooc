@@ -1,1 +1,1 @@
-include ':mooc', ':domain', ':data'
+include ':mooc', ':domain', ':data', ':LameMP3', ':OriaLibs'

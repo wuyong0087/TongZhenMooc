@@ -3,7 +3,8 @@ package com.tongzhen.mooc.entities.types;
 /**
  * Created by wuyong on 2016/11/26.
  */
-public class ErrorCodes {
+public class ResultCodes {
+    public static final int OK = 0;
     public static final int LOSE_PARAMS = 1000;
 
     public static final int USERNAME_ILLGLE = 2000;
