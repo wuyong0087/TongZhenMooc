@@ -1,15 +1,6 @@
 package com.tzhen.mooc.net.drupal;
 
-import com.tongzhen.mooc.entities.AnswerListInfo;
 import com.tongzhen.mooc.entities.BaseInfo;
-import com.tongzhen.mooc.entities.CountryListInfo;
-import com.tongzhen.mooc.entities.CourseIntroduceInfo;
-import com.tongzhen.mooc.entities.QuestionListInfo;
-import com.tongzhen.mooc.entities.TitleListInfo;
-import com.tongzhen.mooc.entities.UserInfo;
-import com.tongzhen.mooc.entities.UserVerifyInfo;
-import com.tongzhen.mooc.entities.UserVerifyParams;
-import com.tongzhen.mooc.entities.WorksListInfo;
 import com.tzhen.mooc.entities.drupal.AnswerListInfoJson;
 import com.tzhen.mooc.entities.drupal.ChatListInfoJson;
 import com.tzhen.mooc.entities.drupal.CityListInfoJson;
@@ -31,7 +22,6 @@ import com.tzhen.mooc.entities.drupal.UserVerifyInfoJson;
 import com.tzhen.mooc.entities.drupal.WorksInfoJson;
 import com.tzhen.mooc.entities.drupal.WorksListInfoJson;
 
-import java.util.List;
 import java.util.Map;
 
 import retrofit2.http.Field;
@@ -45,7 +35,7 @@ public interface Endpoints {
 
     @FormUrlEncoded
     @POST("?mod=wetube&act=login")
-    Observable<LoginJson> login(@Field("mobile") String mobile, @Field("password") String password, @FieldMap Map<String, String> paramsMap);
+    Observable<LoginJson> login(@Field("username") String username, @Field("password") String password, @FieldMap Map<String, String> paramsMap);
 
     @FormUrlEncoded
     @POST("?mod=wetube&act=my_info")

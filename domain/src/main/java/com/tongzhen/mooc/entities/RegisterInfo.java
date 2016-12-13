@@ -41,7 +41,7 @@ public class RegisterInfo extends BaseInfo {
         private String nickname;
         private String uid;
         private String head;
-        private String result;
+        private int result;
         private String errorMsg;
 
         public Builder setUsername(String username) {
@@ -64,7 +64,7 @@ public class RegisterInfo extends BaseInfo {
             return this;
         }
 
-        public Builder setResult(String result) {
+        public Builder setResult(int result) {
             this.result = result;
             return this;
         }

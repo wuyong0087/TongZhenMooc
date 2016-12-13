@@ -10,6 +10,8 @@ import com.tongzhen.mooc.interactors.WorksGoodListUseCase;
 import com.tongzhen.mooc.interactors.WorksShareListUseCase;
 import com.tongzhen.mooc.views.WorksListView;
 
+import javax.inject.Inject;
+
 /**
  * Created by wuyong on 16/12/13.
  */
@@ -20,6 +22,7 @@ public class WorksListPresenter implements Presenter<WorksListView> {
 
     private int listType;
 
+    @Inject
     public WorksListPresenter(WorksGoodListUseCase worksGoodListUseCase, WorksShareListUseCase worksShareListUseCase, MyCollectionUseCase myCollectionUseCase) {
         this.worksGoodListUseCase = worksGoodListUseCase;
         this.worksShareListUseCase = worksShareListUseCase;
