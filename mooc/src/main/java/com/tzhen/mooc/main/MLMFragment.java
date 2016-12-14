@@ -4,6 +4,7 @@ import android.support.design.widget.TabLayout;
 import android.support.v4.view.ViewPager;
 
 import com.tongzhen.mooc.entities.BaseInfo;
+import com.tzhen.commen.adapters.MLMAdapter;
 import com.tzhen.commen.fragment.BaseFragment;
 import com.tzhen.mooc.R;
 
@@ -15,12 +16,13 @@ import org.androidannotations.annotations.ViewById;
  */
 @EFragment(R.layout.fragment_mlm)
 public class MLMFragment extends BaseFragment<BaseInfo> implements TabLayout.OnTabSelectedListener {
-    private int[] title = {R.string.featured, R.string.shared, R.string.favorites};
     @ViewById(R.id.tab_top)
     TabLayout tabTop;
 
     @ViewById(R.id.vp_container)
     ViewPager vpContainer;
+
+    private MLMAdapter mlmAdapter;
 
     @Override
     protected void init() {
@@ -37,10 +39,11 @@ public class MLMFragment extends BaseFragment<BaseInfo> implements TabLayout.OnT
     }
 
     private void initTabs() {
-        for (int i = 0; i < title.length; i++) {
-            tabTop.addTab(tabTop.newTab().setText(title[i]));
-        }
+        mlmAdapter = new MLMAdapter(getFragmentManager(), getContext());
+        vpContainer.setAdapter(mlmAdapter);
+        vpContainer.setOffscreenPageLimit(2);
 
+        tabTop.setupWithViewPager(vpContainer);
         tabTop.setOnTabSelectedListener(this);
     }
 

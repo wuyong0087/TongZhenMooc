@@ -63,7 +63,7 @@ public class WorksListFragment extends BaseFragment<WorksListInfo> {
             rcvWorksList.setAdapter(worksListAdapter);
 
         } else{
-
+            showMsg(value.getErrorMsg());
         }
     }
 }
