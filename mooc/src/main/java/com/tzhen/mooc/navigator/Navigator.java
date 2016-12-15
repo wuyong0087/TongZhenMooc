@@ -1,5 +1,7 @@
 package com.tzhen.mooc.navigator;
 
+import android.content.Context;
+
 import javax.inject.Inject;
 
 /**
@@ -8,5 +10,17 @@ import javax.inject.Inject;
 public class Navigator {
     @Inject
     public void Navigator() {
+    }
+
+    public void toResetPwd(Context context) {
+
+    }
+
+    public void toSignUp(Context context) {
+
+    }
+
+    public void toMain(Context context) {
+
     }
 }

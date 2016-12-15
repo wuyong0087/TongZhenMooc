@@ -5,4 +5,7 @@ package com.tongzhen.common.presenters;
  */
 public interface UserSession {
 
+    String getUid();
+
+    String getEmail();
 }

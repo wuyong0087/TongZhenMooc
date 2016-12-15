@@ -7,6 +7,23 @@ import com.tongzhen.common.presenters.UserSession;
  */
 public class UserSessionImp implements UserSession {
     private String userId;
-    private String userEmail;
+    private String email;
 
+    public void setUserId(String userId) {
+        this.userId = userId;
+    }
+
+    public void setEmail(String email) {
+        this.email = email;
+    }
+
+    @Override
+    public String getUid() {
+        return userId;
+    }
+
+    @Override
+    public String getEmail() {
+        return email;
+    }
 }

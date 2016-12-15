@@ -27,4 +27,6 @@
     <string name="friends">Friends</string>
     <string name="fans">Fans</string>
     <string name="follows">Follows</string>
+    <string name="invalid_username">无效的用户名</string>
+    <string name="invalid_password">无效密码</string>
 </resources>

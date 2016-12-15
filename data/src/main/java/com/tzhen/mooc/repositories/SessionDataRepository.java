@@ -2,6 +2,7 @@ package com.tzhen.mooc.repositories;
 
 import android.content.Context;
 
+import com.tongzhen.common.presenters.UserSession;
 import com.tongzhen.mooc.entities.AnswerListInfo;
 import com.tongzhen.mooc.entities.ChatListInfo;
 import com.tongzhen.mooc.entities.ChatParams;
@@ -65,6 +66,8 @@ public class SessionDataRepository implements SessionRepository {
     private Context context;
     private Persistence persistence;
 
+    @Inject UserSession userSession;
+
     @Inject
     public SessionDataRepository(Context context, RestApi restApi, Persistence persistence) {
         this.context = context;
@@ -86,7 +89,7 @@ public class SessionDataRepository implements SessionRepository {
     }
 
     @Override
-    public Observable<UserInfo> login(String username, String password) {
+    public Observable<UserInfo> login(final String username, String password) {
         return restApi.login(username, password).map(new Func1<LoginJson, UserInfo>() {
             @Override
             public UserInfo call(LoginJson loginJson) {

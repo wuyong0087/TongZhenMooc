@@ -3,23 +3,36 @@ package com.tzhen.mooc.activities;
 import android.view.View;
 import android.widget.EditText;
 
-import com.tongzhen.mooc.entities.BaseInfo;
-import com.tzhen.mooc.R;
+import com.tongzhen.mooc.entities.UserInfo;
+import com.tongzhen.mooc.entities.types.ResultCodes;
+import com.tongzhen.mooc.presenters.LoginPresenter;
+import com.tongzhen.mooc.views.LoginView;
 import com.tzhen.commen.activity.BaseActivity;
+import com.tzhen.commen.utils.StringUtils;
+import com.tzhen.mooc.R;
+import com.tzhen.mooc.navigator.Navigator;
 
 import org.androidannotations.annotations.Click;
 import org.androidannotations.annotations.EActivity;
 import org.androidannotations.annotations.ViewById;
 
+import javax.inject.Inject;
+
 /**
  * Created by wuyong on 2016/11/26.
  */
 @EActivity(R.layout.activity_login)
-public class LoginActivity extends BaseActivity<BaseInfo> {
+public class LoginActivity extends BaseActivity<UserInfo> implements LoginView {
 
     @ViewById(R.id.et_username) EditText etUsername;
 
     @ViewById(R.id.et_password) EditText etPassword;
+
+    @Inject
+    Navigator navigator;
+
+    @Inject
+    LoginPresenter presenter;
 
     @Override
     protected void init() {
@@ -48,14 +61,35 @@ public class LoginActivity extends BaseActivity<BaseInfo> {
     }
 
     private void resetPassword() {
-
+        navigator.toResetPwd(this);
     }
 
     private void signIn() {
+        String username = etUsername.getText().toString().trim();
+        String password = etPassword.getText().toString().trim();
+        if (!StringUtils.isValidUsername(username)){
+            showMsg(getString(R.string.invalid_username));
+            return;
+        }
 
+        if (!StringUtils.isValidPwd(password)){
+            showMsg(getString(R.string.invalid_password));
+            return;
+        }
+
+        presenter.attachView(this, username, password);
     }
 
     private void signUp() {
+        navigator.toSignUp(this);
+    }
 
+    @Override
+    public void onSuccess(UserInfo value) {
+        if (ResultCodes.OK == value.getResult()){
+            navigator.toMain(this);
+        } else{
+            showMsg(value.getErrorMsg());
+        }
     }
 }
