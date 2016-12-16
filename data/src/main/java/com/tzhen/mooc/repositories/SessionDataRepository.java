@@ -81,11 +81,16 @@ public class SessionDataRepository implements SessionRepository {
             @Override
             public RegisterInfo call(RegisterJson registerJson) {
                 RegisterInfo data = registerJson.getData();
+                saveUId(data.getUid());
                 data.setResult(registerJson.getResult());
                 data.setErrorMsg(registerJson.getErrorMsg());
                 return data;
             }
         });
+    }
+
+    private void saveUId(String uid) {
+        persistence.save(Persistence.KEY_USER_ID, uid);
     }
 
     @Override
@@ -94,6 +99,7 @@ public class SessionDataRepository implements SessionRepository {
             @Override
             public UserInfo call(LoginJson loginJson) {
                 UserInfo data = loginJson.getData();
+                saveUId(data.getUid());
                 data.setResult(loginJson.getResult());
                 data.setErrorMsg(loginJson.getErrorMsg());
                 return data;

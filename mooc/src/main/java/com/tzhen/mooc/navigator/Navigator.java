@@ -2,6 +2,13 @@ package com.tzhen.mooc.navigator;
 
 import android.content.Context;
 
+import com.tzhen.mooc.activities.ForgotPwdActivity_;
+import com.tzhen.mooc.activities.LaunchActivity;
+import com.tzhen.mooc.activities.LoginActivity_;
+import com.tzhen.mooc.activities.MainActivity_;
+import com.tzhen.mooc.activities.SignUpActivity;
+import com.tzhen.mooc.activities.SignUpActivity_;
+
 import javax.inject.Inject;
 
 /**
@@ -12,15 +19,19 @@ public class Navigator {
     public void Navigator() {
     }
 
-    public void toResetPwd(Context context) {
-
+    public void toForgotPwd(Context context) {
+        ForgotPwdActivity_.intent(context).start();
     }
 
     public void toSignUp(Context context) {
-
+        SignUpActivity_.intent(context).start();
     }
 
     public void toMain(Context context) {
+        MainActivity_.intent(context).start();
+    }
 
+    public void toLogin(Context context) {
+        LoginActivity_.intent(context).start();
     }
 }

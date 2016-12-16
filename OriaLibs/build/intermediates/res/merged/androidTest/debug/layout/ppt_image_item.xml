@@ -1,0 +1,31 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:background="@drawable/shape_works_bg"
+    android:gravity="center_horizontal"
+    android:padding="2dp"
+    android:orientation="vertical" >
+
+    <ImageView
+        android:id="@+id/imgppt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:scaleType="fitCenter" />
+
+    <CheckBox
+        android:id="@+id/ppt_del_cb"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginRight="1dp"
+        android:layout_marginTop="1dp"
+        android:background="@drawable/video_checkbox_bg"
+        android:button="@null"
+        android:checked="true"
+        android:enabled="false"
+        android:focusable="false" />
+
+</RelativeLayout>

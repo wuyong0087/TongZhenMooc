@@ -1,0 +1,224 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent" >
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:orientation="horizontal" >
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="fill_parent"
+            android:background="#DFDFDF"
+            android:gravity="center_horizontal"
+            android:orientation="vertical"
+            android:paddingLeft="7dp"
+            android:paddingRight="7dp" >
+
+            <ImageView
+                android:id="@+id/digital_btn"
+                android:layout_width="@dimen/record_menu_size"
+                android:layout_height="@dimen/record_menu_size"
+                android:layout_marginTop="10dp"
+                android:src="@drawable/digital_pen_normal"
+                android:visibility="gone" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="0dp"
+                android:layout_weight="1" />
+
+            <ImageView
+                android:id="@+id/opttype_btn"
+                android:layout_width="@dimen/record_menu_size"
+                android:layout_height="@dimen/record_menu_size"
+                android:src="@drawable/opt_pencil" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="0dp"
+                android:layout_weight="1" />
+
+            <RelativeLayout
+                android:id="@+id/rl_color_set"
+                android:layout_width="@dimen/record_menu_size"
+                android:layout_height="@dimen/record_menu_size" >
+
+                <ImageView
+                    android:id="@+id/color_btn_mark"
+                    android:layout_width="@dimen/record_colorbg_size"
+                    android:layout_height="@dimen/record_colorbg_size"
+                    android:layout_centerInParent="true"
+                    android:background="@android:color/black" />
+
+                <ImageView
+                    android:id="@+id/color_btn"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:src="@drawable/colorset_bt" />
+            </RelativeLayout>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="0dp"
+                android:layout_weight="1" />
+
+            <ImageView
+                android:id="@+id/stroke_btn"
+                android:layout_width="@dimen/record_menu_size"
+                android:layout_height="@dimen/record_menu_size"
+                android:src="@drawable/pen_stroke" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="0dp"
+                android:layout_weight="1" />
+
+            <ImageView
+                android:id="@+id/toolbox_btn"
+                android:layout_width="@dimen/record_menu_size"
+                android:layout_height="@dimen/record_menu_size"
+                android:src="@drawable/toolbox"
+                android:visibility="gone" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:visibility="gone" />
+
+            <ImageView
+                android:id="@+id/back_btn"
+                android:layout_width="@dimen/record_menu_size"
+                android:layout_height="@dimen/record_menu_size"
+                android:src="@drawable/back_bt" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="0dp"
+                android:layout_weight="1" />
+
+            <ImageView
+                android:id="@+id/pre_btn"
+                android:layout_width="@dimen/record_menu_size"
+                android:layout_height="@dimen/record_menu_size"
+                android:src="@drawable/pre_bt" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="0dp"
+                android:layout_weight="1" />
+            <!-- </LinearLayout> -->
+        </LinearLayout>
+
+        <RelativeLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1" >
+
+            <android.support.v4.view.ViewPager
+                android:id="@+id/paint_pager"
+                android:layout_width="wrap_content"
+                android:layout_height="fill_parent" />
+        </RelativeLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="fill_parent"
+            android:background="#DFDFDF"
+            android:gravity="center_horizontal"
+            android:orientation="vertical"
+            android:paddingLeft="7dp"
+            android:paddingRight="7dp" >
+
+            <ImageView
+                android:id="@+id/fodder_btn"
+                android:layout_width="@dimen/record_menu_size"
+                android:layout_height="@dimen/record_menu_size"
+                android:layout_marginTop="10dp"
+                android:src="@drawable/fodder_bt" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="0dp"
+                android:layout_weight="1" />
+
+            <ImageView
+                android:id="@+id/front_btn"
+                android:layout_width="@dimen/record_menu_size"
+                android:layout_height="@dimen/record_menu_size"
+                android:src="@drawable/rec_front_bt_bg" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="0dp"
+                android:layout_weight="1" />
+
+            <TextView
+                android:id="@+id/page_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginBottom="5dp"
+                android:layout_marginTop="5dp"
+                android:textColor="#000000"
+                android:textSize="@dimen/list_font_size" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="0dp"
+                android:layout_weight="1" />
+
+            <ImageView
+                android:id="@+id/next_btn"
+                android:layout_width="@dimen/record_menu_size"
+                android:layout_height="@dimen/record_menu_size"
+                android:src="@drawable/rec_next_bt_bg" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="0dp"
+                android:layout_weight="1" />
+
+            <TextView
+                android:id="@+id/rec_time_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:text="00:00"
+                android:textColor="#38393A"
+                android:textSize="@dimen/list_font_size" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="0dp"
+                android:layout_weight="1" />
+
+            <ImageView
+                android:id="@+id/rec_btn"
+                android:layout_width="@dimen/record_menu_size"
+                android:layout_height="@dimen/record_menu_size"
+                android:layout_marginBottom="8dp"
+                android:src="@drawable/rec_start_bt" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="0dp"
+                android:layout_weight="1" />
+
+            <ImageView
+                android:id="@+id/save_btn"
+                android:layout_width="@dimen/record_menu_size"
+                android:layout_height="@dimen/record_menu_size"
+                android:src="@drawable/rec_save_bt" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="0dp"
+                android:layout_weight="1" />
+        </LinearLayout>
+    </LinearLayout>
+
+</RelativeLayout>

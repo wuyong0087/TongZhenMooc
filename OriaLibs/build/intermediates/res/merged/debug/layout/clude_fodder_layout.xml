@@ -1,0 +1,181 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/box_set_material_bg"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:id="@+id/modify_top_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingBottom="8dp"
+        android:paddingTop="8dp" >
+
+        <TextView
+            android:id="@+id/clude_cancel_tv"
+            android:layout_width="70dp"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="10dp"
+            android:background="@drawable/text_bt_bg"
+            android:gravity="center"
+            android:text="@string/alert_negative_text"
+            android:textSize="16sp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="@string/select_material"
+            android:textColor="#000000"
+            android:textSize="18sp" />
+    </RelativeLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="#dddcdd"
+        android:visibility="gone" />
+
+    <RelativeLayout
+        android:id="@+id/rl_pic_fodder"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/text_bt_bg"
+        android:padding="8dp"
+        android:visibility="gone" >
+
+        <ImageView
+            android:id="@+id/iv_pic_img"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:src="@drawable/fodder_pic" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="20dp"
+            android:layout_toRightOf="@id/iv_pic_img"
+            android:text="@string/picture"
+            android:textColor="#000000"
+            android:textSize="17sp" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:src="@drawable/arrow_mark" />
+    </RelativeLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="#dddcdd" />
+
+    <RelativeLayout
+        android:id="@+id/rl_pdf_fodder"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/text_bt_bg"
+        android:padding="8dp" >
+
+        <ImageView
+            android:id="@+id/iv_pdf_img"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:src="@drawable/fodder_pdf" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="20dp"
+            android:layout_toRightOf="@id/iv_pdf_img"
+            android:text="PDF"
+            android:textColor="#000000"
+            android:textSize="17sp" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:src="@drawable/arrow_mark" />
+    </RelativeLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="#dddcdd" />
+
+    <RelativeLayout
+        android:id="@+id/rl_ppt_fodder"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/text_bt_bg"
+        android:padding="8dp" >
+
+        <ImageView
+            android:id="@+id/iv_ppt_img"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:src="@drawable/fodder_ppt" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="20dp"
+            android:layout_toRightOf="@id/iv_ppt_img"
+            android:text="PPT"
+            android:textColor="#000000"
+            android:textSize="17sp" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:src="@drawable/arrow_mark" />
+    </RelativeLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="#dddcdd" />
+
+    <RelativeLayout
+        android:id="@+id/rl_word_fodder"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/text_bt_bg"
+        android:padding="8dp" >
+
+        <ImageView
+            android:id="@+id/iv_word_img"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:src="@drawable/fodder_word" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="20dp"
+            android:layout_toRightOf="@id/iv_word_img"
+            android:text="Word"
+            android:textColor="#000000"
+            android:textSize="17sp" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:src="@drawable/arrow_mark" />
+    </RelativeLayout>
+
+</LinearLayout>

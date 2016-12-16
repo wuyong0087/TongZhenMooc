@@ -1,0 +1,38 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:gravity="center"
+    android:orientation="horizontal"
+    android:padding="10dp" >
+
+    <ImageButton
+        android:id="@+id/image_del_btn"
+        android:layout_width="45dp"
+        android:layout_height="37dp"
+        android:background="@drawable/edit_del_bg"
+        android:padding="0dp" />
+
+    <ImageButton
+        android:id="@+id/rotate_btn"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_marginLeft="10dp"
+        android:background="@drawable/img_rotate_nor"
+        android:padding="0dp" />
+
+    <TextView
+        android:layout_width="1dp"
+        android:layout_height="fill_parent"
+        android:layout_marginLeft="7dp"
+        android:layout_marginRight="7dp"
+        android:background="#a2a2a2" />
+
+    <ImageButton
+        android:id="@+id/image_lock_btn"
+        android:layout_width="45dp"
+        android:layout_height="37dp"
+        android:background="@drawable/lock_bg"
+        android:padding="0dp" />
+
+</LinearLayout>

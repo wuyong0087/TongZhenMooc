@@ -76,9 +76,9 @@ public class RestApiTest {
     public void register(){
         TestSubscriber<RegisterJson> subscriber = new TestSubscriber<>();
 
-        String username = "18800000001@163.com";
+        String username = "wy@qq.com";
         String password = "000000";
-        String nickname = "123";
+        String nickname = "WYMMY";
         int sex = Gender.MALE;
         int country = 86;
         String description = "AAAAAA";

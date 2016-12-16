@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+  <color name="transhalf">#e0000000</color>  <!-- 半透明   -->
+  <color name="transparent">#00000000</color> <!--  透明  -->
+  <color name="white">#FFFFFFFF</color>
+  <color name = "translucent_background">#00000000</color>
+  <color name="transparentbg">#9000</color>
+  
+  <!-- 画笔颜色的选取框 -->
+  <color name="color_red">#ff0000</color>
+  <color name="color_blue">#00ff00</color>
+  <color name="color_gray">#666666</color>
+  <color name="color_green">#0000ff</color>
+  <color name="color_red1">#fff0f0</color>
+  <color name="color_red2">#f0f0f0</color>
+  <color name="color_blue2">#00ff0f</color>
+</resources>

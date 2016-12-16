@@ -1,0 +1,39 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:background="@drawable/ui_progress_bg"
+    android:gravity="center"
+    android:minHeight="120dp"
+    android:minWidth="130dp"
+    android:orientation="vertical"
+    android:padding="10dp" >
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" >
+
+        <ProgressBar
+            android:id="@+id/ui_progress_pb"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:indeterminate="false"
+            android:indeterminateDrawable="@drawable/ui_dialog_style_color" />
+        
+        <TextView 
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/tv_download_info"
+            android:layout_centerInParent="true"
+            android:visibility="invisible"
+            android:text="100%"/>
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/ui_progress_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:textColor="#3c4c55"
+        android:textSize="15dp" />
+
+</LinearLayout>

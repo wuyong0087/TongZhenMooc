@@ -1,0 +1,2 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merger version="3"><dataSet config="main"><source path="/Users/apple/Documents/Code/TongZhenMooc/LameMP3/libs"><file name="armeabi/libmp3lame.so" path="/Users/apple/Documents/Code/TongZhenMooc/LameMP3/libs/armeabi/libmp3lame.so"/><file name="armeabi-v7a/libmp3lame.so" path="/Users/apple/Documents/Code/TongZhenMooc/LameMP3/libs/armeabi-v7a/libmp3lame.so"/></source></dataSet><dataSet config="debug"><source path="/Users/apple/Documents/Code/TongZhenMooc/LameMP3/build-types/debug/jniLibs"/></dataSet></merger>

@@ -1,0 +1,150 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:gravity="center_vertical" >
+
+    <LinearLayout
+        android:id="@+id/ll_option_type"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="5dp"
+        android:orientation="horizontal" >
+
+        <ImageView
+            android:id="@+id/opt_pencil_btn"
+            android:layout_width="@dimen/record_menu_size"
+            android:layout_height="@dimen/record_menu_size"
+            android:src="@drawable/opt_pencil" />
+
+        <TextView
+            android:layout_width="2dp"
+            android:layout_height="fill_parent"
+            android:layout_marginLeft="2dp"
+            android:layout_marginRight="2dp" />
+
+        <ImageView
+            android:id="@+id/opt_hand_btn"
+            android:layout_width="@dimen/record_menu_size"
+            android:layout_height="@dimen/record_menu_size"
+            android:src="@drawable/opt_hand" />
+
+        <TextView
+            android:layout_width="2dp"
+            android:layout_height="fill_parent"
+            android:layout_marginLeft="2dp"
+            android:layout_marginRight="2dp" />
+
+        <ImageView
+            android:id="@+id/opt_wipe_btn"
+            android:layout_width="@dimen/record_menu_size"
+            android:layout_height="@dimen/record_menu_size"
+            android:src="@drawable/opt_wipe" />
+
+        <TextView
+            android:layout_width="2dp"
+            android:layout_height="fill_parent"
+            android:layout_marginLeft="2dp"
+            android:layout_marginRight="2dp" />
+
+        <!--
+             <ImageView
+            android:id="@+id/opt_digital_btn"
+            android:layout_width="@dimen/record_menu_size"
+            android:layout_height="@dimen/record_menu_size"
+            android:src="@drawable/opt_digital_pen" />
+
+        <TextView
+            android:layout_width="2dp"
+            android:layout_height="fill_parent"
+            android:layout_marginLeft="2dp"
+            android:layout_marginRight="2dp" />
+        -->
+
+        <ImageView
+            android:visibility="gone"
+            android:id="@+id/opt_cursor_btn"
+            android:layout_width="@dimen/record_menu_size"
+            android:layout_height="@dimen/record_menu_size"
+            android:src="@drawable/opt_cursor" />
+
+        <TextView
+            android:layout_width="2dp"
+            android:layout_height="fill_parent"
+            android:layout_marginLeft="2dp"
+            android:layout_marginRight="2dp"
+            android:visibility="gone" />
+
+        <ImageView
+            android:id="@+id/opt_digital_btn"
+            android:layout_width="@dimen/record_menu_size"
+            android:layout_height="@dimen/record_menu_size"
+            android:background="@drawable/digital_pen_focused"
+            android:visibility="gone" />
+        <TextView
+            android:layout_width="2dp"
+            android:layout_height="fill_parent"
+            android:layout_marginLeft="2dp"
+            android:layout_marginRight="2dp"/>
+
+        <ImageView
+            android:visibility="gone"
+            android:id="@+id/opt_clean_rect_btn"
+            android:layout_width="@dimen/record_menu_size"
+            android:layout_height="@dimen/record_menu_size"
+            android:background="@drawable/digital_pen_focused"/>
+        <TextView
+            android:layout_width="2dp"
+            android:layout_height="fill_parent"
+            android:layout_marginLeft="2dp"
+            android:visibility="gone"
+            android:layout_marginRight="2dp"/>
+
+        <ImageView
+            android:id="@+id/opt_arrow_btn"
+            android:layout_width="@dimen/record_menu_size"
+            android:layout_height="@dimen/record_menu_size"
+            android:visibility="gone"
+            android:background="@drawable/digital_pen_focused"/>
+        <TextView
+            android:layout_width="2dp"
+            android:visibility="gone"
+            android:layout_height="fill_parent"
+            android:layout_marginLeft="2dp"
+            android:layout_marginRight="2dp"/>
+
+        <ImageView
+            android:id="@+id/opt_oval_btn"
+            android:layout_width="@dimen/record_menu_size"
+            android:layout_height="@dimen/record_menu_size"
+            android:visibility="gone"
+            android:background="@drawable/digital_pen_focused"
+            />
+        <TextView
+            android:layout_width="2dp"
+            android:layout_height="fill_parent"
+            android:layout_marginLeft="2dp"
+            android:visibility="gone"
+            android:layout_marginRight="2dp"/>
+
+        <ImageView
+            android:id="@+id/opt_rectangle_btn"
+            android:layout_width="@dimen/record_menu_size"
+            android:layout_height="@dimen/record_menu_size"
+            android:visibility="gone"
+            android:background="@drawable/digital_pen_focused"/>
+        <TextView
+            android:layout_width="2dp"
+            android:layout_height="fill_parent"
+            android:layout_marginLeft="2dp"
+            android:visibility="gone"
+            android:layout_marginRight="2dp"/>
+
+        <ImageView
+            android:id="@+id/opt_line_btn"
+            android:layout_width="@dimen/record_menu_size"
+            android:layout_height="@dimen/record_menu_size"
+            android:visibility="gone"
+            android:background="@drawable/digital_pen_focused"/>
+    </LinearLayout>
+
+</RelativeLayout>

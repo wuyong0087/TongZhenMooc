@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">录播</string>
+    <string name="action_settings">Settings</string>
+    <string name="hello_world">Hello world!</string>
+    <!-- 提示对话框 -->
+    <string name="alert_dialog_title">温馨提示</string>
+    <string name="alert_positive_text">确定</string>
+    <string name="alert_negative_text">取消</string>
+    <!-- 素材库相关 -->
+    <string name="input_PPT_fail">素材导入必须在操作前导入!</string>
+    <string name="no_material">没有相关素材!</string>
+    <string name="select_image">请选择图片</string>
+    <string name="material_pic">图片资源</string>
+    <string name="material_pdf">PDF资源</string>
+    <string name="material_ppt">PPT资源</string>
+    <string name="material_word">Word资源</string>
+    <string name="select_material">选择网盘素材</string>
+    <string name="picture">图片</string>
+    <!-- 列表刷新 -->
+    <string name="pull_to_refresh_pull_label_note_down">向下拉动可以刷新</string>
+    <string name="pull_to_refresh_pull_label_note_up">向上拉动可以刷新</string>
+    <string name="pull_to_refresh_release_label_note">松开可以刷新</string>
+    <string name="pull_to_refresh_refreshing_label_note">加载中&#8230;</string>
+    <string name="pull_to_refresh_lasttime">最后更新时间</string>
+    <!-- 基本字符串 -->
+    <string name="not_network">无法连接网络</string>
+
+    <!-- 素材相关 -->
+    <string name="record_image_loading">图片加载中...</string>
+    <string name="record_image_load_failed">图片加载失败</string>
+    <string name="image_inputing">图片导入中\u2026</string>
+    <string name="image_load">图片加载中\u2026</string>
+    <string name="save_fail">保存失败</string>
+    <string name="Image_load_fail">素材加载失败</string>
+    <string name="Image_load_bad">素材有误，加载失败</string>
+
+    <!-- 录制相关 -->
+    <string name="record_pause">暂停</string>
+    <string name="record_start">开始</string>
+    <string name="vedio_saveing">正在保存\u2026</string>
+
+    <!-- 播放相关 -->
+    <string name="video_play_back">返回</string>
+    <string name="video_loading">正在加载&#8230;</string>
+    <string name="video_play_continue">继续</string>
+    <string name="share">分享</string>
+    <string name="video_player_pause">暂停</string>
+    <string name="video_load_failed">加载失败</string>
+    <string name="voice_load_failed">音频加载失败</string>
+    <string name="video_play_error_command">播放指令错误</string>
+    <string name="video_replay">重播</string>
+    <string name="video_play_failed">播放失败</string>
+    <string name="play_error">播放异常</string>
+
+    <!-- 上传相关 -->
+    <string name="upload_error">上传异常</string>
+    <!-- 完成按钮对话框 -->
+    <string name="no_recording">还没有开始录制</string>
+    <string name="save_microclass">保存微课</string>
+    <string name="save_drafts">保存讲义</string>
+    <string name="giveup_rec">放弃录制</string>
+	<string name="ok">确定</string>
+    <string name="imput_title">输入标题</string>
+    <string name="imput_tag">输入标签</string>
+    <string name="cancel">取消</string>
+    <string name="save_weike">保存微课</string>
+    <string name="give_up">放弃</string>
+	<string name="works_default_name">我的作品</string>    	
+   
+    <!-- 下拉刷新相关 -->
+    <string name="pull_to_refresh_pull_label">向下拉动可以刷新&#8230;</string>
+    <string name="pull_to_refresh_release_label">松开可以刷新&#8230;</string>
+    <string name="pull_to_refresh_refreshing_label">加载中&#8230;</string>
+    <string name="pull_to_refresh_tap_label">点击刷新&#8230;</string>
+    <string name="last_updata_time">最后更新时间：</string>
+
+</resources>

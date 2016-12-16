@@ -1,0 +1,64 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content" >
+
+    <LinearLayout
+        android:id="@+id/ll_toolbox"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal" >
+
+        <TextView
+            android:layout_width="5dp"
+            android:layout_height="fill_parent" />
+
+        <ImageButton
+            android:id="@+id/toolbox_arrows_bt"
+            android:layout_width="@dimen/record_menu_size"
+            android:layout_height="@dimen/record_menu_size"
+            android:background="@drawable/toolbox_arrows" />
+
+        <TextView
+            android:layout_width="2dp"
+            android:layout_height="fill_parent"
+            android:layout_marginLeft="2dp"
+            android:layout_marginRight="2dp" />
+
+        <ImageButton
+            android:id="@+id/toolbox_line_bt"
+            android:layout_width="@dimen/record_menu_size"
+            android:layout_height="@dimen/record_menu_size"
+            android:background="@drawable/toolbox_line" />
+
+        <TextView
+            android:layout_width="2dp"
+            android:layout_height="fill_parent"
+            android:layout_marginLeft="2dp"
+            android:layout_marginRight="2dp" />
+
+        <ImageButton
+            android:id="@+id/toolbox_rectangle_bt"
+            android:layout_width="@dimen/record_menu_size"
+            android:layout_height="@dimen/record_menu_size"
+            android:background="@drawable/toolbox_rectangle" />
+
+        <TextView
+            android:layout_width="2dp"
+            android:layout_height="fill_parent"
+            android:layout_marginLeft="2dp"
+            android:layout_marginRight="2dp" />
+
+        <ImageButton
+            android:id="@+id/toolbox_round_bt"
+            android:layout_width="@dimen/record_menu_size"
+            android:layout_height="@dimen/record_menu_size"
+            android:background="@drawable/toolbox_round" />
+
+        <TextView
+            android:layout_width="2dp"
+            android:layout_height="fill_parent"
+            android:layout_marginLeft="2dp"
+            android:layout_marginRight="2dp" />
+    </LinearLayout>
+
+</RelativeLayout>

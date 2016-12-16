@@ -1,0 +1,186 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <integer-array name="color_ids">
+        <item>@color/color_blue</item>
+        <item>@color/color_blue2</item>
+        <item>@color/color_red2</item>
+        <item>@color/color_red1</item>
+        <item>@color/color_red</item>
+        <item>@color/color_gray</item>
+        <item>@color/color_green</item>
+    </integer-array>
+    <color name="color_blue">#00ff00</color>
+    <color name="color_blue2">#00ff0f</color>
+    <color name="color_gray">#666666</color>
+    <color name="color_green">#0000ff</color>
+    <color name="color_red">#ff0000</color>
+    <color name="color_red1">#fff0f0</color>
+    <color name="color_red2">#f0f0f0</color>
+    <color name="transhalf">#e0000000</color>
+    <color name="translucent_background">#00000000</color>
+    <color name="transparent">#00000000</color>
+    <color name="transparentbg">#9000</color>
+    <color name="white">#FFFFFFFF</color>
+    <declare-styleable name="CycleImageView"><attr format="dimension" name="border_width"/><attr format="color" name="border_color"/></declare-styleable>
+    <declare-styleable name="PullToRefresh"><attr format="reference|color" name="adapterViewBackground"/><attr format="reference|color" name="headerBackground"/><attr format="color" name="headerTextColor"/><attr name="mode"><flag name="pullDownFromTop" value="0x1"/><flag name="pullUpFromBottom" value="0x2"/><flag name="both" value="0x3"/></attr></declare-styleable>
+    <declare-styleable name="SlideListView"><attr format="integer" name="slideAnimationTime"/><attr format="enum" name="slideMode"><enum name="none" value="0"/><enum name="left" value="1"/><enum name="right" value="2"/><enum name="both" value="3"/></attr><attr format="enum" name="slideLeftAction"><enum name="scroll" value="0"/><enum name="reveal" value="1"/></attr><attr format="enum" name="slideRightAction"><enum name="scroll" value="0"/><enum name="reveal" value="1"/></attr></declare-styleable>
+    <declare-styleable name="SwitchButton"><attr format="reference|color" name="frameDrawable"/><attr format="reference|color" name="stateDrawable"/><attr format="reference|color" name="stateMaskDrawable"/><attr format="reference|color" name="sliderDrawable"/><attr format="dimension" name="withTextInterval"/></declare-styleable>
+    <dimen name="activity_horizontal_margin">16dp</dimen>
+    <dimen name="activity_vertical_margin">16dp</dimen>
+    <dimen name="head_icon_size">40dip</dimen>
+    <dimen name="icon_name_margin">5dip</dimen>
+    <dimen name="list_font_size">16sp</dimen>
+    <dimen name="list_item_height">51.0dip</dimen>
+    <dimen name="preference_icon_width">50.0dip</dimen>
+    <dimen name="preference_margin">19.0dip</dimen>
+    <dimen name="preference_widget_icon_width">48.0dip</dimen>
+    <dimen name="record_colorbg_size">30dip</dimen>
+    <dimen name="record_fodder_space">230px</dimen>
+    <dimen name="record_menu_size">45dip</dimen>
+    <dimen name="record_pop_space">52px</dimen>
+    <dimen name="set_back_size">29dip</dimen>
+    <dimen name="set_font_size">13sp</dimen>
+    <dimen name="works_list_bottom">45dip</dimen>
+    <dimen name="works_list_margin">10dip</dimen>
+    <dimen name="works_list_top">40dip</dimen>
+    <item name="gridview" type="id"/>
+    <item name="slide_id_front_view" type="id"/>
+    <item name="slide_id_left_back_view" type="id"/>
+    <item name="slide_id_right_back_view" type="id"/>
+    <item name="slide_list_view" type="id"/>
+    <item name="webview" type="id"/>
+    <string name="Image_load_bad">素材有误，加载失败</string>
+    <string name="Image_load_fail">素材加载失败</string>
+    <string name="action_settings">Settings</string>
+    <string name="alert_dialog_title">温馨提示</string>
+    <string name="alert_negative_text">取消</string>
+    <string name="alert_positive_text">确定</string>
+    <string name="app_name">录播</string>
+    <string name="cancel">取消</string>
+    <string name="give_up">放弃</string>
+    <string name="giveup_rec">放弃录制</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="image_inputing">图片导入中\u2026</string>
+    <string name="image_load">图片加载中\u2026</string>
+    <string name="imput_tag">输入标签</string>
+    <string name="imput_title">输入标题</string>
+    <string name="input_PPT_fail">素材导入必须在操作前导入!</string>
+    <string name="last_updata_time">最后更新时间：</string>
+    <string name="material_pdf">PDF资源</string>
+    <string name="material_pic">图片资源</string>
+    <string name="material_ppt">PPT资源</string>
+    <string name="material_word">Word资源</string>
+    <string name="no_material">没有相关素材!</string>
+    <string name="no_recording">还没有开始录制</string>
+    <string name="not_network">无法连接网络</string>
+    <string name="ok">确定</string>
+    <string name="picture">图片</string>
+    <string name="play_error">播放异常</string>
+    <string name="pull_to_refresh_lasttime">最后更新时间</string>
+    <string name="pull_to_refresh_pull_label">向下拉动可以刷新…</string>
+    <string name="pull_to_refresh_pull_label_note_down">向下拉动可以刷新</string>
+    <string name="pull_to_refresh_pull_label_note_up">向上拉动可以刷新</string>
+    <string name="pull_to_refresh_refreshing_label">加载中…</string>
+    <string name="pull_to_refresh_refreshing_label_note">加载中…</string>
+    <string name="pull_to_refresh_release_label">松开可以刷新…</string>
+    <string name="pull_to_refresh_release_label_note">松开可以刷新</string>
+    <string name="pull_to_refresh_tap_label">点击刷新…</string>
+    <string name="record_image_load_failed">图片加载失败</string>
+    <string name="record_image_loading">图片加载中...</string>
+    <string name="record_pause">暂停</string>
+    <string name="record_start">开始</string>
+    <string name="save_drafts">保存讲义</string>
+    <string name="save_fail">保存失败</string>
+    <string name="save_microclass">保存微课</string>
+    <string name="save_weike">保存微课</string>
+    <string name="select_image">请选择图片</string>
+    <string name="select_material">选择网盘素材</string>
+    <string name="share">分享</string>
+    <string name="upload_error">上传异常</string>
+    <string name="vedio_saveing">正在保存\u2026</string>
+    <string name="video_load_failed">加载失败</string>
+    <string name="video_loading">正在加载…</string>
+    <string name="video_play_back">返回</string>
+    <string name="video_play_continue">继续</string>
+    <string name="video_play_error_command">播放指令错误</string>
+    <string name="video_play_failed">播放失败</string>
+    <string name="video_player_pause">暂停</string>
+    <string name="video_replay">重播</string>
+    <string name="voice_load_failed">音频加载失败</string>
+    <string name="works_default_name">我的作品</string>
+    <style name="AppBaseTheme" parent="android:Theme.Light">
+        <!--
+            Theme customizations available in newer API levels can go in
+            res/values-vXX/styles.xml, while customizations related to
+            backward-compatibility can go here.
+
+        -->
+    </style>
+    <style name="AppTheme" parent="AppBaseTheme">
+        <!-- All customizations that are NOT specific to a particular API-level can go here. -->
+    </style>
+    <style name="EditVideoDialogTheme" parent="@android:Theme.Dialog">
+        <item name="android:windowFrame">@null</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowBackground">@color/transparent</item>
+        <item name="android:windowIsFloating">true</item>
+        <item name="android:windowContentOverlay">@null</item>
+        <item name="android:windowIsTranslucent">true</item>
+        <item name="android:windowAnimationStyle">@+android:style/Animation.Translucent</item>
+    </style>
+    <style name="GradeSetDialogTheme" parent="@android:Theme.Dialog">
+        <item name="android:windowFrame">@null</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowBackground">@color/white</item>
+        <item name="android:windowIsFloating">true</item>
+        <item name="android:windowContentOverlay">@null</item>
+        <item name="android:windowIsTranslucent">true</item>
+        <item name="android:windowAnimationStyle">@+android:style/Animation.Translucent</item>
+    </style>
+    <style name="HintFinishDialogTheme" parent="@android:Theme.Dialog">
+        <item name="android:windowFrame">@null</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowBackground">@color/transparent</item>
+        <item name="android:windowIsFloating">true</item>
+        <item name="android:windowContentOverlay">@null</item>
+        <item name="android:windowIsTranslucent">true</item>
+        <item name="android:windowAnimationStyle">@+android:style/Animation.Translucent</item>
+    </style>
+    <style name="MyDialogTheme" parent="@android:style/Theme.Dialog">
+        <item name="android:windowFrame">@null</item>
+        <!-- 边框 -->
+        <item name="android:windowIsFloating">true</item>
+        <!-- 是否浮现在activity之上 -->
+        <item name="android:windowIsTranslucent">false</item>
+        <!-- 半透明 -->
+        <item name="android:windowNoTitle">true</item>
+        <!-- 无标题 -->
+        <item name="android:windowBackground">@color/transparent</item>
+        <!-- 背景透明 -->
+        <item name="android:backgroundDimEnabled">true</item>
+        <!-- 屏幕背景不变暗 -->
+    </style>
+    <style name="RecommendDialogTheme">
+        <item name="android:windowFrame">@null</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowBackground">@color/white</item>
+        <item name="android:windowFullscreen">true</item>
+        <item name="android:windowIsTranslucent">true</item>
+        <item name="android:windowAnimationStyle">@+android:style/Animation.Translucent</item>
+    </style>
+    <style name="layout_full">
+        <item name="android:layout_width">fill_parent</item>
+        <item name="android:layout_height">fill_parent</item>
+    </style>
+    <style name="layout_horizontal" parent="layout_full">
+        <item name="android:layout_width">0px</item>
+    </style>
+    <style name="layout_vertical" parent="layout_full">
+        <item name="android:layout_height">0px</item>
+    </style>
+    <style name="layout_wrap">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:padding">5dp</item>
+    </style>
+</resources>

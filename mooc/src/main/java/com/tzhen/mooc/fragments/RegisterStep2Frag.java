@@ -5,11 +5,9 @@ import android.widget.EditText;
 import com.tongzhen.mooc.entities.BaseInfo;
 import com.tzhen.commen.fragment.BaseFragment;
 import com.tzhen.mooc.R;
-import com.tzhen.commen.activity.BaseActivity;
-import com.tzhen.mooc.activities.RegisterActivity;
+import com.tzhen.mooc.activities.SignUpActivity;
 
 import org.androidannotations.annotations.Click;
-import org.androidannotations.annotations.EActivity;
 import org.androidannotations.annotations.EFragment;
 import org.androidannotations.annotations.ViewById;
 
@@ -38,6 +36,6 @@ public class RegisterStep2Frag extends BaseFragment<BaseInfo> {
 
     @Click(R.id.btn_next)
     public void signUp(){
-        ((RegisterActivity)getActivity()).attachFragment(RegisterActivity.STEP_2);
+        ((SignUpActivity)getActivity()).attachFragment(SignUpActivity.STEP_2);
     }
 }

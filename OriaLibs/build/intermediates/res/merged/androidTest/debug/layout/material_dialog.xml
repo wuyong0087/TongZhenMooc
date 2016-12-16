@@ -1,0 +1,96 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/box_recommend_bg"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:id="@+id/material_rl"
+        android:layout_width="fill_parent"
+        android:layout_height="40dp"
+        android:background="#f4e4cb" >
+
+        <TextView
+            android:id="@+id/textView1_person"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="8dp"
+            android:text="资源名字"
+            android:textColor="#000000"
+            android:textSize="18sp" />
+
+        <RelativeLayout
+            android:id="@+id/mat_cancel_rl"
+            android:layout_width="50dp"
+            android:layout_height="25dp"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="20dp"
+            android:background="@drawable/text_bt_bg"
+            android:gravity="center"
+            android:orientation="vertical" >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/alert_negative_text"
+                android:textColor="#0066ff" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/mat_finish_rl"
+            android:layout_width="50dp"
+            android:layout_height="25dp"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="20dp"
+            android:background="@drawable/text_bt_bg"
+            android:gravity="center"
+            android:orientation="vertical" >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/alert_positive_text"
+                android:textColor="#0066ff" />
+        </RelativeLayout>
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/split_tv"
+        android:layout_width="fill_parent"
+        android:layout_height="1dp"
+        android:layout_below="@id/material_rl"
+        android:background="#d1b9a9" />
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/split_tv"
+        android:orientation="vertical" >
+
+        <HorizontalScrollView
+            android:id="@+id/know_hs"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:paddingLeft="13dp"
+            android:paddingRight="13dp"
+            android:scrollbars="none" >
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" >
+            </LinearLayout>
+        </HorizontalScrollView>
+
+        <com.record.library.view.SwitchViewPager
+            android:id="@+id/view_pager_ppt"
+            android:layout_width="fill_parent"
+            android:layout_height="0dp"
+            android:layout_weight="0.97"
+            android:listSelector="@android:color/transparent" />
+    </LinearLayout>
+
+</RelativeLayout>

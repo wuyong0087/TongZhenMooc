@@ -1,11 +1,15 @@
 package com.tzhen.commen.di;
 
+import com.tzhen.mooc.activities.ForgotPwdActivity;
+import com.tzhen.mooc.activities.LaunchActivity;
 import com.tzhen.mooc.activities.LoginActivity;
 import com.tzhen.mooc.activities.MainActivity;
-import com.tzhen.mooc.activities.RegisterActivity;
+import com.tzhen.mooc.activities.SignUpActivity;
 import com.tzhen.mooc.fragments.RegisterStep1Frag;
 import com.tzhen.mooc.fragments.RegisterStep2Frag;
 import com.tzhen.mooc.fragments.RegisterStep3Frag;
+import com.tzhen.mooc.fragments.SendCodeFragment;
+import com.tzhen.mooc.fragments.SetNewPwdFragment;
 import com.tzhen.mooc.main.ContactsFragment;
 import com.tzhen.mooc.main.MLMFragment;
 import com.tzhen.mooc.main.MeFragment;
@@ -27,7 +31,11 @@ public interface ApplicationComponent {
 
     void inject(LoginActivity loginActivity);
 
-    void inject(RegisterActivity registerActivity);
+    void inject(LaunchActivity launchActivity);
+
+    void inject(SignUpActivity signUpActivity);
+
+    void inject(ForgotPwdActivity forgotPwdActivity);
 
     void inject(RegisterStep1Frag registerStep1Frag);
 
@@ -44,4 +52,8 @@ public interface ApplicationComponent {
     void inject(MeFragment meFragment);
 
     void inject(WorksListFragment worksListFragment);
+
+    void inject(SendCodeFragment sendCodeFragment);
+
+    void inject(SetNewPwdFragment setNewPwdFragment);
 }

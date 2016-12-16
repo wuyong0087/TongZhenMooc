@@ -2,6 +2,7 @@ package com.tzhen.mooc.activities;
 
 import android.view.View;
 import android.widget.EditText;
+import android.widget.TextView;
 
 import com.tongzhen.mooc.entities.UserInfo;
 import com.tongzhen.mooc.entities.types.ResultCodes;
@@ -16,6 +17,8 @@ import org.androidannotations.annotations.Click;
 import org.androidannotations.annotations.EActivity;
 import org.androidannotations.annotations.ViewById;
 
+import java.util.Calendar;
+
 import javax.inject.Inject;
 
 /**
@@ -27,6 +30,9 @@ public class LoginActivity extends BaseActivity<UserInfo> implements LoginView {
     @ViewById(R.id.et_username) EditText etUsername;
 
     @ViewById(R.id.et_password) EditText etPassword;
+
+    @ViewById(R.id.tv_copyright)
+    TextView tvCopyRight;
 
     @Inject
     Navigator navigator;
@@ -43,6 +49,13 @@ public class LoginActivity extends BaseActivity<UserInfo> implements LoginView {
     @Override
     protected void initViews() {
         super.initViews();
+
+        setupCopyRight();
+    }
+
+    private void setupCopyRight() {
+        Calendar c = Calendar.getInstance();
+        tvCopyRight.setText(getString(R.string.copy_right, c.get(Calendar.YEAR)));
     }
 
     @Click({R.id.btn_next, R.id.tv_sign_up, R.id.tv_reset_pwd})
@@ -61,7 +74,7 @@ public class LoginActivity extends BaseActivity<UserInfo> implements LoginView {
     }
 
     private void resetPassword() {
-        navigator.toResetPwd(this);
+        navigator.toForgotPwd(this);
     }
 
     private void signIn() {

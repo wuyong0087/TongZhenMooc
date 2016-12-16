@@ -1,0 +1,349 @@
+[
+    {
+        "outputFile": "/Users/apple/Documents/Code/TongZhenMooc/OriaLibs/build/intermediates/res/merged/debug/values-1920x1500/values-1920x1500.xml",
+        "map": [
+            {
+                "to": {
+                    "startLine": 2,
+                    "startColumn": 4,
+                    "startOffset": 55,
+                    "endColumn": 57,
+                    "endOffset": 108
+                },
+                "from": {
+                    "file": "/Users/apple/Documents/Code/TongZhenMooc/OriaLibs/res/values-1920x1500/dimens.xml",
+                    "position": {
+                        "startLine": 3,
+                        "startColumn": 4,
+                        "startOffset": 89,
+                        "endColumn": 57,
+                        "endOffset": 142
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 3,
+                    "startColumn": 4,
+                    "startOffset": 113,
+                    "endColumn": 55,
+                    "endOffset": 164
+                },
+                "from": {
+                    "file": "/Users/apple/Documents/Code/TongZhenMooc/OriaLibs/res/values-1920x1500/dimens.xml",
+                    "position": {
+                        "startLine": 4,
+                        "startColumn": 4,
+                        "startOffset": 147,
+                        "endColumn": 55,
+                        "endOffset": 198
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 4,
+                    "startColumn": 4,
+                    "startOffset": 169,
+                    "endColumn": 46,
+                    "endOffset": 211
+                },
+                "from": {
+                    "file": "/Users/apple/Documents/Code/TongZhenMooc/OriaLibs/res/values-1920x1500/dimens.xml",
+                    "position": {
+                        "startLine": 14,
+                        "startColumn": 4,
+                        "startOffset": 592,
+                        "endColumn": 46,
+                        "endOffset": 634
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 5,
+                    "startColumn": 4,
+                    "startOffset": 216,
+                    "endColumn": 48,
+                    "endOffset": 260
+                },
+                "from": {
+                    "file": "/Users/apple/Documents/Code/TongZhenMooc/OriaLibs/res/values-1920x1500/dimens.xml",
+                    "position": {
+                        "startLine": 16,
+                        "startColumn": 4,
+                        "startOffset": 685,
+                        "endColumn": 48,
+                        "endOffset": 729
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 6,
+                    "startColumn": 4,
+                    "startOffset": 265,
+                    "endColumn": 45,
+                    "endOffset": 306
+                },
+                "from": {
+                    "file": "/Users/apple/Documents/Code/TongZhenMooc/OriaLibs/res/values-1920x1500/dimens.xml",
+                    "position": {
+                        "startLine": 15,
+                        "startColumn": 4,
+                        "startOffset": 639,
+                        "endColumn": 45,
+                        "endOffset": 680
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 7,
+                    "startColumn": 4,
+                    "startOffset": 311,
+                    "endColumn": 50,
+                    "endOffset": 357
+                },
+                "from": {
+                    "file": "/Users/apple/Documents/Code/TongZhenMooc/OriaLibs/res/values-1920x1500/dimens.xml",
+                    "position": {
+                        "startLine": 9,
+                        "startColumn": 4,
+                        "startOffset": 376,
+                        "endColumn": 50,
+                        "endOffset": 422
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 8,
+                    "startColumn": 4,
+                    "startOffset": 362,
+                    "endColumn": 55,
+                    "endOffset": 413
+                },
+                "from": {
+                    "file": "/Users/apple/Documents/Code/TongZhenMooc/OriaLibs/res/values-1920x1500/dimens.xml",
+                    "position": {
+                        "startLine": 6,
+                        "startColumn": 5,
+                        "startOffset": 205,
+                        "endColumn": 56,
+                        "endOffset": 256
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 9,
+                    "startColumn": 4,
+                    "startOffset": 418,
+                    "endColumn": 51,
+                    "endOffset": 465
+                },
+                "from": {
+                    "file": "/Users/apple/Documents/Code/TongZhenMooc/OriaLibs/res/values-1920x1500/dimens.xml",
+                    "position": {
+                        "startLine": 7,
+                        "startColumn": 4,
+                        "startOffset": 261,
+                        "endColumn": 51,
+                        "endOffset": 308
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 10,
+                    "startColumn": 4,
+                    "startOffset": 470,
+                    "endColumn": 62,
+                    "endOffset": 528
+                },
+                "from": {
+                    "file": "/Users/apple/Documents/Code/TongZhenMooc/OriaLibs/res/values-1920x1500/dimens.xml",
+                    "position": {
+                        "startLine": 8,
+                        "startColumn": 4,
+                        "startOffset": 313,
+                        "endColumn": 62,
+                        "endOffset": 371
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 11,
+                    "startColumn": 4,
+                    "startOffset": 533,
+                    "endColumn": 51,
+                    "endOffset": 580
+                },
+                "from": {
+                    "file": "/Users/apple/Documents/Code/TongZhenMooc/OriaLibs/res/values-1920x1500/dimens.xml",
+                    "position": {
+                        "startLine": 20,
+                        "startColumn": 4,
+                        "startOffset": 806,
+                        "endColumn": 51,
+                        "endOffset": 853
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 12,
+                    "startColumn": 4,
+                    "startOffset": 585,
+                    "endColumn": 51,
+                    "endOffset": 632
+                },
+                "from": {
+                    "file": "/Users/apple/Documents/Code/TongZhenMooc/OriaLibs/res/values-1920x1500/dimens.xml",
+                    "position": {
+                        "startLine": 26,
+                        "startColumn": 4,
+                        "startOffset": 1049,
+                        "endColumn": 51,
+                        "endOffset": 1096
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 13,
+                    "startColumn": 4,
+                    "startOffset": 637,
+                    "endColumn": 48,
+                    "endOffset": 681
+                },
+                "from": {
+                    "file": "/Users/apple/Documents/Code/TongZhenMooc/OriaLibs/res/values-1920x1500/dimens.xml",
+                    "position": {
+                        "startLine": 19,
+                        "startColumn": 4,
+                        "startOffset": 757,
+                        "endColumn": 48,
+                        "endOffset": 801
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 14,
+                    "startColumn": 4,
+                    "startOffset": 686,
+                    "endColumn": 47,
+                    "endOffset": 729
+                },
+                "from": {
+                    "file": "/Users/apple/Documents/Code/TongZhenMooc/OriaLibs/res/values-1920x1500/dimens.xml",
+                    "position": {
+                        "startLine": 25,
+                        "startColumn": 4,
+                        "startOffset": 1001,
+                        "endColumn": 47,
+                        "endOffset": 1044
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 15,
+                    "startColumn": 4,
+                    "startOffset": 734,
+                    "endColumn": 45,
+                    "endOffset": 775
+                },
+                "from": {
+                    "file": "/Users/apple/Documents/Code/TongZhenMooc/OriaLibs/res/values-1920x1500/dimens.xml",
+                    "position": {
+                        "startLine": 22,
+                        "startColumn": 4,
+                        "startOffset": 878,
+                        "endColumn": 45,
+                        "endOffset": 919
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 16,
+                    "startColumn": 4,
+                    "startOffset": 780,
+                    "endColumn": 44,
+                    "endOffset": 820
+                },
+                "from": {
+                    "file": "/Users/apple/Documents/Code/TongZhenMooc/OriaLibs/res/values-1920x1500/dimens.xml",
+                    "position": {
+                        "startLine": 23,
+                        "startColumn": 4,
+                        "startOffset": 924,
+                        "endColumn": 44,
+                        "endOffset": 964
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 17,
+                    "startColumn": 4,
+                    "startOffset": 825,
+                    "endColumn": 49,
+                    "endOffset": 870
+                },
+                "from": {
+                    "file": "/Users/apple/Documents/Code/TongZhenMooc/OriaLibs/res/values-1920x1500/dimens.xml",
+                    "position": {
+                        "startLine": 12,
+                        "startColumn": 4,
+                        "startOffset": 492,
+                        "endColumn": 49,
+                        "endOffset": 537
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 18,
+                    "startColumn": 4,
+                    "startOffset": 875,
+                    "endColumn": 49,
+                    "endOffset": 920
+                },
+                "from": {
+                    "file": "/Users/apple/Documents/Code/TongZhenMooc/OriaLibs/res/values-1920x1500/dimens.xml",
+                    "position": {
+                        "startLine": 13,
+                        "startColumn": 4,
+                        "startOffset": 542,
+                        "endColumn": 49,
+                        "endOffset": 587
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 19,
+                    "startColumn": 4,
+                    "startOffset": 925,
+                    "endColumn": 46,
+                    "endOffset": 967
+                },
+                "from": {
+                    "file": "/Users/apple/Documents/Code/TongZhenMooc/OriaLibs/res/values-1920x1500/dimens.xml",
+                    "position": {
+                        "startLine": 11,
+                        "startColumn": 4,
+                        "startOffset": 445,
+                        "endColumn": 46,
+                        "endOffset": 487
+                    }
+                }
+            }
+        ]
+    }
+]

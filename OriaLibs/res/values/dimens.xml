@@ -1,0 +1,29 @@
+<resources>
+
+    <!-- Default screen margins, per the Android Design guidelines. -->
+    <dimen name="activity_horizontal_margin">16dp</dimen>
+    <dimen name="activity_vertical_margin">16dp</dimen>
+
+     <dimen name="preference_icon_width">50.0dip</dimen>
+    <dimen name="preference_margin">19.0dip</dimen>
+    <dimen name="preference_widget_icon_width">48.0dip</dimen>
+    <dimen name="list_item_height">51.0dip</dimen>
+    <!-- 作品列表 -->
+    <dimen name="works_list_top">40dip</dimen>
+    <dimen name="works_list_bottom">45dip</dimen>
+    <dimen name="works_list_margin">10dip</dimen>
+    <dimen name="head_icon_size">40dip</dimen>
+    <dimen name="list_font_size">16sp</dimen>
+    <dimen name="icon_name_margin">5dip</dimen>
+    <!-- 录制相关 -->
+    <dimen name="record_menu_size">45dip</dimen>
+    <dimen name="record_colorbg_size">30dip</dimen>
+    <!-- 用户设置相关 -->
+    <dimen name="set_back_size">29dip</dimen>
+    <dimen name="set_font_size">13sp</dimen>
+    
+    <!-- 录制界面的Popwindow的间隔值 -->
+    <dimen name="record_pop_space">52px</dimen>
+    <dimen name="record_fodder_space">230px</dimen>
+    
+</resources>

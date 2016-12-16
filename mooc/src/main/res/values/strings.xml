@@ -27,6 +27,21 @@
     <string name="friends">Friends</string>
     <string name="fans">Fans</string>
     <string name="follows">Follows</string>
-    <string name="invalid_username">无效的用户名</string>
-    <string name="invalid_password">无效密码</string>
+    <string name="invalid_username">Invalid username</string>
+    <string name="invalid_password">Invalid password</string>
+    <string name="copy_right">© %1$s mmooc.com</string>
+    <string name="forgot_pwd">Forgot password</string>
+    <string name="code">Code</string>
+    <string name="get_code">Get Code</string>
+    <string name="verify_code_error">The verify code is error</string>
+    <string name="submit">Submit</string>
+    <string name="password_not_match">New password don\'t match the confirm password</string>
+    <string name="reset_pwd_success">Reset password successful</string>
+    <string name="score">Score</string>
+    <string name="school_verify_state">(%1$s)</string>
+    <string name="my_q_a"><![CDATA[My Q&A]]></string>
+    <string name="my_notes">My Notes</string>
+    <string name="my_videos">My Videos</string>
+    <string name="my_favorites">My Favorites</string>
+    <string name="my_shared">My Shared</string>
 </resources>

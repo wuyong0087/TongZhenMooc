@@ -1,0 +1,60 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/ll_save"
+    android:layout_width="130dp"
+    android:layout_height="wrap_content"
+    android:background="@drawable/scr_save_dialog_bg"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:id="@+id/save_save_video"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:background="@drawable/text_bt_bg" >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="@string/save_microclass"
+            android:textSize="20sp" />
+    </RelativeLayout>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="#C4C4C4" />
+
+    <RelativeLayout
+        android:id="@+id/save_save_draft"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:background="@drawable/text_bt_bg" >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="@string/save_drafts"
+            android:textSize="20sp" />
+    </RelativeLayout>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="#C4C4C4" />
+
+    <RelativeLayout
+        android:id="@+id/save_quit_rec"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:background="@drawable/text_bt_bg" >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="@string/giveup_rec"
+            android:textSize="20sp" />
+    </RelativeLayout>
+
+</LinearLayout>

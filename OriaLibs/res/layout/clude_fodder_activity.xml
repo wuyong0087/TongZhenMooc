@@ -1,0 +1,176 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#ffffff"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:id="@+id/modify_top_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#eeeeee"
+        android:paddingBottom="10dp"
+        android:paddingTop="10dp" >
+
+        <TextView
+            android:id="@+id/clude_cancel_tv"
+            android:layout_width="70dp"
+            android:layout_height="40dp"
+            android:layout_marginLeft="10dp"
+            android:background="@drawable/text_bt_bg"
+            android:gravity="center"
+            android:text="取消"
+            android:textSize="18sp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="选择网盘素材"
+            android:textColor="#000000"
+            android:textSize="18sp" />
+    </RelativeLayout>
+	
+    <RelativeLayout 
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="15dp"
+        android:visibility="gone"
+        android:id="@+id/rl_pic_fodder">
+        
+        <ImageView 
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:src="@drawable/pic"
+            android:id="@+id/iv_pic_img"/>
+        
+        <TextView 
+            android:layout_centerVertical="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@id/iv_pic_img"
+            android:layout_marginLeft="20dp"
+            android:textColor="#000000"
+            android:text="图片"/>
+        
+        <ImageView 
+            android:layout_width="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_alignParentRight="true"
+            android:layout_height="wrap_content"
+            android:src="@drawable/arrow_mark"/>
+        
+    </RelativeLayout>
+    
+    <View 
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:visibility="gone"
+        android:background="#888888"/>
+    
+    <RelativeLayout 
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="15dp"
+        android:id="@+id/rl_pdf_fodder">
+        
+        <ImageView 
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:src="@drawable/pdf"
+            android:id="@+id/iv_pdf_img"/>
+        
+        <TextView 
+            android:layout_centerVertical="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@id/iv_pdf_img"
+            android:layout_marginLeft="20dp"
+            android:textColor="#000000"
+            android:text="PDF"/>
+        
+        <ImageView 
+            android:layout_width="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_alignParentRight="true"
+            android:layout_height="wrap_content"
+            android:src="@drawable/arrow_mark"/>
+        
+    </RelativeLayout>
+    
+    <View 
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="#888888"/>
+    <RelativeLayout 
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="15dp"
+        android:id="@+id/rl_ppt_fodder">
+        
+        <ImageView 
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:src="@drawable/ppt"
+            android:id="@+id/iv_ppt_img"/>
+        
+        <TextView 
+            android:layout_centerVertical="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@id/iv_ppt_img"
+            android:layout_marginLeft="20dp"
+            android:textColor="#000000"
+            android:text="PPT"/>
+        
+        <ImageView 
+            android:layout_width="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_alignParentRight="true"
+            android:layout_height="wrap_content"
+            android:src="@drawable/arrow_mark"/>
+        
+    </RelativeLayout>
+    
+    <View 
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="#888888"/>
+    <RelativeLayout 
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:visibility="gone"
+        android:padding="15dp"
+        android:id="@+id/rl_word_fodder">
+        
+        <ImageView 
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:src="@drawable/word"
+            android:id="@+id/iv_word_img"/>
+        
+        <TextView 
+            android:layout_centerVertical="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@id/iv_word_img"
+            android:layout_marginLeft="20dp"
+            android:textColor="#000000"
+            android:text="Word"/>
+        
+        <ImageView 
+            android:layout_width="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_alignParentRight="true"
+            android:layout_height="wrap_content"
+            android:src="@drawable/arrow_mark"/>
+        
+    </RelativeLayout>
+    
+    <View 
+        android:visibility="gone"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="#888888"/>
+</LinearLayout>

@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingLeft="5dp"
+    android:orientation="horizontal" >
+
+    <!-- <ImageView
+        android:id="@+id/color1"
+		style="@style/layout_wrap"
+        android:src="@drawable/color_red" />
+
+    <ImageView
+        android:id="@+id/color2"
+        style="@style/layout_wrap"
+        android:src="@drawable/color_blue" />
+
+    <ImageView
+        android:id="@+id/color3"
+        style="@style/layout_wrap"
+        android:src="@drawable/color_green" />
+
+    <ImageView
+        android:id="@+id/color4"
+		style="@style/layout_wrap"
+        android:src="@drawable/color_gray" />
+
+    <ImageView
+        android:id="@+id/color5"
+		style="@style/layout_wrap"
+        android:src="@drawable/color_red1" />
+
+    <ImageView
+        android:id="@+id/color6"
+		style="@style/layout_wrap"
+        android:src="@drawable/color_red2" />
+
+    <ImageView
+        android:id="@+id/color7"
+        style="@style/layout_wrap"
+        android:src="@drawable/color_red3" /> -->
+	
+	<ListView style="@style/layout_wrap"
+	    android:id="@+id/lv_color_list"/>
+	
+</LinearLayout>

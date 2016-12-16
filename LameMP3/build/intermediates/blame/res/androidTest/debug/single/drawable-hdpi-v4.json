@@ -1,0 +1,22 @@
+[
+    {
+        "merged": "/Users/apple/Documents/Code/TongZhenMooc/LameMP3/build/intermediates/res/merged/androidTest/debug/drawable-hdpi-v4/chatting_setmode_voice.png",
+        "source": "/Users/apple/Documents/Code/TongZhenMooc/LameMP3/build/intermediates/bundles/debug/res/drawable-hdpi-v4/chatting_setmode_voice.png"
+    },
+    {
+        "merged": "/Users/apple/Documents/Code/TongZhenMooc/LameMP3/build/intermediates/res/merged/androidTest/debug/drawable-hdpi-v4/ic_launcher.png",
+        "source": "/Users/apple/Documents/Code/TongZhenMooc/LameMP3/build/intermediates/bundles/debug/res/drawable-hdpi-v4/ic_launcher.png"
+    },
+    {
+        "merged": "/Users/apple/Documents/Code/TongZhenMooc/LameMP3/build/intermediates/res/merged/androidTest/debug/drawable-hdpi-v4/loading_bg.9.png",
+        "source": "/Users/apple/Documents/Code/TongZhenMooc/LameMP3/build/intermediates/bundles/debug/res/drawable-hdpi-v4/loading_bg.9.png"
+    },
+    {
+        "merged": "/Users/apple/Documents/Code/TongZhenMooc/LameMP3/build/intermediates/res/merged/androidTest/debug/drawable-hdpi-v4/ic_recording.png",
+        "source": "/Users/apple/Documents/Code/TongZhenMooc/LameMP3/build/intermediates/bundles/debug/res/drawable-hdpi-v4/ic_recording.png"
+    },
+    {
+        "merged": "/Users/apple/Documents/Code/TongZhenMooc/LameMP3/build/intermediates/res/merged/androidTest/debug/drawable-hdpi-v4/chatting_setmode_keyboard.png",
+        "source": "/Users/apple/Documents/Code/TongZhenMooc/LameMP3/build/intermediates/bundles/debug/res/drawable-hdpi-v4/chatting_setmode_keyboard.png"
+    }
+]

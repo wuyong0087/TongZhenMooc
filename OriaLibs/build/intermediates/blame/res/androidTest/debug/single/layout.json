@@ -1,0 +1,278 @@
+[
+    {
+        "merged": "/Users/apple/Documents/Code/TongZhenMooc/OriaLibs/build/intermediates/res/merged/androidTest/debug/layout/abc_screen_toolbar.xml",
+        "source": "/Users/apple/Documents/Code/TongZhenMooc/OriaLibs/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.1.1/res/layout/abc_screen_toolbar.xml"
+    },
+    {
+        "merged": "/Users/apple/Documents/Code/TongZhenMooc/OriaLibs/build/intermediates/res/merged/androidTest/debug/layout/float_fodderset.xml",
+        "source": "/Users/apple/Documents/Code/TongZhenMooc/OriaLibs/build/intermediates/bundles/debug/res/layout/float_fodderset.xml"
+    },
+    {
+        "merged": "/Users/apple/Documents/Code/TongZhenMooc/OriaLibs/build/intermediates/res/merged/androidTest/debug/layout/abc_action_bar_up_container.xml",
+        "source": "/Users/apple/Documents/Code/TongZhenMooc/OriaLibs/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.1.1/res/layout/abc_action_bar_up_container.xml"
+    },
+    {
+        "merged": "/Users/apple/Documents/Code/TongZhenMooc/OriaLibs/build/intermediates/res/merged/androidTest/debug/layout/note_player.xml",
+        "source": "/Users/apple/Documents/Code/TongZhenMooc/OriaLibs/build/intermediates/bundles/debug/res/layout/note_player.xml"
+    },
+    {
+        "merged": "/Users/apple/Documents/Code/TongZhenMooc/OriaLibs/build/intermediates/res/merged/androidTest/debug/layout/abc_activity_chooser_view.xml",
+        "source": "/Users/apple/Documents/Code/TongZhenMooc/OriaLibs/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.1.1/res/layout/abc_activity_chooser_view.xml"
+    },
+    {
+        "merged": "/Users/apple/Documents/Code/TongZhenMooc/OriaLibs/build/intermediates/res/merged/androidTest/debug/layout/float_edit_colorset.xml",
+        "source": "/Users/apple/Documents/Code/TongZhenMooc/OriaLibs/build/intermediates/bundles/debug/res/layout/float_edit_colorset.xml"
+    },
+    {
+        "merged": "/Users/apple/Documents/Code/TongZhenMooc/OriaLibs/build/intermediates/res/merged/androidTest/debug/layout/abc_alert_dialog_material.xml",
+        "source": "/Users/apple/Documents/Code/TongZhenMooc/OriaLibs/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.1.1/res/layout/abc_alert_dialog_material.xml"
+    },
+    {
+        "merged": "/Users/apple/Documents/Code/TongZhenMooc/OriaLibs/build/intermediates/res/merged/androidTest/debug/layout/area_choose.xml",
+        "source": "/Users/apple/Documents/Code/TongZhenMooc/OriaLibs/build/intermediates/bundles/debug/res/layout/area_choose.xml"
+    },
+    {
+        "merged": "/Users/apple/Documents/Code/TongZhenMooc/OriaLibs/build/intermediates/res/merged/androidTest/debug/layout/notification_template_big_media_narrow.xml",
+        "source": "/Users/apple/Documents/Code/TongZhenMooc/OriaLibs/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.1.1/res/layout/notification_template_big_media_narrow.xml"
+    },
+    {
+        "merged": "/Users/apple/Documents/Code/TongZhenMooc/OriaLibs/build/intermediates/res/merged/androidTest/debug/layout/notification_media_action.xml",
+        "source": "/Users/apple/Documents/Code/TongZhenMooc/OriaLibs/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.1.1/res/layout/notification_media_action.xml"
+    },
+    {
+        "merged": "/Users/apple/Documents/Code/TongZhenMooc/OriaLibs/build/intermediates/res/merged/androidTest/debug/layout/pptimage2.xml",
+        "source": "/Users/apple/Documents/Code/TongZhenMooc/OriaLibs/build/intermediates/bundles/debug/res/layout/pptimage2.xml"
+    },
+    {
+        "merged": "/Users/apple/Documents/Code/TongZhenMooc/OriaLibs/build/intermediates/res/merged/androidTest/debug/layout/material_images_float.xml",
+        "source": "/Users/apple/Documents/Code/TongZhenMooc/OriaLibs/build/intermediates/bundles/debug/res/layout/material_images_float.xml"
+    },
+    {
+        "merged": "/Users/apple/Documents/Code/TongZhenMooc/OriaLibs/build/intermediates/res/merged/androidTest/debug/layout/abc_search_view.xml",
+        "source": "/Users/apple/Documents/Code/TongZhenMooc/OriaLibs/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.1.1/res/layout/abc_search_view.xml"
+    },
+    {
+        "merged": "/Users/apple/Documents/Code/TongZhenMooc/OriaLibs/build/intermediates/res/merged/androidTest/debug/layout/abc_list_menu_item_layout.xml",
+        "source": "/Users/apple/Documents/Code/TongZhenMooc/OriaLibs/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.1.1/res/layout/abc_list_menu_item_layout.xml"
+    },
+    {
+        "merged": "/Users/apple/Documents/Code/TongZhenMooc/OriaLibs/build/intermediates/res/merged/androidTest/debug/layout/float_toolbox.xml",
+        "source": "/Users/apple/Documents/Code/TongZhenMooc/OriaLibs/build/intermediates/bundles/debug/res/layout/float_toolbox.xml"
+    },
+    {
+        "merged": "/Users/apple/Documents/Code/TongZhenMooc/OriaLibs/build/intermediates/res/merged/androidTest/debug/layout/notification_template_part_chronometer.xml",
+        "source": "/Users/apple/Documents/Code/TongZhenMooc/OriaLibs/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.1.1/res/layout/notification_template_part_chronometer.xml"
+    },
+    {
+        "merged": "/Users/apple/Documents/Code/TongZhenMooc/OriaLibs/build/intermediates/res/merged/androidTest/debug/layout/abc_action_mode_close_item_material.xml",
+        "source": "/Users/apple/Documents/Code/TongZhenMooc/OriaLibs/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.1.1/res/layout/abc_action_mode_close_item_material.xml"
+    },
+    {
+        "merged": "/Users/apple/Documents/Code/TongZhenMooc/OriaLibs/build/intermediates/res/merged/androidTest/debug/layout/notification_template_part_time.xml",
+        "source": "/Users/apple/Documents/Code/TongZhenMooc/OriaLibs/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.1.1/res/layout/notification_template_part_time.xml"
+    },
+    {
+        "merged": "/Users/apple/Documents/Code/TongZhenMooc/OriaLibs/build/intermediates/res/merged/androidTest/debug/layout/clude_fodder_activity.xml",
+        "source": "/Users/apple/Documents/Code/TongZhenMooc/OriaLibs/build/intermediates/bundles/debug/res/layout/clude_fodder_activity.xml"
+    },
+    {
+        "merged": "/Users/apple/Documents/Code/TongZhenMooc/OriaLibs/build/intermediates/res/merged/androidTest/debug/layout/share_dialog.xml",
+        "source": "/Users/apple/Documents/Code/TongZhenMooc/OriaLibs/build/intermediates/bundles/debug/res/layout/share_dialog.xml"
+    },
+    {
+        "merged": "/Users/apple/Documents/Code/TongZhenMooc/OriaLibs/build/intermediates/res/merged/androidTest/debug/layout/abc_screen_content_include.xml",
+        "source": "/Users/apple/Documents/Code/TongZhenMooc/OriaLibs/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.1.1/res/layout/abc_screen_content_include.xml"
+    },
+    {
+        "merged": "/Users/apple/Documents/Code/TongZhenMooc/OriaLibs/build/intermediates/res/merged/androidTest/debug/layout/select_dialog_multichoice_material.xml",
+        "source": "/Users/apple/Documents/Code/TongZhenMooc/OriaLibs/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.1.1/res/layout/select_dialog_multichoice_material.xml"
+    },
+    {
+        "merged": "/Users/apple/Documents/Code/TongZhenMooc/OriaLibs/build/intermediates/res/merged/androidTest/debug/layout/abc_list_menu_item_icon.xml",
+        "source": "/Users/apple/Documents/Code/TongZhenMooc/OriaLibs/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.1.1/res/layout/abc_list_menu_item_icon.xml"
+    },
+    {
+        "merged": "/Users/apple/Documents/Code/TongZhenMooc/OriaLibs/build/intermediates/res/merged/androidTest/debug/layout/notification_template_big_media.xml",
+        "source": "/Users/apple/Documents/Code/TongZhenMooc/OriaLibs/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.1.1/res/layout/notification_template_big_media.xml"
+    },
+    {
+        "merged": "/Users/apple/Documents/Code/TongZhenMooc/OriaLibs/build/intermediates/res/merged/androidTest/debug/layout/abc_screen_simple_overlay_action_mode.xml",
+        "source": "/Users/apple/Documents/Code/TongZhenMooc/OriaLibs/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.1.1/res/layout/abc_screen_simple_overlay_action_mode.xml"
+    },
+    {
+        "merged": "/Users/apple/Documents/Code/TongZhenMooc/OriaLibs/build/intermediates/res/merged/androidTest/debug/layout/abc_dialog_title_material.xml",
+        "source": "/Users/apple/Documents/Code/TongZhenMooc/OriaLibs/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.1.1/res/layout/abc_dialog_title_material.xml"
+    },
+    {
+        "merged": "/Users/apple/Documents/Code/TongZhenMooc/OriaLibs/build/intermediates/res/merged/androidTest/debug/layout/select_dialog_singlechoice_material.xml",
+        "source": "/Users/apple/Documents/Code/TongZhenMooc/OriaLibs/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.1.1/res/layout/select_dialog_singlechoice_material.xml"
+    },
+    {
+        "merged": "/Users/apple/Documents/Code/TongZhenMooc/OriaLibs/build/intermediates/res/merged/androidTest/debug/layout/camera_image_item.xml",
+        "source": "/Users/apple/Documents/Code/TongZhenMooc/OriaLibs/build/intermediates/bundles/debug/res/layout/camera_image_item.xml"
+    },
+    {
+        "merged": "/Users/apple/Documents/Code/TongZhenMooc/OriaLibs/build/intermediates/res/merged/androidTest/debug/layout/abc_expanded_menu_layout.xml",
+        "source": "/Users/apple/Documents/Code/TongZhenMooc/OriaLibs/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.1.1/res/layout/abc_expanded_menu_layout.xml"
+    },
+    {
+        "merged": "/Users/apple/Documents/Code/TongZhenMooc/OriaLibs/build/intermediates/res/merged/androidTest/debug/layout/abc_action_bar_view_list_nav_layout.xml",
+        "source": "/Users/apple/Documents/Code/TongZhenMooc/OriaLibs/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.1.1/res/layout/abc_action_bar_view_list_nav_layout.xml"
+    },
+    {
+        "merged": "/Users/apple/Documents/Code/TongZhenMooc/OriaLibs/build/intermediates/res/merged/androidTest/debug/layout/abc_list_menu_item_radio.xml",
+        "source": "/Users/apple/Documents/Code/TongZhenMooc/OriaLibs/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.1.1/res/layout/abc_list_menu_item_radio.xml"
+    },
+    {
+        "merged": "/Users/apple/Documents/Code/TongZhenMooc/OriaLibs/build/intermediates/res/merged/androidTest/debug/layout/material_dialog.xml",
+        "source": "/Users/apple/Documents/Code/TongZhenMooc/OriaLibs/build/intermediates/bundles/debug/res/layout/material_dialog.xml"
+    },
+    {
+        "merged": "/Users/apple/Documents/Code/TongZhenMooc/OriaLibs/build/intermediates/res/merged/androidTest/debug/layout/savevideo_dialog.xml",
+        "source": "/Users/apple/Documents/Code/TongZhenMooc/OriaLibs/build/intermediates/bundles/debug/res/layout/savevideo_dialog.xml"
+    },
+    {
+        "merged": "/Users/apple/Documents/Code/TongZhenMooc/OriaLibs/build/intermediates/res/merged/androidTest/debug/layout/support_simple_spinner_dropdown_item.xml",
+        "source": "/Users/apple/Documents/Code/TongZhenMooc/OriaLibs/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.1.1/res/layout/support_simple_spinner_dropdown_item.xml"
+    },
+    {
+        "merged": "/Users/apple/Documents/Code/TongZhenMooc/OriaLibs/build/intermediates/res/merged/androidTest/debug/layout/video_player.xml",
+        "source": "/Users/apple/Documents/Code/TongZhenMooc/OriaLibs/build/intermediates/bundles/debug/res/layout/video_player.xml"
+    },
+    {
+        "merged": "/Users/apple/Documents/Code/TongZhenMooc/OriaLibs/build/intermediates/res/merged/androidTest/debug/layout/pptimage1.xml",
+        "source": "/Users/apple/Documents/Code/TongZhenMooc/OriaLibs/build/intermediates/bundles/debug/res/layout/pptimage1.xml"
+    },
+    {
+        "merged": "/Users/apple/Documents/Code/TongZhenMooc/OriaLibs/build/intermediates/res/merged/androidTest/debug/layout/materialppt_dialog.xml",
+        "source": "/Users/apple/Documents/Code/TongZhenMooc/OriaLibs/build/intermediates/bundles/debug/res/layout/materialppt_dialog.xml"
+    },
+    {
+        "merged": "/Users/apple/Documents/Code/TongZhenMooc/OriaLibs/build/intermediates/res/merged/androidTest/debug/layout/float_colorset.xml",
+        "source": "/Users/apple/Documents/Code/TongZhenMooc/OriaLibs/build/intermediates/bundles/debug/res/layout/float_colorset.xml"
+    },
+    {
+        "merged": "/Users/apple/Documents/Code/TongZhenMooc/OriaLibs/build/intermediates/res/merged/androidTest/debug/layout/abc_search_dropdown_item_icons_2line.xml",
+        "source": "/Users/apple/Documents/Code/TongZhenMooc/OriaLibs/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.1.1/res/layout/abc_search_dropdown_item_icons_2line.xml"
+    },
+    {
+        "merged": "/Users/apple/Documents/Code/TongZhenMooc/OriaLibs/build/intermediates/res/merged/androidTest/debug/layout/abc_alert_dialog_button_bar_material.xml",
+        "source": "/Users/apple/Documents/Code/TongZhenMooc/OriaLibs/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.1.1/res/layout/abc_alert_dialog_button_bar_material.xml"
+    },
+    {
+        "merged": "/Users/apple/Documents/Code/TongZhenMooc/OriaLibs/build/intermediates/res/merged/androidTest/debug/layout/main.xml",
+        "source": "/Users/apple/Documents/Code/TongZhenMooc/OriaLibs/build/intermediates/bundles/debug/res/layout/main.xml"
+    },
+    {
+        "merged": "/Users/apple/Documents/Code/TongZhenMooc/OriaLibs/build/intermediates/res/merged/androidTest/debug/layout/float_edit.xml",
+        "source": "/Users/apple/Documents/Code/TongZhenMooc/OriaLibs/build/intermediates/bundles/debug/res/layout/float_edit.xml"
+    },
+    {
+        "merged": "/Users/apple/Documents/Code/TongZhenMooc/OriaLibs/build/intermediates/res/merged/androidTest/debug/layout/float_opttypeset.xml",
+        "source": "/Users/apple/Documents/Code/TongZhenMooc/OriaLibs/build/intermediates/bundles/debug/res/layout/float_opttypeset.xml"
+    },
+    {
+        "merged": "/Users/apple/Documents/Code/TongZhenMooc/OriaLibs/build/intermediates/res/merged/androidTest/debug/layout/abc_action_menu_item_layout.xml",
+        "source": "/Users/apple/Documents/Code/TongZhenMooc/OriaLibs/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.1.1/res/layout/abc_action_menu_item_layout.xml"
+    },
+    {
+        "merged": "/Users/apple/Documents/Code/TongZhenMooc/OriaLibs/build/intermediates/res/merged/androidTest/debug/layout/float_strokeset.xml",
+        "source": "/Users/apple/Documents/Code/TongZhenMooc/OriaLibs/build/intermediates/bundles/debug/res/layout/float_strokeset.xml"
+    },
+    {
+        "merged": "/Users/apple/Documents/Code/TongZhenMooc/OriaLibs/build/intermediates/res/merged/androidTest/debug/layout/float_saveset.xml",
+        "source": "/Users/apple/Documents/Code/TongZhenMooc/OriaLibs/build/intermediates/bundles/debug/res/layout/float_saveset.xml"
+    },
+    {
+        "merged": "/Users/apple/Documents/Code/TongZhenMooc/OriaLibs/build/intermediates/res/merged/androidTest/debug/layout/recommend_img_item.xml",
+        "source": "/Users/apple/Documents/Code/TongZhenMooc/OriaLibs/build/intermediates/bundles/debug/res/layout/recommend_img_item.xml"
+    },
+    {
+        "merged": "/Users/apple/Documents/Code/TongZhenMooc/OriaLibs/build/intermediates/res/merged/androidTest/debug/layout/abc_select_dialog_material.xml",
+        "source": "/Users/apple/Documents/Code/TongZhenMooc/OriaLibs/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.1.1/res/layout/abc_select_dialog_material.xml"
+    },
+    {
+        "merged": "/Users/apple/Documents/Code/TongZhenMooc/OriaLibs/build/intermediates/res/merged/androidTest/debug/layout/notification_template_media.xml",
+        "source": "/Users/apple/Documents/Code/TongZhenMooc/OriaLibs/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.1.1/res/layout/notification_template_media.xml"
+    },
+    {
+        "merged": "/Users/apple/Documents/Code/TongZhenMooc/OriaLibs/build/intermediates/res/merged/androidTest/debug/layout/float_imageview.xml",
+        "source": "/Users/apple/Documents/Code/TongZhenMooc/OriaLibs/build/intermediates/bundles/debug/res/layout/float_imageview.xml"
+    },
+    {
+        "merged": "/Users/apple/Documents/Code/TongZhenMooc/OriaLibs/build/intermediates/res/merged/androidTest/debug/layout/color_set_item.xml",
+        "source": "/Users/apple/Documents/Code/TongZhenMooc/OriaLibs/build/intermediates/bundles/debug/res/layout/color_set_item.xml"
+    },
+    {
+        "merged": "/Users/apple/Documents/Code/TongZhenMooc/OriaLibs/build/intermediates/res/merged/androidTest/debug/layout/abc_popup_menu_item_layout.xml",
+        "source": "/Users/apple/Documents/Code/TongZhenMooc/OriaLibs/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.1.1/res/layout/abc_popup_menu_item_layout.xml"
+    },
+    {
+        "merged": "/Users/apple/Documents/Code/TongZhenMooc/OriaLibs/build/intermediates/res/merged/androidTest/debug/layout/pull_to_refresh_header.xml",
+        "source": "/Users/apple/Documents/Code/TongZhenMooc/OriaLibs/build/intermediates/bundles/debug/res/layout/pull_to_refresh_header.xml"
+    },
+    {
+        "merged": "/Users/apple/Documents/Code/TongZhenMooc/OriaLibs/build/intermediates/res/merged/androidTest/debug/layout/notification_media_cancel_action.xml",
+        "source": "/Users/apple/Documents/Code/TongZhenMooc/OriaLibs/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.1.1/res/layout/notification_media_cancel_action.xml"
+    },
+    {
+        "merged": "/Users/apple/Documents/Code/TongZhenMooc/OriaLibs/build/intermediates/res/merged/androidTest/debug/layout/abc_list_menu_item_checkbox.xml",
+        "source": "/Users/apple/Documents/Code/TongZhenMooc/OriaLibs/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.1.1/res/layout/abc_list_menu_item_checkbox.xml"
+    },
+    {
+        "merged": "/Users/apple/Documents/Code/TongZhenMooc/OriaLibs/build/intermediates/res/merged/androidTest/debug/layout/abc_action_mode_bar.xml",
+        "source": "/Users/apple/Documents/Code/TongZhenMooc/OriaLibs/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.1.1/res/layout/abc_action_mode_bar.xml"
+    },
+    {
+        "merged": "/Users/apple/Documents/Code/TongZhenMooc/OriaLibs/build/intermediates/res/merged/androidTest/debug/layout/color_layout.xml",
+        "source": "/Users/apple/Documents/Code/TongZhenMooc/OriaLibs/build/intermediates/bundles/debug/res/layout/color_layout.xml"
+    },
+    {
+        "merged": "/Users/apple/Documents/Code/TongZhenMooc/OriaLibs/build/intermediates/res/merged/androidTest/debug/layout/ppt_image_item.xml",
+        "source": "/Users/apple/Documents/Code/TongZhenMooc/OriaLibs/build/intermediates/bundles/debug/res/layout/ppt_image_item.xml"
+    },
+    {
+        "merged": "/Users/apple/Documents/Code/TongZhenMooc/OriaLibs/build/intermediates/res/merged/androidTest/debug/layout/notification_template_lines.xml",
+        "source": "/Users/apple/Documents/Code/TongZhenMooc/OriaLibs/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.1.1/res/layout/notification_template_lines.xml"
+    },
+    {
+        "merged": "/Users/apple/Documents/Code/TongZhenMooc/OriaLibs/build/intermediates/res/merged/androidTest/debug/layout/material_float.xml",
+        "source": "/Users/apple/Documents/Code/TongZhenMooc/OriaLibs/build/intermediates/bundles/debug/res/layout/material_float.xml"
+    },
+    {
+        "merged": "/Users/apple/Documents/Code/TongZhenMooc/OriaLibs/build/intermediates/res/merged/androidTest/debug/layout/abc_action_bar_title_item.xml",
+        "source": "/Users/apple/Documents/Code/TongZhenMooc/OriaLibs/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.1.1/res/layout/abc_action_bar_title_item.xml"
+    },
+    {
+        "merged": "/Users/apple/Documents/Code/TongZhenMooc/OriaLibs/build/intermediates/res/merged/androidTest/debug/layout/abc_activity_chooser_view_list_item.xml",
+        "source": "/Users/apple/Documents/Code/TongZhenMooc/OriaLibs/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.1.1/res/layout/abc_activity_chooser_view_list_item.xml"
+    },
+    {
+        "merged": "/Users/apple/Documents/Code/TongZhenMooc/OriaLibs/build/intermediates/res/merged/androidTest/debug/layout/abc_screen_simple.xml",
+        "source": "/Users/apple/Documents/Code/TongZhenMooc/OriaLibs/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.1.1/res/layout/abc_screen_simple.xml"
+    },
+    {
+        "merged": "/Users/apple/Documents/Code/TongZhenMooc/OriaLibs/build/intermediates/res/merged/androidTest/debug/layout/oldvideo_player.xml",
+        "source": "/Users/apple/Documents/Code/TongZhenMooc/OriaLibs/build/intermediates/bundles/debug/res/layout/oldvideo_player.xml"
+    },
+    {
+        "merged": "/Users/apple/Documents/Code/TongZhenMooc/OriaLibs/build/intermediates/res/merged/androidTest/debug/layout/abc_action_menu_layout.xml",
+        "source": "/Users/apple/Documents/Code/TongZhenMooc/OriaLibs/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.1.1/res/layout/abc_action_menu_layout.xml"
+    },
+    {
+        "merged": "/Users/apple/Documents/Code/TongZhenMooc/OriaLibs/build/intermediates/res/merged/androidTest/debug/layout/select_dialog_item_material.xml",
+        "source": "/Users/apple/Documents/Code/TongZhenMooc/OriaLibs/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.1.1/res/layout/select_dialog_item_material.xml"
+    },
+    {
+        "merged": "/Users/apple/Documents/Code/TongZhenMooc/OriaLibs/build/intermediates/res/merged/androidTest/debug/layout/materialpdf_dialog.xml",
+        "source": "/Users/apple/Documents/Code/TongZhenMooc/OriaLibs/build/intermediates/bundles/debug/res/layout/materialpdf_dialog.xml"
+    },
+    {
+        "merged": "/Users/apple/Documents/Code/TongZhenMooc/OriaLibs/build/intermediates/res/merged/androidTest/debug/layout/clude_fodder_layout.xml",
+        "source": "/Users/apple/Documents/Code/TongZhenMooc/OriaLibs/build/intermediates/bundles/debug/res/layout/clude_fodder_layout.xml"
+    },
+    {
+        "merged": "/Users/apple/Documents/Code/TongZhenMooc/OriaLibs/build/intermediates/res/merged/androidTest/debug/layout/ui_progress_view.xml",
+        "source": "/Users/apple/Documents/Code/TongZhenMooc/OriaLibs/build/intermediates/bundles/debug/res/layout/ui_progress_view.xml"
+    }
+]

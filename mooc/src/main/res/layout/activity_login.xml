@@ -8,7 +8,7 @@
     <ImageView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="30dp"
+        android:layout_marginTop="50dp"
         android:src="@drawable/logo" />
 
     <TextView
@@ -89,5 +89,5 @@
         android:layout_height="wrap_content"
         android:layout_marginBottom="20dp"
         android:id="@+id/tv_copyright"
-        android:text="© %1$s mmooc.com"/>
+        android:text="@string/copy_right"/>
 </LinearLayout>
