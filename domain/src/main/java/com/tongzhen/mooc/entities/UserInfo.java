@@ -19,7 +19,7 @@ public class UserInfo extends BaseInfo {
     private String city;
     private String school;
     private String address;
-    private String is_verify;
+    private int is_verify;
     private int follows;
     private int fans;
     private int chat_number;
@@ -106,7 +106,7 @@ public class UserInfo extends BaseInfo {
         return address;
     }
 
-    public String getIs_verify() {
+    public int getIs_verify() {
         return is_verify;
     }
 
@@ -158,7 +158,7 @@ public class UserInfo extends BaseInfo {
         private String city;
         private String school;
         private String address;
-        private String is_verify;
+        private int is_verify;
         private String result;
         private String errorMsg;
         private int follows;
@@ -280,7 +280,7 @@ public class UserInfo extends BaseInfo {
             return this;
         }
 
-        public Builder setIs_verify(String is_verify) {
+        public Builder setIs_verify(int is_verify) {
             this.is_verify = is_verify;
             return this;
         }

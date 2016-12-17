@@ -35,13 +35,11 @@ public class MLMFragment extends BaseFragment<BaseInfo> implements TabLayout.OnT
         super.initViews();
 
         initTabs();
-
     }
 
     private void initTabs() {
         mlmAdapter = new MLMAdapter(getFragmentManager(), getContext());
         vpContainer.setAdapter(mlmAdapter);
-        vpContainer.setOffscreenPageLimit(2);
 
         tabTop.setupWithViewPager(vpContainer);
         tabTop.setOnTabSelectedListener(this);

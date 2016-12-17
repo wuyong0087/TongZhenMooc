@@ -24,17 +24,19 @@ public class MLMAdapter extends FragmentPagerAdapter {
     @Override
     public Fragment getItem(int position) {
         Fragment frag = null;
+        int listType = -1;
         switch (position) {
             case 0:
-                frag = WorksListFragment_.builder().listType(WorksListType.FEATURED).build();
+                listType = WorksListType.FEATURED;
                 break;
             case 1:
-                frag = WorksListFragment_.builder().listType(WorksListType.SHARED).build();
+                listType = WorksListType.SHARED;
                 break;
             case 2:
-                frag = WorksListFragment_.builder().listType(WorksListType.FAVORITES).build();
+                listType = WorksListType.FAVORITES;
                 break;
         }
+        frag = WorksListFragment_.builder().listType(listType).build();
         return frag;
     }
 

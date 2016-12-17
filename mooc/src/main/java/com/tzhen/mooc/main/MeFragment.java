@@ -7,6 +7,7 @@ import android.widget.TextView;
 import com.bumptech.glide.Glide;
 import com.tongzhen.mooc.entities.UserInfo;
 import com.tongzhen.mooc.entities.types.ResultCodes;
+import com.tongzhen.mooc.entities.types.StatusCode;
 import com.tongzhen.mooc.presenters.MePresenter;
 import com.tongzhen.mooc.views.MeView;
 import com.tzhen.commen.fragment.BaseFragment;
@@ -61,6 +62,8 @@ public class MeFragment extends BaseFragment<UserInfo> implements MeView {
     protected void initViews() {
         super.initViews();
 
+        String uid = persistence.retrieve(Persistence.KEY_USER_ID, String.class);
+        presenter.attachView(this, uid);
     }
 
     @Click({R.id.ll_my_university, R.id.ll_my_videos, R.id.ll_my_notes, R.id.ll_my_qa, R.id.ll_my_shared, R.id.ll_my_favorites})
@@ -89,8 +92,6 @@ public class MeFragment extends BaseFragment<UserInfo> implements MeView {
 
     @Override
     protected void lazyLoad() {
-        String uid = persistence.retrieve(Persistence.KEY_USER_ID, String.class);
-        presenter.attachView(this, uid);
     }
 
     @Override
@@ -103,6 +104,8 @@ public class MeFragment extends BaseFragment<UserInfo> implements MeView {
             tvScores.setText(value.getScore() + "");
             tvFollows.setText(value.getFollows() + "");
             tvFans.setText(value.getFans() + "");
+            String verify = getString(value.getIs_verify() == StatusCode.YES ? R.string.verifyed : R.string.un_verify);
+            tvVerifyState.setText(getString(R.string.school_verify_state, verify));
 
         } else{
             showMsg(value.getErrorMsg());

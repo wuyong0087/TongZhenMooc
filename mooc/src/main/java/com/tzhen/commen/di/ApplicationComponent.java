@@ -11,6 +11,7 @@ import com.tzhen.mooc.fragments.RegisterStep3Frag;
 import com.tzhen.mooc.fragments.SendCodeFragment;
 import com.tzhen.mooc.fragments.SetNewPwdFragment;
 import com.tzhen.mooc.main.ContactsFragment;
+import com.tzhen.mooc.main.CreateSuccessActivity;
 import com.tzhen.mooc.main.MLMFragment;
 import com.tzhen.mooc.main.MeFragment;
 import com.tzhen.mooc.main.QAFragment;
@@ -36,6 +37,8 @@ public interface ApplicationComponent {
     void inject(SignUpActivity signUpActivity);
 
     void inject(ForgotPwdActivity forgotPwdActivity);
+
+    void inject(CreateSuccessActivity createSuccessActivity);
 
     void inject(RegisterStep1Frag registerStep1Frag);
 

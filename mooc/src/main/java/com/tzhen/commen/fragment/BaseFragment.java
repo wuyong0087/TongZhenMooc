@@ -7,10 +7,13 @@ import android.widget.Toast;
 import com.tongzhen.common.views.View;
 import com.tzhen.commen.activity.BaseActivity;
 import com.tzhen.commen.di.ApplicationComponent;
+import com.tzhen.mooc.progress.DialogProgress;
 
 import org.androidannotations.annotations.AfterInject;
 import org.androidannotations.annotations.AfterViews;
 import org.androidannotations.annotations.EFragment;
+
+import javax.inject.Inject;
 
 import rx.Subscription;
 
@@ -33,6 +36,9 @@ public abstract class BaseFragment<T> extends Fragment implements View<T> {
     protected int memberId;
     protected float[] location;
 
+    @Inject
+    DialogProgress progress;
+
     @AfterInject
     protected void init() {
     }
@@ -51,10 +57,12 @@ public abstract class BaseFragment<T> extends Fragment implements View<T> {
 
     @Override
     public void showProgress() {
+        progress.showProgressView(getActivity());
     }
 
     @Override
     public void hideProgress() {
+        progress.hideProgressView();
     }
 
 

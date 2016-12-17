@@ -5,6 +5,8 @@ import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentTransaction;
 import android.support.v4.content.ContextCompat;
 import android.support.v7.widget.Toolbar;
+import android.view.Menu;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.ImageView;
 import android.widget.TextView;
@@ -39,6 +41,7 @@ public class MainActivity extends BaseActivity<BaseInfo> implements TabLayout.On
     @ViewById(R.id.tab_bottom)
     TabLayout tabBottom;
 
+    private MenuItem rightMenuSearch, rightMenuFilter, rightMenuMore;
 
     @Override
     protected void init() {
@@ -51,6 +54,8 @@ public class MainActivity extends BaseActivity<BaseInfo> implements TabLayout.On
         super.initViews();
 
         initToolBar(toolbar, true);
+
+        toolbar.setNavigationIcon(R.drawable.course_center);
 
         initTabs();
 
@@ -73,7 +78,8 @@ public class MainActivity extends BaseActivity<BaseInfo> implements TabLayout.On
             tvTitle.setText(titles[i]);
             TabLayout.Tab tab = tabBottom.newTab().setCustomView(view).setTag(i);
             if (i == 0){
-                tab.select();
+                ivIcon.setImageResource(selectIcons[i]);
+                tvTitle.setTextColor(ContextCompat.getColor(this, R.color.blue));
             }
             tabBottom.addTab(tab);
 
@@ -83,10 +89,20 @@ public class MainActivity extends BaseActivity<BaseInfo> implements TabLayout.On
     }
 
     @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        getMenuInflater().inflate(R.menu.main_menu, menu);
+
+        rightMenuSearch = menu.findItem(R.id.action_search);
+        rightMenuFilter = menu.findItem(R.id.action_filter);
+        rightMenuMore = menu.findItem(R.id.action_more);
+        return true;
+    }
+
+    @Override
     public void onTabSelected(TabLayout.Tab tab) {
         updateTabState(tab, true);
 
-        updateTitle(tab);
+        updateToolbar(tab);
 
         attachFragment((int)tab.getTag());
     }
@@ -114,7 +130,7 @@ public class MainActivity extends BaseActivity<BaseInfo> implements TabLayout.On
         }
     }
 
-    private void updateTitle(TabLayout.Tab tab) {
+    private void updateToolbar(TabLayout.Tab tab) {
         int index = (int) tab.getTag();
         int title = -1;
         switch (index) {
@@ -138,6 +154,8 @@ public class MainActivity extends BaseActivity<BaseInfo> implements TabLayout.On
         if (index == CREATE) {
             performClick(R.id.iv_create);
         }
+
+        setupMenuIcon(index);
     }
 
     @Override
@@ -174,6 +192,26 @@ public class MainActivity extends BaseActivity<BaseInfo> implements TabLayout.On
         View view = findViewById(viewId);
         if (view != null) {
             view.performClick();
+        }
+    }
+
+    public void setupMenuIcon(int index) {
+        rightMenuFilter.setVisible(false);
+        rightMenuMore.setVisible(false);
+        rightMenuSearch.setVisible(false);
+        switch (index) {
+            case MLM:
+            case QA:
+                toolbar.setNavigationIcon(R.drawable.course_center);
+                setToolBarDisplayHomeAsUpEnabled(true);
+                rightMenuFilter.setVisible(true);
+                break;
+            case CONTACTS:
+                setToolBarDisplayHomeAsUpEnabled(false);
+                rightMenuSearch.setVisible(true);
+            case ME:
+                setToolBarDisplayHomeAsUpEnabled(false);
+                break;
         }
     }
 }

@@ -1,228 +1,233 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:orientation="vertical">
-
-    <include layout="@layout/layout_user_info"/>
+    android:layout_height="match_parent">
 
     <LinearLayout
-        android:id="@+id/ll_my_university"
-        android:layout_marginTop="5dp"
-        android:layout_marginBottom="5dp"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="match_parent"
         android:orientation="vertical">
 
-        <include layout="@layout/split_layout" />
+        <include layout="@layout/layout_user_info" />
 
         <LinearLayout
-            android:padding="5dp"
-            android:gravity="center_vertical"
+            android:id="@+id/ll_my_university"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="horizontal">
+            android:layout_marginBottom="5dp"
+            android:layout_marginTop="5dp"
+            android:orientation="vertical">
 
-            <ImageView
-                android:layout_width="30dp"
-                android:layout_height="30dp"
-                android:src="@drawable/unverified"/>
+            <include layout="@layout/split_layout" />
 
-            <TextView
-                android:layout_marginLeft="10dp"
-                android:textSize="16sp"
-                android:id="@+id/tv_school_name"
-                android:layout_width="wrap_content"
+            <LinearLayout
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:textColor="@color/black"
-                android:text="Stanford University"/>
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:padding="5dp">
 
-            <TextView
-                android:textColor="@color/yellow"
-                android:layout_width="wrap_content"
-                android:textSize="16sp"
-                android:layout_height="wrap_content"
-                android:id="@+id/tv_verify_state"
-                android:text="@string/school_verify_state"/>
+                <ImageView
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:src="@drawable/unverified" />
+
+                <TextView
+                    android:id="@+id/tv_school_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:text="Stanford University"
+                    android:textColor="@color/black"
+                    android:textSize="16sp" />
+
+                <TextView
+                    android:id="@+id/tv_verify_state"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/school_verify_state"
+                    android:textColor="@color/yellow"
+                    android:textSize="16sp" />
+            </LinearLayout>
+
+            <include layout="@layout/split_layout" />
         </LinearLayout>
-
-        <include layout="@layout/split_layout" />
-    </LinearLayout>
-
-    <LinearLayout
-        android:id="@+id/ll_my_videos"
-        android:layout_marginTop="5dp"
-        android:layout_marginBottom="5dp"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="vertical">
-
-        <include layout="@layout/split_layout" />
 
         <LinearLayout
-            android:padding="5dp"
-            android:gravity="center_vertical"
+            android:id="@+id/ll_my_videos"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="horizontal">
+            android:layout_marginBottom="5dp"
+            android:layout_marginTop="5dp"
+            android:orientation="vertical">
 
-            <ImageView
-                android:id="@+id/iv_my_videos"
-                android:layout_width="30dp"
-                android:layout_height="30dp"
-                android:src="@drawable/my_videos"/>
+            <include layout="@layout/split_layout" />
 
-            <TextView
-                android:layout_marginLeft="10dp"
-                android:textSize="16sp"
-                android:layout_width="wrap_content"
+            <LinearLayout
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:textColor="@color/black"
-                android:text="@string/my_videos"/>
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:padding="5dp">
 
+                <ImageView
+                    android:id="@+id/iv_my_videos"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:src="@drawable/my_videos" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:text="@string/my_videos"
+                    android:textColor="@color/black"
+                    android:textSize="16sp" />
+
+            </LinearLayout>
+
+            <include layout="@layout/split_layout" />
         </LinearLayout>
-
-        <include layout="@layout/split_layout" />
-    </LinearLayout>
-
-    <LinearLayout
-        android:id="@+id/ll_my_notes"
-        android:layout_marginTop="5dp"
-        android:layout_marginBottom="5dp"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="vertical">
-
-        <include layout="@layout/split_layout" />
 
         <LinearLayout
-            android:padding="5dp"
-            android:gravity="center_vertical"
+            android:id="@+id/ll_my_notes"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="horizontal">
+            android:layout_marginBottom="5dp"
+            android:layout_marginTop="5dp"
+            android:orientation="vertical">
 
-            <ImageView
-                android:id="@+id/iv_my_notes"
-                android:layout_width="30dp"
-                android:layout_height="30dp"
-                android:src="@drawable/my_notes"/>
+            <include layout="@layout/split_layout" />
 
-            <TextView
-                android:layout_marginLeft="10dp"
-                android:textSize="16sp"
-                android:layout_width="wrap_content"
+            <LinearLayout
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:textColor="@color/black"
-                android:text="@string/my_notes"/>
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:padding="5dp">
 
+                <ImageView
+                    android:id="@+id/iv_my_notes"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:src="@drawable/my_notes" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:text="@string/my_notes"
+                    android:textColor="@color/black"
+                    android:textSize="16sp" />
+
+            </LinearLayout>
+
+            <include layout="@layout/split_layout" />
         </LinearLayout>
-
-        <include layout="@layout/split_layout" />
-    </LinearLayout>
-
-    <LinearLayout
-        android:id="@+id/ll_my_qa"
-        android:layout_marginTop="5dp"
-        android:layout_marginBottom="5dp"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="vertical">
-
-        <include layout="@layout/split_layout" />
 
         <LinearLayout
-            android:padding="5dp"
-            android:gravity="center_vertical"
+            android:id="@+id/ll_my_qa"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="horizontal">
+            android:layout_marginBottom="5dp"
+            android:layout_marginTop="5dp"
+            android:orientation="vertical">
 
-            <ImageView
-                android:layout_width="30dp"
-                android:layout_height="30dp"
-                android:src="@drawable/my_qa"/>
+            <include layout="@layout/split_layout" />
 
-            <TextView
-                android:layout_marginLeft="10dp"
-                android:textSize="16sp"
-                android:layout_width="wrap_content"
+            <LinearLayout
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:textColor="@color/black"
-                android:text="@string/my_q_a"/>
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:padding="5dp">
 
+                <ImageView
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:src="@drawable/my_qa" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:text="@string/my_q_a"
+                    android:textColor="@color/black"
+                    android:textSize="16sp" />
+
+            </LinearLayout>
+
+            <include layout="@layout/split_layout" />
         </LinearLayout>
-
-        <include layout="@layout/split_layout" />
-    </LinearLayout>
-
-    <LinearLayout
-        android:id="@+id/ll_my_shared"
-        android:layout_marginTop="5dp"
-        android:layout_marginBottom="5dp"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="vertical">
-
-        <include layout="@layout/split_layout" />
 
         <LinearLayout
-            android:padding="5dp"
-            android:gravity="center_vertical"
+            android:id="@+id/ll_my_shared"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="horizontal">
+            android:layout_marginBottom="5dp"
+            android:layout_marginTop="5dp"
+            android:orientation="vertical">
 
-            <ImageView
-                android:layout_width="30dp"
-                android:layout_height="30dp"
-                android:src="@drawable/my_shared"/>
+            <include layout="@layout/split_layout" />
 
-            <TextView
-                android:layout_marginLeft="10dp"
-                android:textSize="16sp"
-                android:layout_width="wrap_content"
+            <LinearLayout
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:textColor="@color/black"
-                android:text="@string/my_shared"/>
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:padding="5dp">
 
+                <ImageView
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:src="@drawable/my_shared" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:text="@string/my_shared"
+                    android:textColor="@color/black"
+                    android:textSize="16sp" />
+
+            </LinearLayout>
+
+            <include layout="@layout/split_layout" />
         </LinearLayout>
-
-        <include layout="@layout/split_layout" />
-    </LinearLayout>
-
-    <LinearLayout
-        android:id="@+id/ll_my_favorites"
-        android:layout_marginTop="5dp"
-        android:layout_marginBottom="5dp"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="vertical">
-
-        <include layout="@layout/split_layout" />
 
         <LinearLayout
-            android:padding="5dp"
-            android:gravity="center_vertical"
+            android:id="@+id/ll_my_favorites"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="horizontal">
+            android:layout_marginBottom="5dp"
+            android:layout_marginTop="5dp"
+            android:orientation="vertical">
 
-            <ImageView
-                android:layout_width="30dp"
-                android:layout_height="30dp"
-                android:src="@drawable/my_favorites"/>
+            <include layout="@layout/split_layout" />
 
-            <TextView
-                android:layout_marginLeft="10dp"
-                android:textSize="16sp"
-                android:layout_width="wrap_content"
+            <LinearLayout
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:textColor="@color/black"
-                android:text="@string/my_favorites"/>
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:padding="5dp">
 
+                <ImageView
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:src="@drawable/my_favorites" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:text="@string/my_favorites"
+                    android:textColor="@color/black"
+                    android:textSize="16sp" />
+
+            </LinearLayout>
+
+            <include layout="@layout/split_layout" />
         </LinearLayout>
-
-        <include layout="@layout/split_layout" />
     </LinearLayout>
-</LinearLayout>
+</ScrollView>

@@ -12,4 +12,6 @@
     <color name="tab_select">#2153b5</color>
     <color name="tab_un_select">#666666</color>
     <color name="yellow">#f05500</color>
+
+    <color name="transparent">#00000000</color>
 </resources>

@@ -49,7 +49,7 @@ public class WorksListPresenter implements Presenter<WorksListView> {
         }
     }
 
-    public void loadWorksList(String uid, int page, int max, int listType) {
+    public void loadWorksList(WorksListView view, String uid, int page, int max, int listType) {
         this.listType = listType;
         switch (listType) {
             case WorksListType.FAVORITES:
@@ -63,6 +63,7 @@ public class WorksListPresenter implements Presenter<WorksListView> {
                 break;
         }
 
+        attachView(view);
     }
 
     @Override

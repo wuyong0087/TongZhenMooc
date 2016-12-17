@@ -13,10 +13,13 @@ import com.tongzhen.mooc.entities.BaseInfo;
 import com.tzhen.mooc.R;
 import com.tzhen.commen.application.AndroidApplication;
 import com.tzhen.commen.di.ApplicationComponent;
+import com.tzhen.mooc.progress.DialogProgress;
 
 import org.androidannotations.annotations.AfterInject;
 import org.androidannotations.annotations.AfterViews;
 import org.androidannotations.annotations.EActivity;
+
+import javax.inject.Inject;
 
 import rx.Subscription;
 
@@ -28,6 +31,9 @@ public abstract class BaseActivity<T extends BaseInfo> extends AppCompatActivity
     private Toolbar mToolbar;
     private TextView mToolbarTitle;
     protected Subscription mRxSub;
+
+    @Inject
+    DialogProgress progress;
 
     @AfterInject protected void init() {
     }
@@ -86,10 +92,12 @@ public abstract class BaseActivity<T extends BaseInfo> extends AppCompatActivity
 
     @Override
     public void showProgress() {
+        progress.showProgressView(this);
     }
 
     @Override
     public void hideProgress() {
+        progress.hideProgressView();
     }
 
     public void showMsg(String msg){
