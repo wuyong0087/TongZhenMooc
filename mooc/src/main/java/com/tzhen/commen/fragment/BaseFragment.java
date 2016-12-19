@@ -1,12 +1,18 @@
 package com.tzhen.commen.fragment;
 
 import android.content.Intent;
+import android.os.Bundle;
+import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
+import android.view.LayoutInflater;
+import android.view.ViewGroup;
+import android.view.ViewParent;
 import android.widget.Toast;
 
 import com.tongzhen.common.views.View;
 import com.tzhen.commen.activity.BaseActivity;
 import com.tzhen.commen.di.ApplicationComponent;
+import com.tzhen.mooc.R;
 import com.tzhen.mooc.progress.DialogProgress;
 
 import org.androidannotations.annotations.AfterInject;
@@ -21,6 +27,7 @@ import rx.Subscription;
 public abstract class BaseFragment<T> extends Fragment implements View<T> {
 
     protected Intent errorIntent;
+
     protected Subscription mRxSub;
 
     protected boolean isVisable;
@@ -34,6 +41,7 @@ public abstract class BaseFragment<T> extends Fragment implements View<T> {
     protected boolean isRefreshing;
 
     protected int memberId;
+
     protected float[] location;
 
     @Inject
@@ -42,6 +50,8 @@ public abstract class BaseFragment<T> extends Fragment implements View<T> {
     @AfterInject
     protected void init() {
     }
+
+
 
     @AfterViews
     protected void initViews() {
@@ -86,6 +96,7 @@ public abstract class BaseFragment<T> extends Fragment implements View<T> {
 
     @Override
     public void onSuccess(T value) {
+        hasLoadData = true;
         showDefaultView(value);
     }
 

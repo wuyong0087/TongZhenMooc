@@ -29,7 +29,7 @@ public class VideoInfoUseCase extends BaseUseCase<WorksInfo> {
         return sessionRepository.video_info(vid, uid);
     }
 
-    public void signParams(){
+    public void signParams(String uid, int vid){
         this.vid = vid;
         this.uid = uid;
     }

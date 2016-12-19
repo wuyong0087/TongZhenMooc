@@ -56,5 +56,8 @@
     <string name="please_wait">Please wait...</string>
     <string name="verifyed">Verifyed</string>
     <string name="un_verify">Un verify</string>
-    <string name="works_lenth">Lenth/!%$s</string>
+    <string name="works_length">Length / %1$s</string>
+    <string name="works_info_comments">Comments %1$s</string>
+    <string name="information_architecture">Information architecture</string>
+    <string name="send">Send</string>
 </resources>

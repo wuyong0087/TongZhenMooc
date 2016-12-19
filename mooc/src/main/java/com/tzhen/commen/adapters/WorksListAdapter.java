@@ -7,7 +7,10 @@ import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import com.bumptech.glide.Glide;
 import com.tongzhen.mooc.entities.WorksInfo;
+import com.tzhen.commen.utils.CircleTransform;
+import com.tzhen.commen.utils.DateUtils;
 import com.tzhen.mooc.R;
 
 import java.util.List;
@@ -18,6 +21,7 @@ import java.util.List;
 public class WorksListAdapter extends RecyclerView.Adapter<WorksListAdapter.ViewHolder> {
     private List<WorksInfo> worksInfoList;
     private Context context;
+    private OnItemClickListener onItemClickListener;
 
     public WorksListAdapter(List<WorksInfo> worksInfoList, Context context) {
         this.worksInfoList = worksInfoList;
@@ -31,8 +35,40 @@ public class WorksListAdapter extends RecyclerView.Adapter<WorksListAdapter.View
     }
 
     @Override
-    public void onBindViewHolder(ViewHolder holder, int position) {
+    public void onBindViewHolder(final ViewHolder holder, final int position) {
 
+        setupViews(holder, position);
+
+        setupListener(holder, position);
+
+    }
+
+    private void setupListener(final ViewHolder holder, final int position) {
+        if (onItemClickListener != null){
+            holder.itemView.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    onItemClickListener.onItemClick(holder, position);
+                }
+            });
+        }
+    }
+
+    private void setupViews(ViewHolder holder, int position) {
+        WorksInfo worksInfo = worksInfoList.get(position);
+
+        Glide.with(context).load(worksInfo.getHead()).transform(new CircleTransform(context)).into(holder.ivHeader);
+        Glide.with(context).load(worksInfo.getScreenshot_m()).placeholder(R.drawable.shape_place_holder).into(holder.ivWorksCover);
+
+        holder.tvNickname.setText(worksInfo.getNickname());
+        holder.tvCourse.setText(worksInfo.getCourse_title());
+        holder.tvDuration.setText(context.getString(R.string.works_length, DateUtils.parseLongToHH_mm_ss(worksInfo.getDuration())));
+        holder.tvDate.setText(DateUtils.parseLongToyyyy_MM_dd(worksInfo.getAddtime()));
+        holder.tvTitle.setText(worksInfo.getTitle());
+
+        holder.tvComments.setText(worksInfo.getComments() + "");
+        holder.tvLikes.setText(worksInfo.getPraise() + "");
+        holder.tvShares.setText(worksInfo.getShare() + "");
     }
 
     @Override
@@ -40,7 +76,11 @@ public class WorksListAdapter extends RecyclerView.Adapter<WorksListAdapter.View
         return worksInfoList.size();
     }
 
-    class ViewHolder extends RecyclerView.ViewHolder{
+    public void setOnItemClickListener(OnItemClickListener onItemClickListener) {
+        this.onItemClickListener = onItemClickListener;
+    }
+
+    public class ViewHolder extends RecyclerView.ViewHolder{
         TextView tvNickname, tvDate, tvCourse, tvTitle, tvDuration,
         tvShares, tvLikes, tvComments;
         ImageView ivHeader, ivVipIcon, ivWorksCover;
@@ -61,5 +101,11 @@ public class WorksListAdapter extends RecyclerView.Adapter<WorksListAdapter.View
             ivVipIcon = (ImageView) view.findViewById(R.id.iv_level_icon);
             ivWorksCover = (ImageView) view.findViewById(R.id.iv_cover);
         }
+    }
+
+    public interface OnItemClickListener{
+        void onItemClick(ViewHolder holder, int position);
+
+        void onItemLongClick(ViewHolder holder, int position);
     }
 }

@@ -4,7 +4,7 @@ package com.tongzhen.mooc.entities;
  * Created by wuyong on 16/12/1.
  */
 public class WorksInfo extends BaseInfo {
-    private String vid;
+    private int vid;
     private String uid;
     private String nickname;
     private String head;
@@ -72,7 +72,7 @@ public class WorksInfo extends BaseInfo {
         reason = builder.reason;
     }
 
-    public String getVid() {
+    public int getVid() {
         return vid;
     }
 
@@ -198,7 +198,7 @@ public class WorksInfo extends BaseInfo {
 
     public static class Builder{
 
-        private String vid;
+        private int vid;
         private String uid;
         private String nickname;
         private String head;
@@ -230,7 +230,7 @@ public class WorksInfo extends BaseInfo {
         private String[] files;
         private String reason;
 
-        public Builder setVid(String vid) {
+        public Builder setVid(int vid) {
             this.vid = vid;
             return this;
         }

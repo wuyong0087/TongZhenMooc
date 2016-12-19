@@ -201,7 +201,7 @@ public class SessionDataRepository implements SessionRepository {
             @Override
             public WorksListInfo call(WorksListInfoJson worksListInfoJson) {
                 WorksListInfo worksListInfo = new WorksListInfo();
-                worksListInfo.setResult(worksListInfo.getResult());
+                worksListInfo.setResult(worksListInfoJson.getResult());
                 worksListInfo.setErrorMsg(worksListInfoJson.getErrorMsg());
                 worksListInfo.setWorksInfoList(worksListInfoJson.getData());
                 return worksListInfo;
@@ -229,7 +229,7 @@ public class SessionDataRepository implements SessionRepository {
             @Override
             public WorksListInfo call(WorksListInfoJson worksListInfoJson) {
                 WorksListInfo worksListInfo = new WorksListInfo();
-                worksListInfo.setResult(worksListInfo.getResult());
+                worksListInfo.setResult(worksListInfoJson.getResult());
                 worksListInfo.setErrorMsg(worksListInfoJson.getErrorMsg());
                 worksListInfo.setWorksInfoList(worksListInfoJson.getData());
                 return worksListInfo;
@@ -243,7 +243,7 @@ public class SessionDataRepository implements SessionRepository {
             @Override
             public WorksListInfo call(WorksListInfoJson worksListInfoJson) {
                 WorksListInfo worksListInfo = new WorksListInfo();
-                worksListInfo.setResult(worksListInfo.getResult());
+                worksListInfo.setResult(worksListInfoJson.getResult());
                 worksListInfo.setErrorMsg(worksListInfoJson.getErrorMsg());
                 worksListInfo.setWorksInfoList(worksListInfoJson.getData());
                 return worksListInfo;

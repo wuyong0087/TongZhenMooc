@@ -52,14 +52,14 @@ public class WorksListPresenter implements Presenter<WorksListView> {
     public void loadWorksList(WorksListView view, String uid, int page, int max, int listType) {
         this.listType = listType;
         switch (listType) {
-            case WorksListType.FAVORITES:
-                myCollectionUseCase.signParams(uid, page, max);
+            case WorksListType.FEATURED:
+                worksGoodListUseCase.signParams(uid, page, max);
                 break;
             case WorksListType.SHARED:
                 worksShareListUseCase.signParams(uid, page, max);
                 break;
-            case WorksListType.FEATURED:
-                worksGoodListUseCase.signParams(uid, page, max);
+            case WorksListType.FAVORITES:
+                myCollectionUseCase.signParams(uid, page, max);
                 break;
         }
 

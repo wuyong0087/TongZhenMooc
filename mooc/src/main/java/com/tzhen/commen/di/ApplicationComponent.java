@@ -5,6 +5,8 @@ import com.tzhen.mooc.activities.LaunchActivity;
 import com.tzhen.mooc.activities.LoginActivity;
 import com.tzhen.mooc.activities.MainActivity;
 import com.tzhen.mooc.activities.SignUpActivity;
+import com.tzhen.mooc.activities.UserInfoActivity;
+import com.tzhen.mooc.activities.WorksInfoActivity;
 import com.tzhen.mooc.fragments.RegisterStep1Frag;
 import com.tzhen.mooc.fragments.RegisterStep2Frag;
 import com.tzhen.mooc.fragments.RegisterStep3Frag;
@@ -39,6 +41,10 @@ public interface ApplicationComponent {
     void inject(ForgotPwdActivity forgotPwdActivity);
 
     void inject(CreateSuccessActivity createSuccessActivity);
+
+    void inject(WorksInfoActivity worksInfoActivity);
+
+    void inject(UserInfoActivity userInfoActivity);
 
     void inject(RegisterStep1Frag registerStep1Frag);
 

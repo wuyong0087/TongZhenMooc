@@ -15,7 +15,7 @@ import org.androidannotations.annotations.ViewById;
  * Created by wuyong on 16/12/13.
  */
 @EFragment(R.layout.fragment_mlm)
-public class MLMFragment extends BaseFragment<BaseInfo> implements TabLayout.OnTabSelectedListener {
+public class MLMFragment extends BaseFragment<BaseInfo> {
     @ViewById(R.id.tab_top)
     TabLayout tabTop;
 
@@ -40,28 +40,24 @@ public class MLMFragment extends BaseFragment<BaseInfo> implements TabLayout.OnT
     private void initTabs() {
         mlmAdapter = new MLMAdapter(getFragmentManager(), getContext());
         vpContainer.setAdapter(mlmAdapter);
-
+        vpContainer.setOffscreenPageLimit(2);
         tabTop.setupWithViewPager(vpContainer);
-        tabTop.setOnTabSelectedListener(this);
-    }
 
-    @Override
-    protected void lazyLoad() {
+        vpContainer.addOnPageChangeListener(new ViewPager.OnPageChangeListener() {
+            @Override
+            public void onPageScrolled(int position, float positionOffset, int positionOffsetPixels) {
 
-    }
+            }
 
-    @Override
-    public void onTabSelected(TabLayout.Tab tab) {
+            @Override
+            public void onPageSelected(int position) {
 
-    }
+            }
 
-    @Override
-    public void onTabUnselected(TabLayout.Tab tab) {
+            @Override
+            public void onPageScrollStateChanged(int state) {
 
-    }
-
-    @Override
-    public void onTabReselected(TabLayout.Tab tab) {
-
+            }
+        });
     }
 }

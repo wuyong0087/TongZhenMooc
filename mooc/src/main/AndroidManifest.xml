@@ -22,6 +22,8 @@
         <activity android:name=".activities.LoginActivity_" />
         <activity android:name=".activities.SignUpActivity_" />
         <activity android:name=".activities.MainActivity_" />
+        <activity android:name=".activities.WorksInfoActivity_"/>
+        <activity android:name=".activities.UserInfoActivity_"/>
     </application>
 
 </manifest>
