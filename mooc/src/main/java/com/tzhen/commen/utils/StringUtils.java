@@ -14,4 +14,11 @@ public class StringUtils {
     public static boolean isValidPwd(String password) {
         return password.matches(PASSWORD_REG);
     }
+
+    public static boolean isEmpty(String str){
+        if (str == null || "".equals(str)){
+            return true;
+        }
+        return false;
+    }
 }

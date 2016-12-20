@@ -1,9 +1,11 @@
 package com.tongzhen.mooc.entities;
 
+import java.io.Serializable;
+
 /**
  * Created by wuyong on 2016/11/26.
  */
-public class BaseInfo {
+public class BaseInfo implements Serializable {
     protected int result;
     protected String errorMsg;
 

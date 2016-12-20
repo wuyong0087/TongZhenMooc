@@ -4,9 +4,12 @@ package com.tongzhen.mooc.entities;
  * Created by wuyong on 16/12/1.
  */
 public class ChatParams {
+    public static final int TEXT = 1;
+    public static final int WORKS = 2;
+
     private String uid;
     private String oid;
-    private int type;
+    private int type; // 1 : text; 2 : works
     private long addtime;
     private String content;
     private int vid;

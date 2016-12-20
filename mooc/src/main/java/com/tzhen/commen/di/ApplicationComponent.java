@@ -1,5 +1,6 @@
 package com.tzhen.commen.di;
 
+import com.tzhen.mooc.activities.ChatActivity;
 import com.tzhen.mooc.activities.ForgotPwdActivity;
 import com.tzhen.mooc.activities.LaunchActivity;
 import com.tzhen.mooc.activities.LoginActivity;
@@ -45,6 +46,8 @@ public interface ApplicationComponent {
     void inject(WorksInfoActivity worksInfoActivity);
 
     void inject(UserInfoActivity userInfoActivity);
+
+    void inject(ChatActivity chatActivity);
 
     void inject(RegisterStep1Frag registerStep1Frag);
 

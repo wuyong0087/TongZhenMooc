@@ -24,6 +24,7 @@
         <activity android:name=".activities.MainActivity_" />
         <activity android:name=".activities.WorksInfoActivity_"/>
         <activity android:name=".activities.UserInfoActivity_"/>
+        <activity android:name=".activities.ChatActivity_"/>
     </application>
 
 </manifest>

@@ -2,7 +2,9 @@ package com.tongzhen.mooc.presenters;
 
 import com.tongzhen.common.presenters.Presenter;
 import com.tongzhen.common.presenters.subscribers.BaseProgressViewSubscriber;
+import com.tongzhen.mooc.entities.BaseInfo;
 import com.tongzhen.mooc.entities.UserInfo;
+import com.tongzhen.mooc.interactors.UserFollowUseCase;
 import com.tongzhen.mooc.interactors.UserInfoUseCase;
 import com.tongzhen.mooc.views.UserInfoView;
 
@@ -13,10 +15,12 @@ import javax.inject.Inject;
  */
 public class UserInfoPresenter implements Presenter<UserInfoView> {
     private UserInfoUseCase userInfoUseCase;
+    private UserFollowUseCase followUseCase;
 
     @Inject
-    public UserInfoPresenter(UserInfoUseCase userInfoUseCase) {
+    public UserInfoPresenter(UserInfoUseCase userInfoUseCase, UserFollowUseCase followUseCase) {
         this.userInfoUseCase = userInfoUseCase;
+        this.followUseCase = followUseCase;
     }
 
     @Override
@@ -38,5 +42,15 @@ public class UserInfoPresenter implements Presenter<UserInfoView> {
     @Override
     public void retry() {
 
+    }
+
+    public void follow(UserInfoView view, String oid, String uid, int val) {
+        followUseCase.signParams(uid, oid, val);
+        followUseCase.execute(new BaseProgressViewSubscriber<UserInfoView, BaseInfo>(view) {
+            @Override
+            public void onNext(BaseInfo baseInfo) {
+                view.onFollow(baseInfo);
+            }
+        });
     }
 }

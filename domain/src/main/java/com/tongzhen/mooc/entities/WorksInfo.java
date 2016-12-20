@@ -1,9 +1,11 @@
 package com.tongzhen.mooc.entities;
 
+import java.io.Serializable;
+
 /**
  * Created by wuyong on 16/12/1.
  */
-public class WorksInfo extends BaseInfo {
+public class WorksInfo extends BaseInfo implements Serializable {
     private int vid;
     private String uid;
     private String nickname;

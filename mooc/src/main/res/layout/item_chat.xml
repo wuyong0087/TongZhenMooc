@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:padding="10dp"
+    android:layout_width="match_parent"
+    android:background="@color/light_gray"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:id="@+id/rl_receiver"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/iv_receiver_header"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:src="@drawable/test"
+            app:civ_border_width="0dp"/>
+
+        <TextView
+            android:layout_toRightOf="@id/iv_receiver_header"
+            android:layout_marginLeft="10dp"
+            android:textColor="@color/black"
+            android:layout_width="wrap_content"
+            android:padding="10dp"
+            android:layout_height="wrap_content"
+            android:background="@drawable/shape_chat_receiver_bg"
+            android:id="@+id/tv_receiver_content"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:layout_marginLeft="10dp"
+            android:id="@+id/tv_date"
+            android:layout_toRightOf="@id/iv_receiver_header"
+            android:layout_below="@id/tv_receiver_content"
+            android:text="1233"/>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/rl_sender"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:layout_alignParentRight="true"
+            android:id="@+id/iv_sender_header"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:src="@drawable/test"
+            app:civ_border_width="0dp"/>
+
+        <TextView
+            android:layout_toLeftOf="@id/iv_sender_header"
+            android:layout_marginRight="10dp"
+            android:textColor="@color/black"
+            android:layout_width="wrap_content"
+            android:padding="10dp"
+            android:layout_height="wrap_content"
+            android:background="@drawable/shape_chat_receiver_bg"
+            android:id="@+id/tv_sender_content"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:layout_toLeftOf="@id/iv_sender_header"
+            android:layout_marginRight="10dp"
+            android:id="@+id/tv_sender_date"
+            android:layout_below="@id/tv_sender_content"
+            android:text="1233"/>
+    </RelativeLayout>
+</RelativeLayout>

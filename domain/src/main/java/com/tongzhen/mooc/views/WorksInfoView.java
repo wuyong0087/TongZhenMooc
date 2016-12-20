@@ -12,4 +12,8 @@ public interface WorksInfoView extends BaseView<WorksInfo> {
     void onLoadedComments(CommentListInfo commentListInfo);
 
     void onCommentPost(BaseInfo baseInfo);
+
+    void onLike(BaseInfo baseInfo);
+
+    void onCollect(BaseInfo baseInfo);
 }

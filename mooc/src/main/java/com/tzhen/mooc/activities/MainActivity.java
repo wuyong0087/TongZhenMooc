@@ -55,6 +55,8 @@ public class MainActivity extends BaseActivity<BaseInfo> implements TabLayout.On
 
         initToolBar(toolbar, true);
 
+        setToolbarTitle(getString(R.string.mlm));
+
         toolbar.setNavigationIcon(R.drawable.course_center);
 
         initTabs();
@@ -96,6 +98,11 @@ public class MainActivity extends BaseActivity<BaseInfo> implements TabLayout.On
         rightMenuFilter = menu.findItem(R.id.action_filter);
         rightMenuMore = menu.findItem(R.id.action_more);
         return true;
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        return super.onOptionsItemSelected(item);
     }
 
     @Override
@@ -203,7 +210,6 @@ public class MainActivity extends BaseActivity<BaseInfo> implements TabLayout.On
             case MLM:
             case QA:
                 toolbar.setNavigationIcon(R.drawable.course_center);
-                setToolBarDisplayHomeAsUpEnabled(true);
                 rightMenuFilter.setVisible(true);
                 break;
             case CONTACTS:

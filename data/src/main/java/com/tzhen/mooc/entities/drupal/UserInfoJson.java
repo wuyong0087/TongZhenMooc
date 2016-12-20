@@ -12,4 +12,8 @@ public class UserInfoJson extends BaseInfo {
     public UserInfo getData() {
         return data;
     }
+
+    public void setData(UserInfo data) {
+        this.data = data;
+    }
 }
