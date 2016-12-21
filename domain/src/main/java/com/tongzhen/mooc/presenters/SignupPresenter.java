@@ -12,11 +12,11 @@ import javax.inject.Inject;
 /**
  * Created by wuyong on 16/12/21.
  */
-public class SignupPresenter implements Presenter<SignUpView> {
+public class SignUpPresenter implements Presenter<SignUpView> {
     private RegisterUseCase registerUseCase;
 
     @Inject
-    public SignupPresenter(RegisterUseCase registerUseCase) {
+    public SignUpPresenter(RegisterUseCase registerUseCase) {
         this.registerUseCase = registerUseCase;
     }
 

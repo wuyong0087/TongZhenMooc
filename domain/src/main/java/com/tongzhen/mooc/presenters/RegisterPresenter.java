@@ -3,6 +3,7 @@ package com.tongzhen.mooc.presenters;
 import com.tongzhen.common.presenters.Presenter;
 import com.tongzhen.common.presenters.subscribers.BaseProgressViewSubscriber;
 import com.tongzhen.mooc.entities.RegisterInfo;
+import com.tongzhen.mooc.entities.params.RegisterParams;
 import com.tongzhen.mooc.interactors.RegisterUseCase;
 import com.tongzhen.mooc.views.RegisterView;
 
@@ -24,8 +25,8 @@ public class RegisterPresenter implements Presenter<RegisterView> {
         useCase.execute(new BaseProgressViewSubscriber<RegisterView, RegisterInfo>(view) {});
     }
 
-    public void attachView(RegisterView view, String username, String password, String nickname, int sex, int country, String description) {
-        useCase.signParams(username, password, nickname, sex, country, description);
+    public void attachView(RegisterView view, RegisterParams params) {
+        useCase.signParams(params);
         attachView(view);
     }
 

@@ -5,12 +5,10 @@ import android.support.v4.app.FragmentManager;
 import android.view.KeyEvent;
 import android.view.MenuItem;
 
-import com.tongzhen.mooc.entities.BaseInfo;
 import com.tongzhen.mooc.entities.RegisterInfo;
 import com.tongzhen.mooc.entities.params.RegisterParams;
-import com.tongzhen.mooc.entities.types.Gender;
 import com.tongzhen.mooc.entities.types.ResultCodes;
-import com.tongzhen.mooc.presenters.SignupPresenter;
+import com.tongzhen.mooc.presenters.SignUpPresenter;
 import com.tongzhen.mooc.views.SignUpView;
 import com.tzhen.commen.activity.BaseActivity;
 import com.tzhen.commen.utils.StringUtils;
@@ -43,7 +41,7 @@ public class SignUpActivity extends BaseActivity<RegisterInfo> implements SignUp
     private RegisterParams.Builder paramsBuilder;
 
     @Inject
-    SignupPresenter presenter;
+    SignUpPresenter presenter;
 
     @Override
     protected void init() {

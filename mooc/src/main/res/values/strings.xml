@@ -77,4 +77,11 @@
     <string name="un_follow_success">Un follow success</string>
     <string name="follow_success">Follow success</string>
     <string name="please_input_content">Please input chat content</string>
+    <string name="gender_dialog_title">Gender</string>
+
+    <array name="gender">
+        <item>Secret</item>
+        <item>Male</item>
+        <item>Female</item>
+    </array>
 </resources>
