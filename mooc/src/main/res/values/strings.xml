@@ -78,10 +78,20 @@
     <string name="follow_success">Follow success</string>
     <string name="please_input_content">Please input chat content</string>
     <string name="gender_dialog_title">Gender</string>
+    <string name="course_videos">Videos %1$s</string>
+    <string name="course_questions">Questions %1$s</string>
+    <string name="course_enrollments">Enrollments %1$s</string>
+    <string name="course_center">Course Center</string>
 
     <array name="gender">
         <item>Secret</item>
         <item>Male</item>
         <item>Female</item>
+    </array>
+
+    <array name="course_info_type">
+        <item>Overview</item>
+        <item>MLM</item>
+        <item>Q&#038;A</item>
     </array>
 </resources>

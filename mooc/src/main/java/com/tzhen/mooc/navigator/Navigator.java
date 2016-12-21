@@ -1,16 +1,15 @@
 package com.tzhen.mooc.navigator;
 
 import android.content.Context;
-import android.support.v4.app.FragmentActivity;
 
 import com.tzhen.mooc.activities.ChatActivity_;
+import com.tzhen.mooc.activities.CourseCenterActivity_;
+import com.tzhen.mooc.activities.CourseInfoActivity_;
 import com.tzhen.mooc.activities.ForgotPwdActivity_;
 import com.tzhen.mooc.activities.LoginActivity_;
 import com.tzhen.mooc.activities.MainActivity_;
 import com.tzhen.mooc.activities.SignUpActivity_;
-import com.tzhen.mooc.activities.UserInfoActivity;
 import com.tzhen.mooc.activities.UserInfoActivity_;
-import com.tzhen.mooc.activities.WorksInfoActivity;
 import com.tzhen.mooc.activities.WorksInfoActivity_;
 
 import javax.inject.Inject;
@@ -49,5 +48,13 @@ public class Navigator {
 
     public void toChat(Context context, String oid) {
         ChatActivity_.intent(context).oid(oid).start();
+    }
+
+    public void toCourseInfo(Context context, int cid) {
+        CourseInfoActivity_.intent(context).cid(cid).start();
+    }
+
+    public void toCourseCenter(Context context) {
+        CourseCenterActivity_.intent(context).start();
     }
 }

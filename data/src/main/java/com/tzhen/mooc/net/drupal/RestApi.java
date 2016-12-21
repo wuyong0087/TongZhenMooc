@@ -261,7 +261,19 @@ public class RestApi {
     }
 
     public Observable<CourseListInfoJson> course_list(int subject, int page, int max) {
-        return endpoints.course_list(subject, page, max, encryptParams());
+        encryptParams();
+        if (subject > 0){
+            paramsMap.put("subject", subject + "");
+        }
+
+        if (page > 0){
+            paramsMap.put("page", page + "");
+        }
+        if (max > 0){
+            paramsMap.put("max", max + "");
+        }
+
+        return endpoints.course_list(paramsMap);
     }
 
     public Observable<CourseIntroduceInfoJson> course_info_introduce(int cid, String uid) {

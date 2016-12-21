@@ -147,7 +147,7 @@ public interface Endpoints {
 
     @FormUrlEncoded
     @POST("?mod=wetube&act=course_list")
-    Observable<CourseListInfoJson> course_list(@Field("uid") int uid, @Field("page") int page, @Field("max") int max, @FieldMap Map<String, String> paramsMap);
+    Observable<CourseListInfoJson> course_list(@FieldMap Map<String, String> paramsMap);
 
     @FormUrlEncoded
     @POST("?mod=wetube&act=course_info_introduce")

@@ -19,10 +19,13 @@ import com.tzhen.mooc.main.ContactsFragment_;
 import com.tzhen.mooc.main.MLMFragment_;
 import com.tzhen.mooc.main.MeFragment_;
 import com.tzhen.mooc.main.QAFragment_;
+import com.tzhen.mooc.navigator.Navigator;
 
 import org.androidannotations.annotations.Click;
 import org.androidannotations.annotations.EActivity;
 import org.androidannotations.annotations.ViewById;
+
+import javax.inject.Inject;
 
 @EActivity(R.layout.activity_main)
 public class MainActivity extends BaseActivity<BaseInfo> implements TabLayout.OnTabSelectedListener {
@@ -41,6 +44,9 @@ public class MainActivity extends BaseActivity<BaseInfo> implements TabLayout.On
     @ViewById(R.id.tab_bottom)
     TabLayout tabBottom;
 
+    @Inject
+    Navigator navigator;
+
     private MenuItem rightMenuSearch, rightMenuFilter, rightMenuMore;
 
     @Override
@@ -53,6 +59,14 @@ public class MainActivity extends BaseActivity<BaseInfo> implements TabLayout.On
     protected void initViews() {
         super.initViews();
 
+        setupViews();
+
+        attachFragment(MLM);
+
+    }
+
+    private void setupViews() {
+
         initToolBar(toolbar, true);
 
         setToolbarTitle(getString(R.string.mlm));
@@ -60,9 +74,6 @@ public class MainActivity extends BaseActivity<BaseInfo> implements TabLayout.On
         toolbar.setNavigationIcon(R.drawable.course_center);
 
         initTabs();
-
-        attachFragment(MLM);
-
     }
 
     private void initTabs() {
@@ -102,6 +113,11 @@ public class MainActivity extends BaseActivity<BaseInfo> implements TabLayout.On
 
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
+        switch (item.getItemId()){
+            case android.R.id.home:
+                navigator.toCourseCenter(this);
+                break;
+        }
         return super.onOptionsItemSelected(item);
     }
 

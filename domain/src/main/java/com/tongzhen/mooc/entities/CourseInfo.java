@@ -3,7 +3,7 @@ package com.tongzhen.mooc.entities;
 /**
  * Created by wuyong on 16/12/1.
  */
-public class CourseInfo {
+public class CourseInfo extends BaseInfo {
     private int cid;
     private String course_title;
     private String cover;

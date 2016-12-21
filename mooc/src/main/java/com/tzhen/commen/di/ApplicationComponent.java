@@ -1,6 +1,8 @@
 package com.tzhen.commen.di;
 
 import com.tzhen.mooc.activities.ChatActivity;
+import com.tzhen.mooc.activities.CourseCenterActivity;
+import com.tzhen.mooc.activities.CourseInfoActivity;
 import com.tzhen.mooc.activities.ForgotPwdActivity;
 import com.tzhen.mooc.activities.LaunchActivity;
 import com.tzhen.mooc.activities.LoginActivity;
@@ -46,6 +48,10 @@ public interface ApplicationComponent {
     void inject(WorksInfoActivity worksInfoActivity);
 
     void inject(UserInfoActivity userInfoActivity);
+
+    void inject(CourseCenterActivity courseCenterActivity);
+
+    void inject(CourseInfoActivity courseInfoActivity);
 
     void inject(ChatActivity chatActivity);
 
