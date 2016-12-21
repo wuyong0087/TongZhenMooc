@@ -6,7 +6,14 @@ import android.view.KeyEvent;
 import android.view.MenuItem;
 
 import com.tongzhen.mooc.entities.BaseInfo;
+import com.tongzhen.mooc.entities.RegisterInfo;
+import com.tongzhen.mooc.entities.params.RegisterParams;
+import com.tongzhen.mooc.entities.types.Gender;
+import com.tongzhen.mooc.entities.types.ResultCodes;
+import com.tongzhen.mooc.presenters.SignupPresenter;
+import com.tongzhen.mooc.views.SignUpView;
 import com.tzhen.commen.activity.BaseActivity;
+import com.tzhen.commen.utils.StringUtils;
 import com.tzhen.mooc.R;
 import com.tzhen.mooc.fragments.RegisterStep1Frag_;
 import com.tzhen.mooc.fragments.RegisterStep2Frag;
@@ -16,11 +23,13 @@ import com.tzhen.mooc.fragments.RegisterStep3Frag_;
 
 import org.androidannotations.annotations.EActivity;
 
+import javax.inject.Inject;
+
 /**
  * Created by wuyong on 16/12/12.
  */
 @EActivity(R.layout.activity_sign_up)
-public class SignUpActivity extends BaseActivity<BaseInfo> {
+public class SignUpActivity extends BaseActivity<RegisterInfo> implements SignUpView {
 
     public static final int STEP_1 = 1;
 
@@ -31,6 +40,11 @@ public class SignUpActivity extends BaseActivity<BaseInfo> {
     private FragmentManager fm;
     private Fragment frag = null;
 
+    private RegisterParams.Builder paramsBuilder;
+
+    @Inject
+    SignupPresenter presenter;
+
     @Override
     protected void init() {
         super.init();
@@ -40,6 +54,8 @@ public class SignUpActivity extends BaseActivity<BaseInfo> {
     @Override
     protected void initViews() {
         super.initViews();
+
+        paramsBuilder = new RegisterParams.Builder();
 
         fm = getSupportFragmentManager();
 
@@ -87,6 +103,40 @@ public class SignUpActivity extends BaseActivity<BaseInfo> {
 
         } else if (frag instanceof RegisterStep2Frag){
             attachFragment(STEP_1);
+        }
+    }
+
+    public void setupParams(RegisterParams params){
+        if (!StringUtils.isEmpty(params.getUsername())){
+            paramsBuilder.setUsername(params.getUsername());
+        }
+        if (!StringUtils.isEmpty(params.getPassword())){
+            paramsBuilder.setPassword(params.getPassword());
+        }
+        if (!StringUtils.isEmpty(params.getNickname())){
+            paramsBuilder.setNickname(params.getNickname());
+        }
+        if (!StringUtils.isEmpty(params.getDescription())){
+            paramsBuilder.setDescription(params.getDescription());
+        }
+        if (params.getSex() > -1){
+            paramsBuilder.setSex(params.getSex());
+        }
+        if (params.getCountry() > 0){
+            paramsBuilder.setCountry(params.getCountry());
+        }
+    }
+
+    public void signup(){
+        presenter.attachView(this, paramsBuilder.build());
+    }
+
+    @Override
+    public void onSuccess(RegisterInfo value) {
+        if (ResultCodes.OK == value.getResult()){
+            attachFragment(STEP_3);
+        } else{
+            showMsg(value.getErrorMsg());
         }
     }
 }

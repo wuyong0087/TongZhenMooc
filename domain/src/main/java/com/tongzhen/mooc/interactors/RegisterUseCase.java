@@ -4,6 +4,7 @@ import com.tongzhen.common.interactors.BaseUseCase;
 import com.tongzhen.common.schedulers.ObserveOn;
 import com.tongzhen.common.schedulers.SubscribeOn;
 import com.tongzhen.mooc.entities.RegisterInfo;
+import com.tongzhen.mooc.entities.params.RegisterParams;
 import com.tongzhen.mooc.repositories.SessionRepository;
 
 import javax.inject.Inject;
@@ -33,11 +34,12 @@ public class RegisterUseCase extends BaseUseCase<RegisterInfo> {
         return sessionRepository.register(username, password, nickname, sex, country, description);
     }
 
-    public void signParams(String username, String password, String nickname, int sex, int country, String description){
-        this.username = username;
-        this.password = password;
-        this.sex = sex;
-        this.country = country;
-        this.description = description;
+    public void signParams(RegisterParams params){
+        this.username = params.getUsername();
+        this.password = params.getPassword();
+        this.nickname = params.getNickname();
+        this.sex = params.getSex();
+        this.country = params.getCountry();
+        this.description = params.getDescription();
     }
 }

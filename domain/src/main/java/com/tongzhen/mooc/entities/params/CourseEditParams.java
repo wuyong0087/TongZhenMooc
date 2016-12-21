@@ -1,4 +1,4 @@
-package com.tongzhen.mooc.entities;
+package com.tongzhen.mooc.entities.params;
 
 /**
  * Created by wuyong on 16/12/1.

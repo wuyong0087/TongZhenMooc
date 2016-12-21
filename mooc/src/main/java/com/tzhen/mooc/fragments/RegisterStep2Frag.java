@@ -1,6 +1,8 @@
 package com.tzhen.mooc.fragments;
 
+import android.view.View;
 import android.widget.EditText;
+import android.widget.TextView;
 
 import com.tongzhen.mooc.entities.BaseInfo;
 import com.tzhen.commen.fragment.BaseFragment;
@@ -17,11 +19,7 @@ import org.androidannotations.annotations.ViewById;
 @EFragment(R.layout.fragment_register_step_second)
 public class RegisterStep2Frag extends BaseFragment<BaseInfo> {
 
-    @ViewById(R.id.et_username) EditText etUsername;
-
-    @ViewById(R.id.et_password) EditText etPassword;
-
-    @ViewById(R.id.et_confirm_password) EditText etConfirmPassword;
+    @ViewById(R.id.et_nickname) EditText etUsername;
 
     @Override
     protected void init() {
@@ -34,8 +32,19 @@ public class RegisterStep2Frag extends BaseFragment<BaseInfo> {
         super.initViews();
     }
 
-    @Click(R.id.btn_next)
-    public void signUp(){
-        ((SignUpActivity)getActivity()).attachFragment(SignUpActivity.STEP_2);
+    @Click({R.id.btn_next, R.id.tv_gender, R.id.tv_country})
+    public void signUp(View v){
+        switch (v.getId()){
+            case R.id.tv_next:
+                ((SignUpActivity)getActivity()).attachFragment(SignUpActivity.STEP_3);
+            break;
+            case R.id.tv_gender:
+
+                break;
+            case R.id.tv_country:
+
+                break;
+        }
+
     }
 }

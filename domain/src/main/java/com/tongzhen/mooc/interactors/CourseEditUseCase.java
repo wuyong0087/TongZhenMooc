@@ -4,7 +4,7 @@ import com.tongzhen.common.interactors.BaseUseCase;
 import com.tongzhen.common.schedulers.ObserveOn;
 import com.tongzhen.common.schedulers.SubscribeOn;
 import com.tongzhen.mooc.entities.CourseEditInfo;
-import com.tongzhen.mooc.entities.CourseEditParams;
+import com.tongzhen.mooc.entities.params.CourseEditParams;
 import com.tongzhen.mooc.repositories.SessionRepository;
 
 import javax.inject.Inject;

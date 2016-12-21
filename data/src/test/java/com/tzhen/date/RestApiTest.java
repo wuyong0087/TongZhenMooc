@@ -1,10 +1,10 @@
 package com.tzhen.date;
 
 import com.tongzhen.mooc.entities.BaseInfo;
-import com.tongzhen.mooc.entities.CourseApplyParams;
-import com.tongzhen.mooc.entities.CourseEditParams;
-import com.tongzhen.mooc.entities.UserInfoEditParams;
-import com.tongzhen.mooc.entities.UserVerifyParams;
+import com.tongzhen.mooc.entities.params.CourseApplyParams;
+import com.tongzhen.mooc.entities.params.CourseEditParams;
+import com.tongzhen.mooc.entities.params.UserInfoEditParams;
+import com.tongzhen.mooc.entities.params.UserVerifyParams;
 import com.tongzhen.mooc.entities.types.AnswerType;
 import com.tongzhen.mooc.entities.types.Gender;
 import com.tongzhen.mooc.entities.types.QuestionType;
@@ -73,15 +73,27 @@ public class RestApiTest {
     }
 
     @Test
+    public void sendCode(){
+        TestSubscriber<SendCodeInfoJson> subscriber = new TestSubscriber<>();
+
+        String username = "546141112@qq.com";
+
+        restApi.send_code(username, SendCodeType.REG).subscribe(subscriber);
+
+        subscriber.awaitTerminalEvent();
+        assertThat(subscriber.getOnNextEvents().size(), is(1));
+    }
+
+    @Test
     public void register(){
         TestSubscriber<RegisterJson> subscriber = new TestSubscriber<>();
 
-        String username = "wy@qq.com";
+        String username = "546141112@qq.com";
         String password = "000000";
-        String nickname = "WYMMY";
+        String nickname = "Jon";
         int sex = Gender.MALE;
         int country = 86;
-        String description = "AAAAAA";
+        String description = "This is my english name";
         restApi.register(username, password, nickname, sex, country, description).subscribe(subscriber);
 
         subscriber.awaitTerminalEvent();

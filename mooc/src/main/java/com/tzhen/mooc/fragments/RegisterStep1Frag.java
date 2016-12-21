@@ -3,6 +3,7 @@ package com.tzhen.mooc.fragments;
 import android.widget.EditText;
 
 import com.tongzhen.mooc.entities.BaseInfo;
+import com.tongzhen.mooc.entities.params.RegisterParams;
 import com.tzhen.commen.fragment.BaseFragment;
 import com.tzhen.mooc.R;
 import com.tzhen.mooc.activities.SignUpActivity;
@@ -36,6 +37,15 @@ public class RegisterStep1Frag extends BaseFragment<BaseInfo> {
 
     @Click(R.id.btn_next)
     public void signUp(){
-        ((SignUpActivity)getActivity()).attachFragment(SignUpActivity.STEP_2);
+        String username = etUsername.getText().toString().trim();
+        String password = etPassword.getText().toString().trim();
+
+        SignUpActivity activity = (SignUpActivity) getActivity();
+        RegisterParams params = new RegisterParams.Builder()
+                .setUsername(username)
+                .setPassword(password)
+                .build();
+        activity.setupParams(params);
+        activity.attachFragment(SignUpActivity.STEP_2);
     }
 }

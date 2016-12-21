@@ -2,11 +2,11 @@ package com.tzhen.mooc.net.drupal;
 
 import com.tongzhen.mooc.entities.BaseInfo;
 import com.tongzhen.mooc.entities.ChatParams;
-import com.tongzhen.mooc.entities.CourseApplyParams;
-import com.tongzhen.mooc.entities.CourseEditParams;
-import com.tongzhen.mooc.entities.UserInfoEditParams;
-import com.tongzhen.mooc.entities.UserVerifyParams;
-import com.tongzhen.mooc.entities.WorksUpLoadParams;
+import com.tongzhen.mooc.entities.params.CourseApplyParams;
+import com.tongzhen.mooc.entities.params.CourseEditParams;
+import com.tongzhen.mooc.entities.params.UserInfoEditParams;
+import com.tongzhen.mooc.entities.params.UserVerifyParams;
+import com.tongzhen.mooc.entities.params.WorksUpLoadParams;
 import com.tzhen.mooc.entities.drupal.AnswerListInfoJson;
 import com.tzhen.mooc.entities.drupal.ChatListInfoJson;
 import com.tzhen.mooc.entities.drupal.CityListInfoJson;

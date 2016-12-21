@@ -7,9 +7,9 @@ import com.tongzhen.mooc.entities.ChatParams;
 import com.tongzhen.mooc.entities.CityListInfo;
 import com.tongzhen.mooc.entities.CommentListInfo;
 import com.tongzhen.mooc.entities.CountryListInfo;
-import com.tongzhen.mooc.entities.CourseApplyParams;
+import com.tongzhen.mooc.entities.params.CourseApplyParams;
 import com.tongzhen.mooc.entities.CourseEditInfo;
-import com.tongzhen.mooc.entities.CourseEditParams;
+import com.tongzhen.mooc.entities.params.CourseEditParams;
 import com.tongzhen.mooc.entities.CourseIntroduceInfo;
 import com.tongzhen.mooc.entities.CourseListInfo;
 import com.tongzhen.mooc.entities.QuestionInfo;
@@ -19,13 +19,13 @@ import com.tongzhen.mooc.entities.SendCodeInfo;
 import com.tongzhen.mooc.entities.SubjectListInfo;
 import com.tongzhen.mooc.entities.TitleListInfo;
 import com.tongzhen.mooc.entities.UserInfo;
-import com.tongzhen.mooc.entities.UserInfoEditParams;
+import com.tongzhen.mooc.entities.params.UserInfoEditParams;
 import com.tongzhen.mooc.entities.UserListInfo;
 import com.tongzhen.mooc.entities.UserVerifyInfo;
-import com.tongzhen.mooc.entities.UserVerifyParams;
+import com.tongzhen.mooc.entities.params.UserVerifyParams;
 import com.tongzhen.mooc.entities.WorksInfo;
 import com.tongzhen.mooc.entities.WorksListInfo;
-import com.tongzhen.mooc.entities.WorksUpLoadParams;
+import com.tongzhen.mooc.entities.params.WorksUpLoadParams;
 
 import rx.Observable;
 
