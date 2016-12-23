@@ -64,7 +64,7 @@ public class RestApiTest {
     public void login(){
         TestSubscriber<LoginJson> subscriber = new TestSubscriber<>();
 
-        String mobile = "18800000001@163.com";
+        String mobile = "wy@qq.com";
         String password = "000000";
         restApi.login(mobile, password).subscribe(subscriber);
 

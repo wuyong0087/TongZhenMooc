@@ -11,6 +11,7 @@ import com.tzhen.mooc.activities.MainActivity_;
 import com.tzhen.mooc.activities.SignUpActivity_;
 import com.tzhen.mooc.activities.UserInfoActivity_;
 import com.tzhen.mooc.activities.WorksInfoActivity_;
+import com.tzhen.mooc.countrylist.CountryListActivity_;
 
 import javax.inject.Inject;
 
@@ -56,5 +57,9 @@ public class Navigator {
 
     public void toCourseCenter(Context context) {
         CourseCenterActivity_.intent(context).start();
+    }
+
+    public void toCountryList(Context context) {
+        CountryListActivity_.intent(context).start();
     }
 }

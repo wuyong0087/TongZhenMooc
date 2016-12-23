@@ -10,6 +10,7 @@ import com.tzhen.mooc.activities.MainActivity;
 import com.tzhen.mooc.activities.SignUpActivity;
 import com.tzhen.mooc.activities.UserInfoActivity;
 import com.tzhen.mooc.activities.WorksInfoActivity;
+import com.tzhen.mooc.countrylist.CountryListActivity;
 import com.tzhen.mooc.fragments.RegisterStep1Frag;
 import com.tzhen.mooc.fragments.RegisterStep2Frag;
 import com.tzhen.mooc.fragments.RegisterStep3Frag;
@@ -52,6 +53,8 @@ public interface ApplicationComponent {
     void inject(CourseCenterActivity courseCenterActivity);
 
     void inject(CourseInfoActivity courseInfoActivity);
+
+    void inject(CountryListActivity countryListActivity);
 
     void inject(ChatActivity chatActivity);
 

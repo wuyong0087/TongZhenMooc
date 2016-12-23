@@ -82,6 +82,9 @@
     <string name="course_questions">Questions %1$s</string>
     <string name="course_enrollments">Enrollments %1$s</string>
     <string name="course_center">Course Center</string>
+    <string name="choose">Choose</string>
+    <string name="choose_a_country">Choose a country</string>
+    <string name="country_list">Country list</string>
 
     <array name="gender">
         <item>Secret</item>

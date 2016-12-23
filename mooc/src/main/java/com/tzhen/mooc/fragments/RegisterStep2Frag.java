@@ -1,5 +1,7 @@
 package com.tzhen.mooc.fragments;
 
+import android.content.Context;
+import android.support.annotation.MainThread;
 import android.view.View;
 import android.widget.EditText;
 import android.widget.TextView;
@@ -10,10 +12,17 @@ import com.tongzhen.mooc.entities.params.RegisterParams;
 import com.tzhen.commen.fragment.BaseFragment;
 import com.tzhen.mooc.R;
 import com.tzhen.mooc.activities.SignUpActivity;
+import com.tzhen.mooc.events.CountryEvent;
+import com.tzhen.mooc.navigator.Navigator;
 
 import org.androidannotations.annotations.Click;
 import org.androidannotations.annotations.EFragment;
 import org.androidannotations.annotations.ViewById;
+import org.greenrobot.eventbus.EventBus;
+import org.greenrobot.eventbus.Subscribe;
+import org.greenrobot.eventbus.ThreadMode;
+
+import javax.inject.Inject;
 
 /**
  * Created by wuyong on 16/12/2.
@@ -27,7 +36,12 @@ public class RegisterStep2Frag extends BaseFragment<BaseInfo> {
 
     @ViewById(R.id.tv_country) TextView tvCountry;
 
+    @Inject
+    Navigator navigator;
+
     private RegisterParams.Builder paramsBuilder;
+
+    private EventBus eventBus;
 
     @Override
     protected void init() {
@@ -39,6 +53,7 @@ public class RegisterStep2Frag extends BaseFragment<BaseInfo> {
     protected void initViews() {
         super.initViews();
         paramsBuilder = new RegisterParams.Builder();
+
     }
 
     @Click({R.id.btn_next, R.id.tv_gender, R.id.tv_country})
@@ -53,10 +68,14 @@ public class RegisterStep2Frag extends BaseFragment<BaseInfo> {
                 showGenderDialog();
                 break;
             case R.id.tv_country:
-
+                showCountriesDialog();
                 break;
         }
 
+    }
+
+    private void showCountriesDialog() {
+        navigator.toCountryList(getContext());
     }
 
     private void showGenderDialog(){
@@ -68,13 +87,31 @@ public class RegisterStep2Frag extends BaseFragment<BaseInfo> {
                     public boolean onSelection(MaterialDialog dialog, View view, int gender, CharSequence text) {
                         paramsBuilder.setSex(gender);
                         tvGender.setText(text);
-                        /**
-                         * If you use alwaysCallSingleChoiceCallback(), which is discussed below,
-                         * returning false here won't allow the newly selected radio button to actually be selected.
-                         **/
                         return true;
                     }
                 })
+                .positiveText(R.string.choose)
                 .show();
+    }
+
+    @Override
+    public void onAttach(Context context) {
+        super.onAttach(context);
+        eventBus = EventBus.getDefault();
+        eventBus.register(this);
+    }
+
+    @Override
+    public void onDetach() {
+        super.onDetach();
+        eventBus.unregister(this);
+    }
+
+    @Subscribe(threadMode = ThreadMode.MAIN)
+    public void onCountryEvent(CountryEvent event){
+        if (event != null){
+            tvCountry.setText(event.getInfo().getName());
+            paramsBuilder.setCountry(event.getInfo().getId());
+        }
     }
 }

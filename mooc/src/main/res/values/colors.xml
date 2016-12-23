@@ -15,4 +15,6 @@
     <color name="yellow">#f05500</color>
 
     <color name="transparent">#00000000</color>
+    <color name="listview_item_normal">#eef0ed</color>
+    <color name="listview_item_pressed">#d4d4d4</color>
 </resources>

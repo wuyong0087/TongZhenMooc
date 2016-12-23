@@ -18,6 +18,8 @@ import com.tzhen.mooc.progress.DialogProgress;
 import org.androidannotations.annotations.AfterInject;
 import org.androidannotations.annotations.AfterViews;
 import org.androidannotations.annotations.EActivity;
+import org.greenrobot.eventbus.Subscribe;
+import org.greenrobot.eventbus.ThreadMode;
 
 import javax.inject.Inject;
 
@@ -146,8 +148,10 @@ public abstract class BaseActivity<T extends BaseInfo> extends AppCompatActivity
 
     }
 
+    @Subscribe(threadMode = ThreadMode.MAIN)
     @Override
     public void showDefaultView(BaseInfo value) {
 
     }
+
 }
