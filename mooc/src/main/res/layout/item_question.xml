@@ -1,0 +1,177 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="5dp"
+        android:background="@color/gray" />
+    <!--top info-->
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="8dp">
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/iv_header"
+            android:layout_width="35dp"
+            android:layout_height="35dp"
+            android:layout_marginRight="10dp"
+            android:src="@drawable/test" />
+
+        <ImageView
+            android:id="@+id/iv_level_icon"
+            android:layout_width="15dp"
+            android:layout_height="15dp"
+            android:layout_alignBottom="@id/iv_header"
+            android:layout_alignRight="@id/iv_header" />
+
+        <TextView
+            android:id="@+id/tv_nickname"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@id/iv_header"
+            android:text="123"
+            android:textColor="@color/yellow"
+            android:textSize="16sp" />
+
+        <TextView
+            android:id="@+id/tv_date"
+            android:layout_marginLeft="3dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tv_nickname"
+            android:layout_toRightOf="@id/iv_header"
+            android:text="123"
+            android:textSize="12sp" />
+
+        <TextView
+            android:id="@+id/tv_curse"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="15dp"
+            android:background="@drawable/shape_oval_gray_stroke_bg"
+            android:paddingBottom="5dp"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            android:paddingTop="5dp"
+            android:text="123" />
+    </RelativeLayout>
+
+    <include layout="@layout/split_layout" />
+
+    <!--works info-->
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="8dp">
+
+        <ImageView
+            android:id="@+id/iv_question_cover"
+            android:layout_width="160dp"
+            android:layout_height="100dp"
+            android:layout_marginRight="15dp"
+            android:src="@drawable/shape_place_holder" />
+
+        <TextView
+            android:id="@+id/tv_question_content"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="123"
+            android:layout_toRightOf="@id/iv_question_cover" />
+    </RelativeLayout>
+
+    <include layout="@layout/split_layout" />
+
+    <LinearLayout
+        android:padding="5dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@id/iv_cover"
+        android:layout_below="@+id/tv_duration"
+        android:layout_toRightOf="@id/iv_cover"
+        android:gravity="bottom">
+
+        <LinearLayout
+            android:id="@+id/ll_shares"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:layout_width="@dimen/works_options_icon_width"
+                android:layout_height="@dimen/works_options_icon_height"
+                android:src="@drawable/weike_answer" />
+
+            <TextView
+                android:id="@+id/tv_works_answers"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="3dp"
+                android:text="0" />
+
+        </LinearLayout>
+
+        <View
+            android:layout_width="1dp"
+            android:layout_height="match_parent"
+            android:background="@color/gray" />
+
+        <LinearLayout
+            android:id="@+id/ll_comments"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:layout_width="@dimen/works_options_icon_width"
+                android:layout_height="@dimen/works_options_icon_height"
+                android:src="@drawable/idea" />
+
+            <TextView
+                android:id="@+id/tv_ideas"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="3dp"
+                android:text="0" />
+        </LinearLayout>
+
+        <View
+            android:layout_width="1dp"
+            android:layout_height="match_parent"
+            android:background="@color/gray" />
+
+        <LinearLayout
+            android:id="@+id/ll_likes"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:layout_width="@dimen/works_options_icon_width"
+                android:layout_height="@dimen/works_options_icon_height"
+                android:src="@drawable/same_ask" />
+
+            <TextView
+                android:id="@+id/tv_same_asks"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="3dp"
+                android:text="0" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <include layout="@layout/split_layout" />
+</LinearLayout>

@@ -85,6 +85,8 @@
     <string name="choose">Choose</string>
     <string name="choose_a_country">Choose a country</string>
     <string name="country_list">Country list</string>
+    <string name="sorry_get_empty_data">Sorry! get empty data</string>
+    <string name="replys">Reply %1$s</string>
 
     <array name="gender">
         <item>Secret</item>

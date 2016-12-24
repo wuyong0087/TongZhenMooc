@@ -2,7 +2,6 @@ package com.tzhen.mooc.activities;
 
 import android.support.design.widget.TabLayout;
 import android.support.v4.app.Fragment;
-import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentTransaction;
 import android.support.v4.content.ContextCompat;
 import android.support.v7.widget.Toolbar;
@@ -50,13 +49,6 @@ public class MainActivity extends BaseActivity<BaseInfo> implements TabLayout.On
 
     private MenuItem rightMenuSearch, rightMenuFilter, rightMenuMore;
 
-    private MLMFragment_.FragmentBuilder_ mlmFragBulder;
-    private QAFragment_.FragmentBuilder_ qaFragBuilder;
-    private ContactsFragment_.FragmentBuilder_ contactsFragBuilder;
-    private MeFragment_.FragmentBuilder_ meFragBuilder;
-
-    private FragmentManager fm;
-
     @Override
     protected void init() {
         super.init();
@@ -83,7 +75,6 @@ public class MainActivity extends BaseActivity<BaseInfo> implements TabLayout.On
 
         initTabs();
 
-        initFragments();
         attachFragment(MLM);
     }
 
@@ -101,7 +92,7 @@ public class MainActivity extends BaseActivity<BaseInfo> implements TabLayout.On
             ivIcon.setImageResource(unSelectIcons[i]);
             tvTitle.setText(titles[i]);
             TabLayout.Tab tab = tabBottom.newTab().setCustomView(view).setTag(i);
-            if (i == 0){
+            if (i == 0) {
                 ivIcon.setImageResource(selectIcons[i]);
                 tvTitle.setTextColor(ContextCompat.getColor(this, R.color.blue));
             }
@@ -124,7 +115,7 @@ public class MainActivity extends BaseActivity<BaseInfo> implements TabLayout.On
 
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
-        switch (item.getItemId()){
+        switch (item.getItemId()) {
             case android.R.id.home:
                 navigator.toCourseCenter(this);
                 return true;
@@ -138,50 +129,29 @@ public class MainActivity extends BaseActivity<BaseInfo> implements TabLayout.On
 
         updateToolbar(tab);
 
-        attachFragment((int)tab.getTag());
-    }
-
-    private void initFragments(){
-        mlmFragBulder = MLMFragment_.builder();
-        qaFragBuilder = QAFragment_.builder();
-        contactsFragBuilder = ContactsFragment_.builder();
-        meFragBuilder = MeFragment_.builder();
-        fm = getSupportFragmentManager();
+        attachFragment((int) tab.getTag());
     }
 
     private void attachFragment(int tag) {
         Fragment frag = null;
-        frag = fm.findFragmentByTag(tag + "");
-        switch (tag){
+        switch (tag) {
             case MLM:
-                if (frag == null){
-                    frag = mlmFragBulder.build();
-                    fm.beginTransaction().add(R.id.fl_container, frag, tag + "");
-                }
+                frag = MLMFragment_.builder().build();
                 break;
             case QA:
-                if (frag == null){
-                    frag = qaFragBuilder.build();
-                    fm.beginTransaction().add(R.id.fl_container, frag, tag + "");
-                }
+                frag = QAFragment_.builder().build();
                 break;
             case CONTACTS:
-                if (frag == null){
-                    frag = contactsFragBuilder.build();
-                    fm.beginTransaction().add(R.id.fl_container, frag, tag + "");
-                }
+                frag = ContactsFragment_.builder().build();
                 break;
             case ME:
-                if (frag == null){
-                    frag = meFragBuilder.build();
-                    fm.beginTransaction().add(R.id.fl_container, frag, tag + "");
-                }
+                frag = MeFragment_.builder().build();
                 break;
         }
 
-        if (frag != null){
+        if (frag != null) {
             FragmentTransaction ft = getSupportFragmentManager().beginTransaction();
-            ft.show(frag).commit();
+            ft.replace(R.id.fl_container, frag).commit();
         }
     }
 
@@ -202,7 +172,7 @@ public class MainActivity extends BaseActivity<BaseInfo> implements TabLayout.On
                 title = R.string.me;
                 break;
         }
-        if (title > 0){
+        if (title > 0) {
             setToolbarTitle(getString(title));
         }
 

@@ -62,4 +62,8 @@ public class Navigator {
     public void toCountryList(Context context) {
         CountryListActivity_.intent(context).start();
     }
+
+    public void toQuestionDetail(Context context, String qid) {
+
+    }
 }

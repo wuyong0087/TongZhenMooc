@@ -11,6 +11,7 @@ import com.tzhen.mooc.activities.SignUpActivity;
 import com.tzhen.mooc.activities.UserInfoActivity;
 import com.tzhen.mooc.activities.WorksInfoActivity;
 import com.tzhen.mooc.countrylist.CountryListActivity;
+import com.tzhen.mooc.fragments.QAListFragment;
 import com.tzhen.mooc.fragments.RegisterStep1Frag;
 import com.tzhen.mooc.fragments.RegisterStep2Frag;
 import com.tzhen.mooc.fragments.RegisterStep3Frag;
@@ -73,6 +74,8 @@ public interface ApplicationComponent {
     void inject(MeFragment meFragment);
 
     void inject(WorksListFragment worksListFragment);
+
+    void inject(QAListFragment qaListFragment);
 
     void inject(SendCodeFragment sendCodeFragment);
 
