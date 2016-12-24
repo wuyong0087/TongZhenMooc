@@ -2,6 +2,7 @@ package com.tzhen.mooc.activities;
 
 import android.support.design.widget.TabLayout;
 import android.support.v4.app.Fragment;
+import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentTransaction;
 import android.support.v4.content.ContextCompat;
 import android.support.v7.widget.Toolbar;
@@ -49,6 +50,13 @@ public class MainActivity extends BaseActivity<BaseInfo> implements TabLayout.On
 
     private MenuItem rightMenuSearch, rightMenuFilter, rightMenuMore;
 
+    private MLMFragment_.FragmentBuilder_ mlmFragBulder;
+    private QAFragment_.FragmentBuilder_ qaFragBuilder;
+    private ContactsFragment_.FragmentBuilder_ contactsFragBuilder;
+    private MeFragment_.FragmentBuilder_ meFragBuilder;
+
+    private FragmentManager fm;
+
     @Override
     protected void init() {
         super.init();
@@ -74,6 +82,9 @@ public class MainActivity extends BaseActivity<BaseInfo> implements TabLayout.On
         toolbar.setNavigationIcon(R.drawable.course_center);
 
         initTabs();
+
+        initFragments();
+        attachFragment(MLM);
     }
 
     private void initTabs() {
@@ -116,7 +127,7 @@ public class MainActivity extends BaseActivity<BaseInfo> implements TabLayout.On
         switch (item.getItemId()){
             case android.R.id.home:
                 navigator.toCourseCenter(this);
-                break;
+                return true;
         }
         return super.onOptionsItemSelected(item);
     }
@@ -130,26 +141,47 @@ public class MainActivity extends BaseActivity<BaseInfo> implements TabLayout.On
         attachFragment((int)tab.getTag());
     }
 
+    private void initFragments(){
+        mlmFragBulder = MLMFragment_.builder();
+        qaFragBuilder = QAFragment_.builder();
+        contactsFragBuilder = ContactsFragment_.builder();
+        meFragBuilder = MeFragment_.builder();
+        fm = getSupportFragmentManager();
+    }
+
     private void attachFragment(int tag) {
         Fragment frag = null;
+        frag = fm.findFragmentByTag(tag + "");
         switch (tag){
             case MLM:
-                frag = MLMFragment_.builder().build();
+                if (frag == null){
+                    frag = mlmFragBulder.build();
+                    fm.beginTransaction().add(R.id.fl_container, frag, tag + "");
+                }
                 break;
             case QA:
-                frag = QAFragment_.builder().build();
+                if (frag == null){
+                    frag = qaFragBuilder.build();
+                    fm.beginTransaction().add(R.id.fl_container, frag, tag + "");
+                }
                 break;
             case CONTACTS:
-                frag = ContactsFragment_.builder().build();
+                if (frag == null){
+                    frag = contactsFragBuilder.build();
+                    fm.beginTransaction().add(R.id.fl_container, frag, tag + "");
+                }
                 break;
             case ME:
-                frag = MeFragment_.builder().build();
+                if (frag == null){
+                    frag = meFragBuilder.build();
+                    fm.beginTransaction().add(R.id.fl_container, frag, tag + "");
+                }
                 break;
         }
 
         if (frag != null){
             FragmentTransaction ft = getSupportFragmentManager().beginTransaction();
-            ft.replace(R.id.fl_container, frag).commit();
+            ft.show(frag).commit();
         }
     }
 

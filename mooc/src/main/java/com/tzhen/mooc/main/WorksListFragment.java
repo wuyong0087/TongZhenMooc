@@ -18,12 +18,10 @@ import com.tzhen.mooc.R;
 import com.tzhen.mooc.navigator.Navigator;
 import com.tzhen.mooc.storage.Persistence;
 
-import org.androidannotations.annotations.App;
 import org.androidannotations.annotations.EFragment;
 import org.androidannotations.annotations.FragmentArg;
 import org.androidannotations.annotations.ViewById;
 
-import java.util.ArrayList;
 import java.util.List;
 
 import javax.inject.Inject;
@@ -102,6 +100,8 @@ public class WorksListFragment extends BaseFragment<WorksListInfo> implements Wo
                 }
             }
         });
+
+        isPrepared = true;
     }
 
     private void loadData() {
