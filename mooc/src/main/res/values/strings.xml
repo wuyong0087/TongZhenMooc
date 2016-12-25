@@ -87,6 +87,24 @@
     <string name="country_list">Country list</string>
     <string name="sorry_get_empty_data">Sorry! get empty data</string>
     <string name="replys">Reply %1$s</string>
+    <string name="profile_photo">Profile photo</string>
+    <string name="name">Name</string>
+    <string name="what_up">Wha\'t up</string>
+    <string name="city">City</string>
+    <string name="institute">Institute</string>
+    <string name="log_out">Log out</string>
+    <string name="my_profile">My Profile</string>
+    <string name="course_title">Course title</string>
+    <string name="subject">Subject</string>
+    <string name="choose_subject">Choose subject</string>
+    <string name="course_description">Course description</string>
+    <string name="upload_course_image_tips">Upload picture \n (Course cover : 400 x 300)</string>
+    <string name="upload">Upload</string>
+    <string name="open_new_course">Open New Course</string>
+    <string name="title">Title</string>
+    <string name="address">Address</string>
+    <string name="upload_verify_picture_tips">Upload picture \n (Photo ID,Staff Card,Support Letter,etc)</string>
+    <string name="get_verified">Get Verified</string>
 
     <array name="gender">
         <item>Secret</item>

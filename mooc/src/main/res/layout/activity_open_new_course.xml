@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/comment_color_bg"
+    android:orientation="vertical">
+
+    <include layout="@layout/toolbar_title_left" />
+
+    <LinearLayout
+        android:id="@+id/ll_choose_subject"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:background="@color/white"
+        android:orientation="vertical">
+
+        <include layout="@layout/split_layout" />
+
+        <LinearLayout
+            android:id="@+id/ll_subject"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:padding="15dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="@string/choose_subject"
+                android:textColor="@color/font_color_gray"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/tv_subject"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/subject" />
+        </LinearLayout>
+
+        <include layout="@layout/split_layout" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/ll_course_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:orientation="vertical">
+
+        <include layout="@layout/split_layout" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:padding="15dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="@string/course_title"
+                android:textColor="@color/font_color_gray"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/tv_course_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="123" />
+        </LinearLayout>
+
+        <include layout="@layout/split_layout" />
+
+    </LinearLayout>
+
+    <EditText
+        android:id="@+id/et_course_description"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:gravity="left|top"
+        android:hint="@string/course_description"
+        android:minHeight="150dp"
+        android:padding="10dp"
+        android:textColorHint="@color/font_color_gray" />
+
+    <include layout="@layout/split_layout" />
+
+    <LinearLayout
+        android:id="@+id/ll_course_cover"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:orientation="vertical">
+
+        <include layout="@layout/split_layout" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:padding="15dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center_horizontal"
+                android:text="@string/upload_course_image_tips"
+                android:textColor="@color/font_color_gray"
+                android:textStyle="bold" />
+
+            <View
+                android:layout_weight="1"
+                android:layout_width="wrap_content"
+                android:layout_height="1dp"/>
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+                <ImageView
+                    android:id="@+id/iv_course_cover"
+                    android:background="@color/gray"
+                    android:layout_width="100dp"
+                    android:layout_height="70dp" />
+
+                <TextView
+                    android:id="@+id/tv_tips"
+                    android:layout_centerInParent="true"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/upload"/>
+            </RelativeLayout>
+
+        </LinearLayout>
+
+        <include layout="@layout/split_layout" />
+
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/btn_submit"
+        android:layout_margin="20dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/submit"
+        android:textColor="@color/white"
+        android:background="@drawable/shape_blue_btn_bg"/>
+
+</LinearLayout>

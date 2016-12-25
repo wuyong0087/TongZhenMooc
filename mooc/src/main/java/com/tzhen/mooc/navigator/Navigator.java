@@ -8,6 +8,7 @@ import com.tzhen.mooc.activities.CourseInfoActivity_;
 import com.tzhen.mooc.activities.ForgotPwdActivity_;
 import com.tzhen.mooc.activities.LoginActivity_;
 import com.tzhen.mooc.activities.MainActivity_;
+import com.tzhen.mooc.activities.MyProFileActivity_;
 import com.tzhen.mooc.activities.SignUpActivity_;
 import com.tzhen.mooc.activities.UserInfoActivity_;
 import com.tzhen.mooc.activities.WorksInfoActivity_;
@@ -65,5 +66,9 @@ public class Navigator {
 
     public void toQuestionDetail(Context context, String qid) {
 
+    }
+
+    public void toMyProfile(Context context) {
+        MyProFileActivity_.intent(context).start();
     }
 }

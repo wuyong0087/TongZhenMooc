@@ -13,6 +13,7 @@ import com.tongzhen.mooc.views.MeView;
 import com.tzhen.commen.fragment.BaseFragment;
 import com.tzhen.commen.utils.CircleTransform;
 import com.tzhen.mooc.R;
+import com.tzhen.mooc.navigator.Navigator;
 import com.tzhen.mooc.storage.Persistence;
 
 import org.androidannotations.annotations.Click;
@@ -52,6 +53,9 @@ public class MeFragment extends BaseFragment<UserInfo> implements MeView {
     @Inject
     Persistence persistence;
 
+    @Inject
+    Navigator navigator;
+
     @Override
     protected void init() {
         super.init();
@@ -66,9 +70,13 @@ public class MeFragment extends BaseFragment<UserInfo> implements MeView {
         presenter.attachView(this, uid);
     }
 
-    @Click({R.id.ll_my_university, R.id.ll_my_videos, R.id.ll_my_notes, R.id.ll_my_qa, R.id.ll_my_shared, R.id.ll_my_favorites})
+    @Click({R.id.ll_my_university, R.id.ll_my_videos, R.id.ll_my_notes, R.id.ll_my_qa, R.id.ll_my_shared,
+            R.id.ll_my_favorites, R.id.iv_header})
     public void onViewsClick(View v) {
         switch (v.getId()) {
+            case R.id.iv_header:
+                navigator.toMyProfile(getContext());
+                break;
             case R.id.ll_my_university:
 
                 break;

@@ -17,4 +17,7 @@
     <color name="transparent">#00000000</color>
     <color name="listview_item_normal">#eef0ed</color>
     <color name="listview_item_pressed">#d4d4d4</color>
+    <color name="red">#ec3c3b</color>
+    <color name="comment_color_bg">#f4f4f4</color>
+    <color name="font_color_gray">#a4a4a4</color>
 </resources>
