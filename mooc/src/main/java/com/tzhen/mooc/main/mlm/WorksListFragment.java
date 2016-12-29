@@ -1,4 +1,4 @@
-package com.tzhen.mooc.main;
+package com.tzhen.mooc.main.mlm;
 
 import android.support.v4.widget.SwipeRefreshLayout;
 import android.support.v7.widget.LinearLayoutManager;
@@ -11,19 +11,17 @@ import com.tongzhen.mooc.entities.WorksListInfo;
 import com.tongzhen.mooc.entities.types.ResultCodes;
 import com.tongzhen.mooc.presenters.WorksListPresenter;
 import com.tongzhen.mooc.views.WorksListView;
+import com.tzhen.commen.adapters.BaseRecyclerAdapter;
 import com.tzhen.commen.adapters.WorksListAdapter;
-import com.tzhen.commen.config.AppConfig;
-import com.tzhen.commen.fragment.BaseFragment;
+import com.tzhen.commen.fragment.LazyLoadFrag;
 import com.tzhen.mooc.R;
 import com.tzhen.mooc.navigator.Navigator;
 import com.tzhen.mooc.storage.Persistence;
 
-import org.androidannotations.annotations.App;
 import org.androidannotations.annotations.EFragment;
 import org.androidannotations.annotations.FragmentArg;
 import org.androidannotations.annotations.ViewById;
 
-import java.util.ArrayList;
 import java.util.List;
 
 import javax.inject.Inject;
@@ -32,51 +30,44 @@ import javax.inject.Inject;
  * Created by wuyong on 16/12/13.
  */
 @EFragment(R.layout.fragment_works_list)
-public class WorksListFragment extends BaseFragment<WorksListInfo> implements WorksListView, WorksListAdapter.OnItemClickListener {
-    private static final String ARG_WORK_LIST_TYPE = "ARG_WORK_LIST_TYPE";
+public abstract class WorksListFragment extends LazyLoadFrag<WorksListInfo> implements WorksListView, BaseRecyclerAdapter.OnItemClickListener {
 
-    @ViewById(R.id.sl_refresh)
-    SwipeRefreshLayout rlRefresh;
+    @ViewById(R.id.sl_refresh) protected SwipeRefreshLayout rlRefresh;
 
-    @ViewById(R.id.rcv_works_list)
-    RecyclerView rcvWorksList;
+    @ViewById(R.id.rcv_works_list) protected RecyclerView rcvWorksList;
 
-    @ViewById(R.id.tv_tips)
-    TextView tvTips;
+    @ViewById(R.id.tv_tips) protected TextView tvTips;
 
-    @Inject
-    WorksListPresenter presenter;
+    @Inject protected WorksListPresenter presenter;
 
-    @Inject
-    Persistence persistence;
+    @Inject protected Persistence persistence;
 
-    @Inject
-    Navigator navigator;
-
-    @FragmentArg(ARG_WORK_LIST_TYPE)
-    int listType;
+    @Inject protected Navigator navigator;
 
     private WorksListAdapter worksListAdapter;
 
-    private int currentPage = 1;
+    protected int currentPage = 1;
 
-    private boolean isLoad;
+    protected String uid;
+
+    private boolean isLoadMore;
 
     private List<WorksInfo> worksInfoList;
 
     @Override
     protected void init() {
         super.init();
-        getApplicationComponent().inject(this);
     }
 
     @Override
     protected void initViews() {
         super.initViews();
 
+        uid = persistence.retrieve(Persistence.KEY_USER_ID, String.class);
+
         setupViews();
 
-        loadData();
+        lazyLoad();
     }
 
     private void setupViews() {
@@ -89,25 +80,16 @@ public class WorksListFragment extends BaseFragment<WorksListInfo> implements Wo
             }
         });
 
-        rcvWorksList.addOnScrollListener(new RecyclerView.OnScrollListener() {
-            @Override
-            public void onScrollStateChanged(RecyclerView recyclerView, int newState) {
-
-                if (newState == RecyclerView.SCROLL_STATE_IDLE) {
-                    int items = worksListAdapter.getItemCount();
-                    if (items > (currentPage * AppConfig.PAGE_MAX_ITEM) - 3) {
-                        isLoad = true;
-                        loadData();
-                    }
-                }
-            }
-        });
+        isPrepared = true;
     }
 
-    private void loadData() {
-        tvTips.setVisibility(View.GONE);
-        String uid = persistence.retrieve(Persistence.KEY_USER_ID, String.class);
-        presenter.loadWorksList(this, uid, isLoad ? currentPage + 1 : currentPage, AppConfig.PAGE_MAX_ITEM, listType);
+    public abstract void loadData();
+
+    @Override
+    protected void lazyLoad() {
+        if (isVisible && isPrepared && !hasLoadData) {
+            loadData();
+        }
     }
 
     @Override
@@ -116,8 +98,9 @@ public class WorksListFragment extends BaseFragment<WorksListInfo> implements Wo
         super.onSuccess(value);
         if (value.getResult() == ResultCodes.OK) {
             hasLoadData = true;
+            tvTips.setVisibility(View.GONE);
 
-            if (isLoad) {
+            if (isLoadMore) {
                 worksInfoList.addAll(value.getWorksInfoList());
             } else {
                 worksInfoList = value.getWorksInfoList();
@@ -128,7 +111,7 @@ public class WorksListFragment extends BaseFragment<WorksListInfo> implements Wo
             rcvWorksList.setAdapter(worksListAdapter);
             worksListAdapter.setOnItemClickListener(this);
         } else {
-            if (isLoad) {
+            if (isLoadMore) {
                 showMsg(value.getErrorMsg());
             } else {
                 tvTips.setVisibility(View.VISIBLE);
@@ -145,18 +128,18 @@ public class WorksListFragment extends BaseFragment<WorksListInfo> implements Wo
     }
 
     private void resetParams() {
-        isLoad = false;
+        isLoadMore = false;
         currentPage -= 1;
     }
 
     @Override
-    public void onItemClick(WorksListAdapter.ViewHolder holder, int position) {
+    public void onItemClick(int position) {
         WorksInfo worksInfo = worksInfoList.get(position);
         navigator.toWorksInfo(getActivity(), worksInfo.getVid());
     }
 
     @Override
-    public void onItemLongClick(WorksListAdapter.ViewHolder holder, int position) {
+    public void onItemLongClick(int position) {
 
     }
 }

@@ -21,7 +21,10 @@ import com.tzhen.mooc.main.CreateSuccessActivity;
 import com.tzhen.mooc.main.MLMFragment;
 import com.tzhen.mooc.main.MeFragment;
 import com.tzhen.mooc.main.QAFragment;
-import com.tzhen.mooc.main.WorksListFragment;
+import com.tzhen.mooc.main.mlm.FeaturedWorksListFrag;
+import com.tzhen.mooc.main.mlm.MyCollectionWorksListFrag;
+import com.tzhen.mooc.main.mlm.SharedWorksListFrag;
+import com.tzhen.mooc.main.q_a.ListedQAListFrag;
 
 import javax.inject.Singleton;
 
@@ -72,9 +75,15 @@ public interface ApplicationComponent {
 
     void inject(MeFragment meFragment);
 
-    void inject(WorksListFragment worksListFragment);
+    void inject(FeaturedWorksListFrag featuredWorksListFrag);
+
+    void inject(SharedWorksListFrag sharedWorksListFrag);
+
+    void inject(MyCollectionWorksListFrag myCollectionWorksListFrag);
 
     void inject(SendCodeFragment sendCodeFragment);
 
     void inject(SetNewPwdFragment setNewPwdFragment);
+
+    void inject(ListedQAListFrag listedQAListFrag);
 }

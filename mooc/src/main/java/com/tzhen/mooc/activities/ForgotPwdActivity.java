@@ -22,8 +22,7 @@ public class ForgotPwdActivity extends BaseActivity<BaseInfo> {
     public static final int SEND_CODE = 0;
     public static final int RESET_PWD = 1;
 
-    @ViewById(R.id.toolbar)
-    Toolbar toolbar;
+    @ViewById(R.id.toolbar) Toolbar toolbar;
 
     @Override
     protected void init() {

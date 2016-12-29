@@ -73,8 +73,6 @@ public class RestApi {
     }
 
     public Map<String, String> encryptParams() {
-        paramsMap.put("kind", "android");
-        paramsMap.put("version", "0.1");
 
         return paramsMap;
     }

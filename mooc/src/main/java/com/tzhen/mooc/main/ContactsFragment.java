@@ -45,11 +45,6 @@ public class ContactsFragment extends BaseFragment<BaseInfo> implements TabLayou
     }
 
     @Override
-    protected void lazyLoad() {
-
-    }
-
-    @Override
     public void onTabSelected(TabLayout.Tab tab) {
 
     }

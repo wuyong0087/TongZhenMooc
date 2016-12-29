@@ -42,10 +42,6 @@ public class QAFragment extends BaseFragment<BaseInfo> implements TabLayout.OnTa
         }
 
         tabTop.setOnTabSelectedListener(this);
-    }
-
-    @Override
-    protected void lazyLoad() {
 
     }
 

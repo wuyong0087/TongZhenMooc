@@ -34,222 +34,222 @@ import rx.Observable;
 public interface Endpoints {
 
     @FormUrlEncoded
-    @POST("?mod=wetube&act=login")
+    @POST("?mod=wetube&kind=android&version=1.0&act=login")
     Observable<LoginJson> login(@Field("username") String username, @Field("password") String password, @FieldMap Map<String, String> paramsMap);
 
     @FormUrlEncoded
-    @POST("?mod=wetube&act=my_info")
+    @POST("?mod=wetube&kind=android&version=1.0&act=my_info")
     Observable<UserInfoJson> my_info(@Field("uid") String uid, @FieldMap Map<String, String> paramsMap);
 
     @FormUrlEncoded
-    @POST("?mod=wetube&act=register")
+    @POST("?mod=wetube&kind=android&version=1.0&act=register")
     Observable<RegisterJson> register(@Field("username") String username, @Field("password") String password, @Field("nickname") String nickname, @Field("sex") int sex, @Field("country") int country, @Field("description") String description, @FieldMap Map<String, String> paramsMap);
 
     @FormUrlEncoded
-    @POST("?mod=wetube&act=check_username")
+    @POST("?mod=wetube&kind=android&version=1.0&act=check_username")
     Observable<BaseInfo> check_username(@Field("username") String username, @FieldMap Map<String, String> paramsMap);
 
     @FormUrlEncoded
-    @POST("?mod=wetube&act=check_username")
+    @POST("?mod=wetube&kind=android&version=1.0&act=check_username")
     Observable<BaseInfo> check_nickname(@Field("nickname") String nickname, @FieldMap Map<String, String> paramsMap);
 
     @FormUrlEncoded
-    @POST("?mod=wetube&act=user_edit")
+    @POST("?mod=wetube&kind=android&version=1.0&act=user_edit")
     Observable<UserInfoJson> user_edit(@Field("uid") String uid, @FieldMap Map<String, String> paramsMap);
 
     @FormUrlEncoded
-    @POST("?mod=wetube&act=up_psd")
+    @POST("?mod=wetube&kind=android&version=1.0&act=up_psd")
     Observable<BaseInfo> up_psd(@Field("uid") String uid, @Field("old_psd") String old_psd, @Field("new_psd") String new_psd, @FieldMap Map<String, String> paramsMap);
 
     @FormUrlEncoded
-    @POST("?mod=wetube&act=up_fagpsd")
+    @POST("?mod=wetube&kind=android&version=1.0&act=up_fagpsd")
     Observable<BaseInfo> up_fagpsd(@Field("username") String username, @Field("new_psd") String new_psd, @FieldMap Map<String, String> paramsMap);
 
     @FormUrlEncoded
-    @POST("?mod=wetube&act=send_code")
+    @POST("?mod=wetube&kind=android&version=1.0&act=send_code")
     Observable<SendCodeInfoJson> send_code(@Field("username") String username, @Field("type") String type, @FieldMap Map<String, String> paramsMap);
 
     @FormUrlEncoded
-    @POST("?mod=wetube&act=my_video")
+    @POST("?mod=wetube&kind=android&version=1.0&act=my_video")
     Observable<WorksListInfoJson> my_video(@Field("uid") String uid, @Field("type") String type, @Field("page") String page, @Field("max") String max, @FieldMap Map<String, String> paramsMap);
 
     @FormUrlEncoded
-    @POST("?mod=wetube&act=my_share")
+    @POST("?mod=wetube&kind=android&version=1.0&act=my_share")
     Observable<WorksListInfoJson> my_share(@Field("uid") String uid, @Field("page") String page, @Field("max") String max, @FieldMap Map<String, String> paramsMap);
 
     @FormUrlEncoded
-    @POST("?mod=wetube&act=my_collection")
+    @POST("?mod=wetube&kind=android&version=1.0&act=my_collection")
     Observable<WorksListInfoJson> my_collection(@Field("uid") String uid, @Field("page") String page, @Field("max") String max, @FieldMap Map<String, String> paramsMap);
 
     @FormUrlEncoded
-    @POST("?mod=wetube&act=my_question")
+    @POST("?mod=wetube&kind=android&version=1.0&act=my_question")
     Observable<QuestionListInfoJson> my_question(@Field("uid") String uid, @Field("type") String type, Map<String, String> paramsMap);
 
     @FormUrlEncoded
-    @POST("?mod=wetube&act=works_good_list")
+    @POST("?mod=wetube&kind=android&version=1.0&act=works_good_list")
     Observable<WorksListInfoJson> works_good_list(@Field("uid") String uid, @Field("page") String page, @Field("max") String max, @FieldMap Map<String, String> paramsMap);
 
     @FormUrlEncoded
-    @POST("?mod=wetube&act=works_share_list")
+    @POST("?mod=wetube&kind=android&version=1.0&act=works_share_list")
     Observable<WorksListInfoJson> works_share_list(@Field("uid") String uid, @Field("page") String page, @Field("max") String max, @FieldMap Map<String, String> paramsMap);
 
     @FormUrlEncoded
-    @POST("?mod=wetube&act=video_upload")
+    @POST("?mod=wetube&kind=android&version=1.0&act=video_upload")
     Observable<WorksInfoJson> video_upload(@Field("uid") String uid, @FieldMap Map<String, String> paramsMap);
 
     @FormUrlEncoded
-    @POST("?mod=wetube&act=video_edit")
+    @POST("?mod=wetube&kind=android&version=1.0&act=video_edit")
     Observable<BaseInfo> video_edit(@Field("vid") int vid, @Field("uid") String uid, @Field("title") String title, @Field("tags") String tags, @FieldMap Map<String, String> paramsMap);
 
     @FormUrlEncoded
-    @POST("?mod=wetube&act=video_del")
+    @POST("?mod=wetube&kind=android&version=1.0&act=video_del")
     Observable<BaseInfo> video_del(@Field("vid") int vid, @Field("uid") String uid, @FieldMap Map<String, String> paramsMap);
 
     @FormUrlEncoded
-    @POST("?mod=wetube&act=video_info")
+    @POST("?mod=wetube&kind=android&version=1.0&act=video_info")
     Observable<WorksInfoJson> video_info(@Field("vid") int vid, @FieldMap Map<String, String> paramsMap);
 
     @FormUrlEncoded
-    @POST("?mod=wetube&act=works_browse")
+    @POST("?mod=wetube&kind=android&version=1.0&act=works_browse")
     Observable<BaseInfo> works_browse(@Field("vid") int vid, @Field("uid") String uid, @FieldMap Map<String, String> paramsMap);
 
     @FormUrlEncoded
-    @POST("?mod=wetube&act=works_share_more")
+    @POST("?mod=wetube&kind=android&version=1.0&act=works_share_more")
     Observable<BaseInfo> works_share_more(@Field("vid") int vid, @Field("uid") String uid, @FieldMap Map<String, String> paramsMap);
 
     @FormUrlEncoded
-    @POST("?mod=wetube&act=works_collection")
+    @POST("?mod=wetube&kind=android&version=1.0&act=works_collection")
     Observable<BaseInfo> works_collection(@Field("vid") int vid, @Field("uid") String uid, @Field("val") int val, @FieldMap Map<String, String> paramsMap);
 
     @FormUrlEncoded
-    @POST("?mod=wetube&act=works_praise")
+    @POST("?mod=wetube&kind=android&version=1.0&act=works_praise")
     Observable<BaseInfo> works_praise(@Field("vid") int vid, @Field("uid") String uid, @Field("val") int val, @FieldMap Map<String, String> paramsMap);
 
     @FormUrlEncoded
-    @POST("?mod=wetube&act=works_comments")
+    @POST("?mod=wetube&kind=android&version=1.0&act=works_comments")
     Observable<BaseInfo> works_comments(@Field("vid") int vid, @Field("uid") String uid, @Field("content") String content, @FieldMap Map<String, String> paramsMap);
 
     @FormUrlEncoded
-    @POST("?mod=wetube&act=works_comment_list")
+    @POST("?mod=wetube&kind=android&version=1.0&act=works_comment_list")
     Observable<CommentListInfoJson> works_comment_list(@Field("vid") int vid, @Field("page") int page, @Field("max") int max, @FieldMap Map<String, String> paramsMap);
 
     @FormUrlEncoded
-    @POST("?mod=wetube&act=works_share")
+    @POST("?mod=wetube&kind=android&version=1.0&act=works_share")
     Observable<BaseInfo> works_share(@Field("cid") int cid, @Field("vid") int vid, @Field("uid") String uid, @Field("reason") String reason, @FieldMap Map<String, String> paramsMap);
 
     @FormUrlEncoded
-    @POST("?mod=wetube&act=user_verify")
+    @POST("?mod=wetube&kind=android&version=1.0&act=user_verify")
     Observable<BaseInfo> user_verify(@Field("uid") String uid, @FieldMap Map<String, String> paramsMap);
 
     @FormUrlEncoded
-    @POST("?mod=wetube&act=user_verify_info")
+    @POST("?mod=wetube&kind=android&version=1.0&act=user_verify_info")
     Observable<UserVerifyInfoJson> user_verify_info(@Field("uid") String uid, @FieldMap Map<String, String> paramsMap);
 
     @FormUrlEncoded
-    @POST("?mod=wetube&act=course_list")
+    @POST("?mod=wetube&kind=android&version=1.0&act=course_list")
     Observable<CourseListInfoJson> course_list(@FieldMap Map<String, String> paramsMap);
 
     @FormUrlEncoded
-    @POST("?mod=wetube&act=course_info_introduce")
+    @POST("?mod=wetube&kind=android&version=1.0&act=course_info_introduce")
     Observable<CourseIntroduceInfoJson> course_info_introduce(@Field("cid") int cid, @Field("uid") String uid, @FieldMap Map<String, String> paramsMap);
 
     @FormUrlEncoded
-    @POST("?mod=wetube&act=course_info_works")
+    @POST("?mod=wetube&kind=android&version=1.0&act=course_info_works")
     Observable<WorksListInfoJson> course_info_works(@Field("cid") int cid, @Field("uid") String uid, @Field("is_teacher") int is_teacher, @FieldMap Map<String, String> paramsMap);
 
     @FormUrlEncoded
-    @POST("?mod=wetube&act=course_info_question")
+    @POST("?mod=wetube&kind=android&version=1.0&act=course_info_question")
     Observable<QuestionListInfoJson> course_info_question(@Field("cid") int cid, @FieldMap Map<String, String> paramsMap);
 
     @FormUrlEncoded
-    @POST("?mod=wetube&act=course_edit")
+    @POST("?mod=wetube&kind=android&version=1.0&act=course_edit")
     Observable<CourseEditInfoJson> course_edit(@Field("cid") int cid, @FieldMap Map<String, String> paramsMap);
 
     @FormUrlEncoded
-    @POST("?mod=wetube&act=course_apply")
+    @POST("?mod=wetube&kind=android&version=1.0&act=course_apply")
     Observable<BaseInfo> course_apply(@FieldMap Map<String, String> paramsMap);
 
     @FormUrlEncoded
-    @POST("?mod=wetube&act=my_course")
+    @POST("?mod=wetube&kind=android&version=1.0&act=my_course")
     Observable<CourseListInfoJson> my_course(@Field("uid") String uid, @FieldMap Map<String, String> paramsMap);
 
     @FormUrlEncoded
-    @POST("?mod=wetube&act=course_enroll")
+    @POST("?mod=wetube&kind=android&version=1.0&act=course_enroll")
     Observable<BaseInfo> course_enroll(@Field("cid") int cid, @Field("uid") String uid, @Field("val") int val, @FieldMap Map<String, String> paramsMap);
 
     @FormUrlEncoded
-    @POST("?mod=wetube&act=question_ask")
+    @POST("?mod=wetube&kind=android&version=1.0&act=question_ask")
     Observable<BaseInfo> question_ask(@Field("cid") int cid, @Field("uid") String uid, @Field("question") String question, @FieldMap Map<String, String> paramsMap);
 
     @FormUrlEncoded
-    @POST("?mod=wetube&act=question_list")
+    @POST("?mod=wetube&kind=android&version=1.0&act=question_list")
     Observable<QuestionListInfoJson> question_list(@Field("page") int page, @Field("max") int max, @FieldMap Map<String, String> paramsMap);
 
     @FormUrlEncoded
-    @POST("?mod=wetube&act=my_watch")
+    @POST("?mod=wetube&kind=android&version=1.0&act=my_watch")
     Observable<QuestionListInfoJson> my_watch(@Field("uid") String uid, @Field("page") int page, @Field("max") int max, @FieldMap Map<String, String> paramsMap);
 
     @FormUrlEncoded
-    @POST("?mod=wetube&act=question_info")
+    @POST("?mod=wetube&kind=android&version=1.0&act=question_info")
     Observable<QuestionInfoJson> question_info(@Field("uid") String uid, @Field("qid") int qid, @FieldMap Map<String, String> paramsMap);
 
     @FormUrlEncoded
-    @POST("?mod=wetube&act=question_watch")
+    @POST("?mod=wetube&kind=android&version=1.0&act=question_watch")
     Observable<BaseInfo> question_watch(@Field("uid") String uid, @Field("qid") int qid, @FieldMap Map<String, String> paramsMap);
 
     @FormUrlEncoded
-    @POST("?mod=wetube&act=answer_question")
+    @POST("?mod=wetube&kind=android&version=1.0&act=answer_question")
     Observable<BaseInfo> answer_question(@Field("uid") String uid, @Field("qid") int qid, @Field("atype") int atype, @Field("content") String content, @FieldMap Map<String, String> paramsMap);
 
     @FormUrlEncoded
-    @POST("?mod=wetube&act=answer_list")
+    @POST("?mod=wetube&kind=android&version=1.0&act=answer_list")
     Observable<AnswerListInfoJson> answer_list(@Field("uid") String uid, @Field("qid") int qid, @FieldMap Map<String, String> paramsMap);
 
     @FormUrlEncoded
-    @POST("?mod=wetube&act=anwser_help")
+    @POST("?mod=wetube&kind=android&version=1.0&act=anwser_help")
     Observable<BaseInfo> anwser_help(@Field("uid") String uid, @Field("qid") int qid, @Field("val") int val, @FieldMap Map<String, String> paramsMap);
 
     @FormUrlEncoded
-    @POST("?mod=wetube&act=answer_works_list")
+    @POST("?mod=wetube&kind=android&version=1.0&act=answer_works_list")
     Observable<WorksListInfoJson> answer_works_list(@Field("uid") String uid, @Field("type") String type, @FieldMap Map<String, String> paramsMap);
 
-    @GET("?mod=wetube&act=subject")
+    @GET("?mod=wetube&kind=android&version=1.0&act=subject")
     Observable<SubjectListInfoJson> subject();
 
-    @GET("?mod=wetube&act=title")
+    @GET("?mod=wetube&kind=android&version=1.0&act=title")
     Observable<TitleListInfoJson> title();
 
-    @GET("?mod=wetube&act=country")
+    @GET("?mod=wetube&kind=android&version=1.0&act=country")
     Observable<CountryListInfoJson> country();
 
-    @GET("?mod=wetube&act=country")
+    @GET("?mod=wetube&kind=android&version=1.0&act=country")
     Observable<CityListInfoJson> city();
 
     @FormUrlEncoded
-    @POST("?mod=wetube&act=user_follow")
+    @POST("?mod=wetube&kind=android&version=1.0&act=user_follow")
     Observable<BaseInfo> user_follow(@Field("uid") String uid, @Field("oid") String oid, @Field("val") int val, @FieldMap Map<String, String> paramsMap);
 
     @FormUrlEncoded
-    @POST("?mod=wetube&act=my_friends")
+    @POST("?mod=wetube&kind=android&version=1.0&act=my_friends")
     Observable<UserListInfoJson> my_friends(@Field("uid") String uid, @FieldMap Map<String, String> paramsMap);
 
     @FormUrlEncoded
-    @POST("?mod=wetube&act=my_fans")
+    @POST("?mod=wetube&kind=android&version=1.0&act=my_fans")
     Observable<UserListInfoJson> my_fans(@Field("uid") String uid, @FieldMap Map<String, String> paramsMap);
 
     @FormUrlEncoded
-    @POST("?mod=wetube&act=my_follows")
+    @POST("?mod=wetube&kind=android&version=1.0&act=my_follows")
     Observable<UserListInfoJson> my_follows(@Field("uid") String uid, @FieldMap Map<String, String> paramsMap);
 
     @FormUrlEncoded
-    @POST("?mod=wetube&act=user_info")
+    @POST("?mod=wetube&kind=android&version=1.0&act=user_info")
     Observable<UserInfoJson> user_info(@Field("oid") String oid, @Field("uid") String uid, @FieldMap Map<String, String> paramsMap);
 
     @FormUrlEncoded
-    @POST("?mod=wetube&act=chat_send")
+    @POST("?mod=wetube&kind=android&version=1.0&act=chat_send")
     Observable<BaseInfo> chat_send(@FieldMap Map<String, String> paramsMap);
 
     @FormUrlEncoded
-    @POST("?mod=wetube&act=chat")
+    @POST("?mod=wetube&kind=android&version=1.0&act=chat")
     Observable<ChatListInfoJson> chat(@Field("oid") String oid, @Field("uid") String uid, @FieldMap Map<String, String> paramsMap);
 }

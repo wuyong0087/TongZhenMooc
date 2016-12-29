@@ -1,48 +1,29 @@
 package com.tzhen.commen.fragment;
 
-import android.content.Intent;
-import android.os.Bundle;
-import android.support.annotation.Nullable;
+import android.content.Context;
 import android.support.v4.app.Fragment;
-import android.view.LayoutInflater;
-import android.view.ViewGroup;
-import android.view.ViewParent;
 import android.widget.Toast;
 
 import com.tongzhen.common.views.View;
 import com.tzhen.commen.activity.BaseActivity;
 import com.tzhen.commen.di.ApplicationComponent;
-import com.tzhen.mooc.R;
 import com.tzhen.mooc.progress.DialogProgress;
 
 import org.androidannotations.annotations.AfterInject;
 import org.androidannotations.annotations.AfterViews;
 import org.androidannotations.annotations.EFragment;
+import org.greenrobot.eventbus.EventBus;
+import org.greenrobot.eventbus.Subscribe;
+import org.greenrobot.eventbus.ThreadMode;
 
 import javax.inject.Inject;
-
-import rx.Subscription;
 
 @EFragment
 public abstract class BaseFragment<T> extends Fragment implements View<T> {
 
-    protected Intent errorIntent;
-
-    protected Subscription mRxSub;
-
-    protected boolean isVisable;
-
-    protected boolean isPrepared;
-
-    protected boolean hasLoadData;
-
     protected boolean isRegister;
 
-    protected boolean isRefreshing;
-
-    protected int memberId;
-
-    protected float[] location;
+    protected EventBus eventBus;
 
     @Inject
     DialogProgress progress;
@@ -51,18 +32,13 @@ public abstract class BaseFragment<T> extends Fragment implements View<T> {
     protected void init() {
     }
 
-
-
     @AfterViews
     protected void initViews() {
+
     }
 
     protected ApplicationComponent getApplicationComponent() {
         return ((BaseActivity)getActivity()).getApplicationComponent();
-    }
-
-    protected void showMsg(int message) {
-        Toast.makeText(getActivity(), message, Toast.LENGTH_LONG).show();
     }
 
     @Override
@@ -90,13 +66,8 @@ public abstract class BaseFragment<T> extends Fragment implements View<T> {
 
     }
 
-    protected void sendErrorCode(String errorCode){
-    }
-
-
     @Override
     public void onSuccess(T value) {
-        hasLoadData = true;
         showDefaultView(value);
     }
 
@@ -116,31 +87,31 @@ public abstract class BaseFragment<T> extends Fragment implements View<T> {
 
     }
 
-    @Override
-    public void setUserVisibleHint(boolean isVisibleToUser) {
-        super.setUserVisibleHint(isVisibleToUser);
-        if (getUserVisibleHint()) {
-            isVisable = true;
-            onVisibility();
-        } else {
-            isVisable = false;
-            onInvisibility();
-        }
-    }
-
-    protected void onVisibility() {
-        lazyLoad();
-    }
-
-    protected void onInvisibility() {
-    }
-
-    protected void lazyLoad(){
-
-    }
-
     public void showMsg(String msg) {
         Toast.makeText(getActivity(), msg, Toast.LENGTH_SHORT).show();
+    }
+
+    protected void showMsg(int message) {
+        Toast.makeText(getActivity(), message, Toast.LENGTH_LONG).show();
+    }
+
+    @Override
+    public void onAttach(Context context) {
+        super.onAttach(context);
+//        if (!isRegister){
+//            eventBus = EventBus.getDefault();
+//            eventBus.register(this);
+//            isRegister = true;
+//        }
+    }
+
+    @Override
+    public void onDetach() {
+        super.onDetach();
+//        if (isRegister){
+//            eventBus.unregister(this);
+//            isRegister = false;
+//        }
     }
 }
 

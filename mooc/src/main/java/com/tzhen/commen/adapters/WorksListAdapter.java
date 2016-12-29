@@ -18,14 +18,12 @@ import java.util.List;
 /**
  * Created by wuyong on 16/12/13.
  */
-public class WorksListAdapter extends RecyclerView.Adapter<WorksListAdapter.ViewHolder> {
+public class WorksListAdapter extends BaseRecyclerAdapter<WorksListAdapter.ViewHolder> {
     private List<WorksInfo> worksInfoList;
-    private Context context;
-    private OnItemClickListener onItemClickListener;
 
     public WorksListAdapter(List<WorksInfo> worksInfoList, Context context) {
+        super(context);
         this.worksInfoList = worksInfoList;
-        this.context = context;
     }
 
     @Override
@@ -34,27 +32,7 @@ public class WorksListAdapter extends RecyclerView.Adapter<WorksListAdapter.View
         return new ViewHolder(view);
     }
 
-    @Override
-    public void onBindViewHolder(final ViewHolder holder, final int position) {
-
-        setupViews(holder, position);
-
-        setupListener(holder, position);
-
-    }
-
-    private void setupListener(final ViewHolder holder, final int position) {
-        if (onItemClickListener != null){
-            holder.itemView.setOnClickListener(new View.OnClickListener() {
-                @Override
-                public void onClick(View v) {
-                    onItemClickListener.onItemClick(holder, position);
-                }
-            });
-        }
-    }
-
-    private void setupViews(ViewHolder holder, int position) {
+    protected void setupViews(ViewHolder holder, int position) {
         WorksInfo worksInfo = worksInfoList.get(position);
 
         Glide.with(context).load(worksInfo.getHead()).transform(new CircleTransform(context)).into(holder.ivHeader);
@@ -76,9 +54,6 @@ public class WorksListAdapter extends RecyclerView.Adapter<WorksListAdapter.View
         return worksInfoList.size();
     }
 
-    public void setOnItemClickListener(OnItemClickListener onItemClickListener) {
-        this.onItemClickListener = onItemClickListener;
-    }
 
     public class ViewHolder extends RecyclerView.ViewHolder{
         TextView tvNickname, tvDate, tvCourse, tvTitle, tvDuration,
@@ -101,11 +76,5 @@ public class WorksListAdapter extends RecyclerView.Adapter<WorksListAdapter.View
             ivVipIcon = (ImageView) view.findViewById(R.id.iv_level_icon);
             ivWorksCover = (ImageView) view.findViewById(R.id.iv_cover);
         }
-    }
-
-    public interface OnItemClickListener{
-        void onItemClick(ViewHolder holder, int position);
-
-        void onItemLongClick(ViewHolder holder, int position);
     }
 }

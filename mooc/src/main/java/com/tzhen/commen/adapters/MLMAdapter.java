@@ -5,9 +5,10 @@ import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentPagerAdapter;
 
-import com.tongzhen.mooc.entities.types.WorksListType;
 import com.tzhen.mooc.R;
-import com.tzhen.mooc.main.WorksListFragment_;
+import com.tzhen.mooc.main.mlm.FeaturedWorksListFrag_;
+import com.tzhen.mooc.main.mlm.MyCollectionWorksListFrag_;
+import com.tzhen.mooc.main.mlm.SharedWorksListFrag_;
 
 /**
  * Created by wuyong on 2016/12/14.
@@ -24,19 +25,17 @@ public class MLMAdapter extends FragmentPagerAdapter {
     @Override
     public Fragment getItem(int position) {
         Fragment frag = null;
-        int listType = -1;
         switch (position) {
             case 0:
-                listType = WorksListType.FEATURED;
+                frag = FeaturedWorksListFrag_.builder().build();
                 break;
             case 1:
-                listType = WorksListType.SHARED;
+                frag = SharedWorksListFrag_.builder().build();
                 break;
             case 2:
-                listType = WorksListType.FAVORITES;
+                frag = MyCollectionWorksListFrag_.builder().build();
                 break;
         }
-        frag = WorksListFragment_.builder().listType(listType).build();
         return frag;
     }
 

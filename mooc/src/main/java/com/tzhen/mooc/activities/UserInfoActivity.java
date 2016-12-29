@@ -18,6 +18,7 @@ import com.tongzhen.mooc.entities.types.StatusCode;
 import com.tongzhen.mooc.presenters.UserInfoPresenter;
 import com.tongzhen.mooc.views.UserInfoView;
 import com.tzhen.commen.activity.BaseActivity;
+import com.tzhen.commen.adapters.BaseRecyclerAdapter;
 import com.tzhen.commen.adapters.WorksListAdapter;
 import com.tzhen.commen.utils.CircleTransform;
 import com.tzhen.mooc.R;
@@ -37,7 +38,7 @@ import javax.inject.Inject;
  * Created by wuyong on 16/12/19.
  */
 @EActivity(R.layout.activity_user_info)
-public class UserInfoActivity extends BaseActivity<UserInfo> implements UserInfoView, WorksListAdapter.OnItemClickListener {
+public class UserInfoActivity extends BaseActivity<UserInfo> implements UserInfoView, BaseRecyclerAdapter.OnItemClickListener {
 
     private static final String EXTRA_OID = "EXTRA_OID";
 
@@ -73,7 +74,6 @@ public class UserInfoActivity extends BaseActivity<UserInfo> implements UserInfo
 
     private List<WorksInfo> worksInfoList;
 
-    private CircleTransform circleTransform;
     private int val;
 
     @Override
@@ -89,8 +89,6 @@ public class UserInfoActivity extends BaseActivity<UserInfo> implements UserInfo
         initToolBar(toolbar, true);
         setToolbarTitle(getString(R.string.user_profile));
 
-        circleTransform = new CircleTransform(this);
-
         String uid = persistence.retrieve(Persistence.KEY_USER_ID, String.class);
         presenter.attachView(this, uid, oid);
     }
@@ -100,7 +98,6 @@ public class UserInfoActivity extends BaseActivity<UserInfo> implements UserInfo
         if (ResultCodes.OK == value.getResult()){
             Glide.with(this).load(value.getHead())
                     .placeholder(R.drawable.test)
-                    .transform(circleTransform)
                     .into(ivHeader);
 
             tvNickname.setText(value.getNickname());
@@ -131,14 +128,14 @@ public class UserInfoActivity extends BaseActivity<UserInfo> implements UserInfo
     }
 
     @Override
-    public void onItemClick(WorksListAdapter.ViewHolder holder, int position) {
+    public void onItemClick(int position) {
         WorksInfo worksInfo = worksInfoList.get(position);
 
         navigator.toWorksInfo(this, worksInfo.getVid());
     }
 
     @Override
-    public void onItemLongClick(WorksListAdapter.ViewHolder holder, int position) {
+    public void onItemLongClick(int position) {
 
     }
 

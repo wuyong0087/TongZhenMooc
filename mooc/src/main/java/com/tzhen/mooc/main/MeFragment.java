@@ -91,10 +91,6 @@ public class MeFragment extends BaseFragment<UserInfo> implements MeView {
     }
 
     @Override
-    protected void lazyLoad() {
-    }
-
-    @Override
     public void onSuccess(UserInfo value) {
         if (ResultCodes.OK == value.getResult()){
             Glide.with(getContext()).load(value.getHead()).transform(new CircleTransform(getContext())).into(ivHeader);

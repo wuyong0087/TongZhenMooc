@@ -16,11 +16,9 @@ import org.androidannotations.annotations.ViewById;
  */
 @EFragment(R.layout.fragment_mlm)
 public class MLMFragment extends BaseFragment<BaseInfo> {
-    @ViewById(R.id.tab_top)
-    TabLayout tabTop;
+    @ViewById(R.id.tab_top) TabLayout tabTop;
 
-    @ViewById(R.id.vp_container)
-    ViewPager vpContainer;
+    @ViewById(R.id.vp_container) ViewPager vpContainer;
 
     private MLMAdapter mlmAdapter;
 
@@ -38,26 +36,9 @@ public class MLMFragment extends BaseFragment<BaseInfo> {
     }
 
     private void initTabs() {
-        mlmAdapter = new MLMAdapter(getFragmentManager(), getContext());
+        mlmAdapter = new MLMAdapter(getChildFragmentManager(), getContext());
         vpContainer.setAdapter(mlmAdapter);
         vpContainer.setOffscreenPageLimit(2);
         tabTop.setupWithViewPager(vpContainer);
-
-        vpContainer.addOnPageChangeListener(new ViewPager.OnPageChangeListener() {
-            @Override
-            public void onPageScrolled(int position, float positionOffset, int positionOffsetPixels) {
-
-            }
-
-            @Override
-            public void onPageSelected(int position) {
-
-            }
-
-            @Override
-            public void onPageScrollStateChanged(int state) {
-
-            }
-        });
     }
 }

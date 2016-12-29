@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <include layout="@layout/includ_layout_list_user_info"/>
+
+    <include layout="@layout/split_layout"/>
+
+    <LinearLayout
+        android:padding="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:layout_weight="2"
+            android:layout_width="0dp"
+            android:layout_marginRight="10dp"
+            android:scaleType="fitXY"
+            android:layout_height="match_parent"
+            android:id="@+id/iv_question_image"/>
+
+        <TextView
+            android:layout_weight="4"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@id/iv_question_image"
+            android:minHeight="80dp"
+            android:id="@+id/tv_question_content"
+            android:text="123"/>
+    </LinearLayout>
+
+    <include layout="@layout/split_layout"/>
+
+    <include layout="@layout/split_layout"/>
+
+    <LinearLayout
+        android:padding="5dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:id="@+id/ll_works_answers"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:src="@drawable/works_answers"/>
+
+            <TextView
+                android:layout_marginLeft="5dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/tv_works_answers"
+                android:textSize="12sp"
+                android:text="12"/>
+        </LinearLayout>
+
+        <View
+            android:layout_marginTop="3dp"
+            android:layout_marginBottom="3dp"
+            android:layout_width="0.5dp"
+            android:layout_height="match_parent"
+            android:background="@color/gray"/>
+
+        <LinearLayout
+            android:id="@+id/ll_ideas"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:src="@drawable/ideas"/>
+
+            <TextView
+                android:layout_marginLeft="5dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/tv_ideas"
+                android:textSize="12sp"
+                android:text="12"/>
+        </LinearLayout>
+
+        <View
+            android:layout_marginTop="3dp"
+            android:layout_marginBottom="3dp"
+            android:layout_width="0.5dp"
+            android:layout_height="match_parent"
+            android:background="@color/gray"/>
+
+        <LinearLayout
+            android:id="@+id/ll_same_asks"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:src="@drawable/same_asks"/>
+
+            <TextView
+                android:layout_marginLeft="5dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/tv_same_asks"
+                android:textSize="12sp"
+                android:text="12"/>
+        </LinearLayout>
+    </LinearLayout>
+
+    <include layout="@layout/split_layout"/>
+</LinearLayout>

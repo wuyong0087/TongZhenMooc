@@ -92,7 +92,6 @@ public class WorksInfoActivity extends BaseActivity<WorksInfo> implements WorksI
     private int likeVal;
     private int collectVal;
     private String oid;
-    private CircleTransform circleTransform;
 
     @Override
     protected void init() {
@@ -105,8 +104,6 @@ public class WorksInfoActivity extends BaseActivity<WorksInfo> implements WorksI
         super.initViews();
         initToolBar(toolbar, true);
         setToolbarTitle(getString(R.string.back));
-
-        circleTransform = new CircleTransform(this);
     }
 
     @Override
@@ -145,7 +142,6 @@ public class WorksInfoActivity extends BaseActivity<WorksInfo> implements WorksI
 
             Glide.with(this)
                     .load(value.getHead())
-                    .transform(circleTransform)
                     .placeholder(R.drawable.test)
                     .into(ivHeader);
             Glide.with(this)
