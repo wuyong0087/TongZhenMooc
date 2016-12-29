@@ -17,13 +17,11 @@ import java.util.List;
 /**
  * Created by wuyong on 2016/12/24.
  */
-public class QAsListAdapter extends RecyclerView.Adapter<QAsListAdapter.ViewHolder> {
-    private Context context;
+public class QAsListAdapter extends BaseRecyclerAdapter<QAsListAdapter.ViewHolder> {
     private List<QuestionInfo> questionInfoList;
-    private QAsListAdapter.OnItemClickListener onItemClickListener;
 
     public QAsListAdapter(Context context, List<QuestionInfo> questionInfoList) {
-        this.context = context;
+        super(context);
         this.questionInfoList = questionInfoList;
     }
 
@@ -33,22 +31,17 @@ public class QAsListAdapter extends RecyclerView.Adapter<QAsListAdapter.ViewHold
         return new ViewHolder(view);
     }
 
-    @Override
-    public void onBindViewHolder(ViewHolder holder, int position) {
-        setupViews(holder, position);
-
-        setupItemClickListener(holder);
-    }
-
-    private void setupViews(ViewHolder holder, int position) {
+    protected void setupViews(ViewHolder holder, int position) {
         QuestionInfo info = questionInfoList.get(position);
 
         Glide.with(context).load(info.getHead()).into(holder.ivHeader);
-        Glide.with(context).load(info.getImg()).into(holder.ivQuestionCover);
-
         holder.tvNickname.setText(info.getNickname());
         holder.tvDate.setText(DateUtils.parseLongToyyyy_MM_dd_HH_mm(info.getAddtime()));
+        holder.ivLevelIcon.setImageResource(info.getIs_verify() == 0 ? R.drawable.shape_transparent : R.drawable.vip);
+
+        Glide.with(context).load(info.getImg()).into(holder.ivQuestionCover);
         holder.tvQuestionContent.setText(info.getQuestion());
+
         holder.tvWorksAnswers.setText(info.getVideos() + "");
         holder.tvIdeas.setText(info.getWriting() + "");
         holder.tvSameAsks.setText(info.getWatch() + "");
@@ -57,21 +50,6 @@ public class QAsListAdapter extends RecyclerView.Adapter<QAsListAdapter.ViewHold
     @Override
     public int getItemCount() {
         return questionInfoList.size();
-    }
-
-    public void setOnItemClickListener(OnItemClickListener onItemClickListener) {
-        this.onItemClickListener = onItemClickListener;
-    }
-
-    public void setupItemClickListener(final ViewHolder holder) {
-        if (onItemClickListener != null){
-            holder.itemView.setOnClickListener(new View.OnClickListener() {
-                @Override
-                public void onClick(View v) {
-                    onItemClickListener.onItemClick(holder.getLayoutPosition());
-                }
-            });
-        }
     }
 
     class ViewHolder extends RecyclerView.ViewHolder{
@@ -97,10 +75,5 @@ public class QAsListAdapter extends RecyclerView.Adapter<QAsListAdapter.ViewHold
             tvIdeas = (TextView) view.findViewById(R.id.tv_ideas);
             tvSameAsks = (TextView) view.findViewById(R.id.tv_same_asks);
         }
-    }
-
-    public interface OnItemClickListener{
-        void onItemClick(int position);
-        void onItemLongClick(int position);
     }
 }

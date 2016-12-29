@@ -107,7 +107,7 @@
             <ImageView
                 android:layout_width="@dimen/works_options_icon_width"
                 android:layout_height="@dimen/works_options_icon_height"
-                android:src="@drawable/weike_answer" />
+                android:src="@drawable/works_answers" />
 
             <TextView
                 android:id="@+id/tv_works_answers"
@@ -134,7 +134,7 @@
             <ImageView
                 android:layout_width="@dimen/works_options_icon_width"
                 android:layout_height="@dimen/works_options_icon_height"
-                android:src="@drawable/idea" />
+                android:src="@drawable/ideas" />
 
             <TextView
                 android:id="@+id/tv_ideas"
@@ -160,7 +160,7 @@
             <ImageView
                 android:layout_width="@dimen/works_options_icon_width"
                 android:layout_height="@dimen/works_options_icon_height"
-                android:src="@drawable/same_ask" />
+                android:src="@drawable/same_asks" />
 
             <TextView
                 android:id="@+id/tv_same_asks"

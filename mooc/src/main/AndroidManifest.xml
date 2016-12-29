@@ -31,6 +31,9 @@
         <activity android:name=".activities.MyProFileActivity_"/>
         <activity android:name=".activities.VerificationActivity_"/>
         <activity android:name=".activities.ForgotPwdActivity_"/>
+        <activity android:name=".activities.OpenNewCourseActivity_"/>
+        <activity android:name=".activities.QuestionDetailActivity_"/>
+        <activity android:name=".main.CreateSuccessActivity_"/>
     </application>
 
 </manifest>

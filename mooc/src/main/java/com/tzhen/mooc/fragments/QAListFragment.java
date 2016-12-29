@@ -13,6 +13,7 @@ import com.tongzhen.mooc.views.QAListView;
 import com.tzhen.commen.adapters.QAsListAdapter;
 import com.tzhen.commen.config.AppConfig;
 import com.tzhen.commen.fragment.BaseFragment;
+import com.tzhen.commen.fragment.LazyLoadFrag;
 import com.tzhen.mooc.R;
 import com.tzhen.mooc.navigator.Navigator;
 import com.tzhen.mooc.storage.Persistence;
@@ -28,7 +29,7 @@ import javax.inject.Inject;
  * Created by wuyong on 2016/12/24.
  */
 @EFragment(R.layout.fragment_question_list)
-public class QAListFragment extends BaseFragment<QuestionListInfo> implements QAListView, QAsListAdapter.OnItemClickListener {
+public class QAListFragment extends LazyLoadFrag<QuestionListInfo> implements QAListView, QAsListAdapter.OnItemClickListener {
     @ViewById(R.id.sl_refresh)
     SwipeRefreshLayout rlRefresh;
 
@@ -117,6 +118,13 @@ public class QAListFragment extends BaseFragment<QuestionListInfo> implements QA
                 tvTips.setVisibility(View.VISIBLE);
             }
             resetParams();
+        }
+    }
+
+    @Override
+    protected void lazyLoad() {
+        if (isVisible && isPrepared && !hasLoadData) {
+            loadData();
         }
     }
 
