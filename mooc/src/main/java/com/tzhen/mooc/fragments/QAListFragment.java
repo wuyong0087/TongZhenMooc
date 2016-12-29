@@ -1,6 +1,7 @@
 package com.tzhen.mooc.fragments;
 
 import android.support.v4.widget.SwipeRefreshLayout;
+import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.view.View;
 import android.widget.TextView;
@@ -10,9 +11,8 @@ import com.tongzhen.mooc.entities.QuestionListInfo;
 import com.tongzhen.mooc.entities.types.ResultCodes;
 import com.tongzhen.mooc.presenters.QAListPresenter;
 import com.tongzhen.mooc.views.QAListView;
-import com.tzhen.commen.adapters.QAsListAdapter;
+import com.tzhen.commen.adapters.QAListAdapter;
 import com.tzhen.commen.config.AppConfig;
-import com.tzhen.commen.fragment.BaseFragment;
 import com.tzhen.commen.fragment.LazyLoadFrag;
 import com.tzhen.mooc.R;
 import com.tzhen.mooc.navigator.Navigator;
@@ -29,26 +29,20 @@ import javax.inject.Inject;
  * Created by wuyong on 2016/12/24.
  */
 @EFragment(R.layout.fragment_question_list)
-public class QAListFragment extends LazyLoadFrag<QuestionListInfo> implements QAListView, QAsListAdapter.OnItemClickListener {
-    @ViewById(R.id.sl_refresh)
-    SwipeRefreshLayout rlRefresh;
+public class QAListFragment extends LazyLoadFrag<QuestionListInfo> implements QAListView, QAListAdapter.OnItemClickListener {
+    @ViewById(R.id.sl_refresh) SwipeRefreshLayout rlRefresh;
 
-    @ViewById(R.id.rcv_qa_list)
-    RecyclerView rcvWorksList;
+    @ViewById(R.id.rcv_qa_list) RecyclerView rcvQAList;
 
-    @ViewById(R.id.tv_tips)
-    TextView tvTips;
+    @ViewById(R.id.tv_tips) TextView tvTips;
 
-    @Inject
-    QAListPresenter presenter;
+    @Inject QAListPresenter presenter;
 
-    @Inject
-    Persistence persistence;
+    @Inject Persistence persistence;
 
-    @Inject
-    Navigator navigator;
+    @Inject Navigator navigator;
 
-    private QAsListAdapter qaListAdapter;
+    private QAListAdapter qaListAdapter;
 
     private int currentPage = 1;
 
@@ -81,7 +75,7 @@ public class QAListFragment extends LazyLoadFrag<QuestionListInfo> implements QA
             }
         });
 
-        rcvWorksList.addOnScrollListener(new RecyclerView.OnScrollListener() {
+        rcvQAList.addOnScrollListener(new RecyclerView.OnScrollListener() {
             @Override
             public void onScrollStateChanged(RecyclerView recyclerView, int newState) {
 
@@ -95,12 +89,16 @@ public class QAListFragment extends LazyLoadFrag<QuestionListInfo> implements QA
             }
         });
 
+        qaListAdapter = new QAListAdapter(getContext(), questionInfoList);
+
+        rcvQAList.setLayoutManager(new LinearLayoutManager(getContext()));
+        rcvQAList.setAdapter(qaListAdapter);
+
         isPrepared = true;
     }
 
     private void loadData() {
         tvTips.setVisibility(View.GONE);
-        String uid = persistence.retrieve(Persistence.KEY_USER_ID, String.class);
         presenter.attachView(this, isLoad ? currentPage + 1 : currentPage, AppConfig.PAGE_MAX_ITEM);
     }
 
@@ -110,6 +108,9 @@ public class QAListFragment extends LazyLoadFrag<QuestionListInfo> implements QA
         super.onSuccess(value);
         if (value.getResult() == ResultCodes.OK) {
             hasLoadData = true;
+
+            questionInfoList = value.getQuestionInfoList();
+            qaListAdapter.setQuestionInfoList(questionInfoList);
 
         } else {
             if (isLoad) {

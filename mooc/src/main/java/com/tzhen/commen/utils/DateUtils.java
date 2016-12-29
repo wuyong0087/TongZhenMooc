@@ -10,12 +10,12 @@ public class DateUtils {
 
     public static String parseLongToyyyy_MM_dd(long timeInMills){
         SimpleDateFormat format = new SimpleDateFormat("yyyy_MM_dd");
-        return format.format(new Date(timeInMills));
+        return format.format(new Date(timeInMills * 1000));
     }
 
     public static String parseLongToyyyy_MM_dd_HH_mm(long timeInMills){
         SimpleDateFormat format = new SimpleDateFormat("yyyy_MM_dd HH:mm");
-        return format.format(new Date(timeInMills));
+        return format.format(new Date(timeInMills * 1000));
     }
 
     public static String parseLongToHH_mm_ss(long timeInMills){

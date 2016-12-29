@@ -32,10 +32,10 @@ public class MLMFragment extends BaseFragment<BaseInfo> {
     protected void initViews() {
         super.initViews();
 
-        initTabs();
+        setupViews();
     }
 
-    private void initTabs() {
+    private void setupViews() {
         mlmAdapter = new MLMAdapter(getChildFragmentManager(), getContext());
         vpContainer.setAdapter(mlmAdapter);
         tabTop.setupWithViewPager(vpContainer);
