@@ -74,6 +74,8 @@ public class MainActivity extends BaseActivity<BaseInfo> implements TabLayout.On
         toolbar.setNavigationIcon(R.drawable.course_center);
 
         initTabs();
+
+        attachFragment(MLM);
     }
 
     private void initTabs() {
@@ -90,7 +92,7 @@ public class MainActivity extends BaseActivity<BaseInfo> implements TabLayout.On
             ivIcon.setImageResource(unSelectIcons[i]);
             tvTitle.setText(titles[i]);
             TabLayout.Tab tab = tabBottom.newTab().setCustomView(view).setTag(i);
-            if (i == 0){
+            if (i == 0) {
                 ivIcon.setImageResource(selectIcons[i]);
                 tvTitle.setTextColor(ContextCompat.getColor(this, R.color.blue));
             }
@@ -113,10 +115,10 @@ public class MainActivity extends BaseActivity<BaseInfo> implements TabLayout.On
 
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
-        switch (item.getItemId()){
+        switch (item.getItemId()) {
             case android.R.id.home:
                 navigator.toCourseCenter(this);
-                break;
+                return true;
         }
         return super.onOptionsItemSelected(item);
     }
@@ -127,12 +129,12 @@ public class MainActivity extends BaseActivity<BaseInfo> implements TabLayout.On
 
         updateToolbar(tab);
 
-        attachFragment((int)tab.getTag());
+        attachFragment((int) tab.getTag());
     }
 
     private void attachFragment(int tag) {
         Fragment frag = null;
-        switch (tag){
+        switch (tag) {
             case MLM:
                 frag = MLMFragment_.builder().build();
                 break;
@@ -147,7 +149,7 @@ public class MainActivity extends BaseActivity<BaseInfo> implements TabLayout.On
                 break;
         }
 
-        if (frag != null){
+        if (frag != null) {
             FragmentTransaction ft = getSupportFragmentManager().beginTransaction();
             ft.replace(R.id.fl_container, frag).commit();
         }
@@ -170,7 +172,7 @@ public class MainActivity extends BaseActivity<BaseInfo> implements TabLayout.On
                 title = R.string.me;
                 break;
         }
-        if (title > 0){
+        if (title > 0) {
             setToolbarTitle(getString(title));
         }
 

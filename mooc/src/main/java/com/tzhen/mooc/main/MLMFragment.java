@@ -38,7 +38,6 @@ public class MLMFragment extends BaseFragment<BaseInfo> {
     private void initTabs() {
         mlmAdapter = new MLMAdapter(getChildFragmentManager(), getContext());
         vpContainer.setAdapter(mlmAdapter);
-        vpContainer.setOffscreenPageLimit(2);
         tabTop.setupWithViewPager(vpContainer);
     }
 }

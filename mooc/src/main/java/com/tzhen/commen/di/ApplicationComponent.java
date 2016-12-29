@@ -7,10 +7,14 @@ import com.tzhen.mooc.activities.ForgotPwdActivity;
 import com.tzhen.mooc.activities.LaunchActivity;
 import com.tzhen.mooc.activities.LoginActivity;
 import com.tzhen.mooc.activities.MainActivity;
+import com.tzhen.mooc.activities.MyProFileActivity;
+import com.tzhen.mooc.activities.OpenNewCourseActivity;
 import com.tzhen.mooc.activities.SignUpActivity;
 import com.tzhen.mooc.activities.UserInfoActivity;
+import com.tzhen.mooc.activities.VerificationActivity;
 import com.tzhen.mooc.activities.WorksInfoActivity;
 import com.tzhen.mooc.countrylist.CountryListActivity;
+import com.tzhen.mooc.fragments.QAListFragment;
 import com.tzhen.mooc.fragments.RegisterStep1Frag;
 import com.tzhen.mooc.fragments.RegisterStep2Frag;
 import com.tzhen.mooc.fragments.RegisterStep3Frag;
@@ -59,6 +63,12 @@ public interface ApplicationComponent {
 
     void inject(CountryListActivity countryListActivity);
 
+    void inject(MyProFileActivity myProFileActivity);
+
+    void inject(OpenNewCourseActivity openNewCourseActivity);
+
+    void inject(VerificationActivity verificationActivity);
+
     void inject(ChatActivity chatActivity);
 
     void inject(RegisterStep1Frag registerStep1Frag);
@@ -80,6 +90,8 @@ public interface ApplicationComponent {
     void inject(SharedWorksListFrag sharedWorksListFrag);
 
     void inject(MyCollectionWorksListFrag myCollectionWorksListFrag);
+
+    void inject(QAListFragment qaListFragment);
 
     void inject(SendCodeFragment sendCodeFragment);
 
