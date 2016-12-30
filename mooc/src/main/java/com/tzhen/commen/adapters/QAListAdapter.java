@@ -52,6 +52,7 @@ public class QAListAdapter extends BaseRecyclerAdapter<QAListAdapter.ViewHolder>
             Glide.with(context).load(info.getImg()).into(holder.ivQuestionCover);
         }
         holder.tvQuestionContent.setText(info.getQuestion());
+        holder.tvCourse.setText(info.getCourse_title());
 
         holder.tvWorksAnswers.setText(info.getVideos() + "");
         holder.tvIdeas.setText(info.getWriting() + "");
@@ -68,7 +69,7 @@ public class QAListAdapter extends BaseRecyclerAdapter<QAListAdapter.ViewHolder>
         ImageView ivLevelIcon;
         ImageView ivHeader;
 
-        TextView tvNickname, tvDate, tvQuestionContent;
+        TextView tvNickname, tvDate, tvQuestionContent, tvCourse;
         TextView tvWorksAnswers, tvIdeas, tvSameAsks;
 
         public ViewHolder(View view) {
@@ -81,6 +82,7 @@ public class QAListAdapter extends BaseRecyclerAdapter<QAListAdapter.ViewHolder>
             tvNickname = (TextView) view.findViewById(R.id.tv_nickname);
             tvDate = (TextView) view.findViewById(R.id.tv_date);
             tvQuestionContent = (TextView) view.findViewById(R.id.tv_question_content);
+            tvCourse = (TextView) view.findViewById(R.id.tv_course);
 
             tvWorksAnswers = (TextView) view.findViewById(R.id.tv_works_answers);
             tvIdeas = (TextView) view.findViewById(R.id.tv_ideas);

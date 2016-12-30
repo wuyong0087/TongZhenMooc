@@ -5,7 +5,7 @@ import android.view.View;
 import android.widget.TextView;
 
 import com.tzhen.mooc.R;
-import com.tzhen.mooc.countrylist.widget.CountryItemInterface;
+import com.tzhen.mooc.countrylist.widget.ItemInterface;
 import com.tzhen.mooc.countrylist.widget.ContactListAdapter;
 
 import java.util.List;
@@ -14,12 +14,12 @@ public class CityAdapter extends ContactListAdapter
 {
 
 	public CityAdapter(Context _context, int _resource,
-			List<CountryItemInterface> _items)
+			List<ItemInterface> _items)
 	{
 		super(_context, _resource, _items);
 	}
 
-	public void populateDataForRow(View parentView, CountryItemInterface item,
+	public void populateDataForRow(View parentView, ItemInterface item,
 			int position)
 	{
 		View infoView = parentView.findViewById(R.id.infoRowContainer);

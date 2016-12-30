@@ -13,7 +13,7 @@ import android.widget.TextView;
 
 import com.tzhen.mooc.R;
 
-public class ContactListAdapter extends ArrayAdapter<CountryItemInterface>
+public class ContactListAdapter extends ArrayAdapter<ItemInterface>
 {
 
 	private int resource; // store the resource layout id for 1 row
@@ -22,7 +22,7 @@ public class ContactListAdapter extends ArrayAdapter<CountryItemInterface>
 	private ContactsSectionIndexer indexer = null;
 
 	public ContactListAdapter(Context _context, int _resource,
-			List<CountryItemInterface> _items)
+			List<ItemInterface> _items)
 	{
 		super(_context, _resource, _items);
 		resource = _resource;
@@ -44,7 +44,7 @@ public class ContactListAdapter extends ArrayAdapter<CountryItemInterface>
 	}
 
 	public void showSectionViewIfFirstItem(View rowView,
-										   CountryItemInterface item, int position)
+										   ItemInterface item, int position)
 	{
 		TextView sectionTextView = getSectionTextView(rowView);
 
@@ -71,7 +71,7 @@ public class ContactListAdapter extends ArrayAdapter<CountryItemInterface>
 
 	// do all the data population for the row here
 	// subclass overwrite this to draw more items
-	public void populateDataForRow(View parentView, CountryItemInterface item,
+	public void populateDataForRow(View parentView, ItemInterface item,
 			int position)
 	{
 		// default just draw the item only
@@ -86,7 +86,7 @@ public class ContactListAdapter extends ArrayAdapter<CountryItemInterface>
 	{
 		ViewGroup parentView;
 
-		CountryItemInterface item = getItem(position);
+		ItemInterface item = getItem(position);
 
 		if (convertView == null)
 		{

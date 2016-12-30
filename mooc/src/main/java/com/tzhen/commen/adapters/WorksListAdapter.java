@@ -64,7 +64,7 @@ public class WorksListAdapter extends BaseRecyclerAdapter<WorksListAdapter.ViewH
 
             tvNickname = (TextView) view.findViewById(R.id.tv_nickname);
             tvDate = (TextView) view.findViewById(R.id.tv_date);
-            tvCourse = (TextView) view.findViewById(R.id.tv_curse);
+            tvCourse = (TextView) view.findViewById(R.id.tv_course);
             tvTitle = (TextView) view.findViewById(R.id.tv_title);
             tvDuration = (TextView) view.findViewById(R.id.tv_duration);
 

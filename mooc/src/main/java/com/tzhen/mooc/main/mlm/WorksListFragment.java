@@ -83,15 +83,6 @@ public abstract class WorksListFragment extends LazyLoadFrag<WorksListInfo> impl
         isPrepared = true;
     }
 
-    public abstract void loadData();
-
-    @Override
-    protected void lazyLoad() {
-        if (isVisible && isPrepared && !hasLoadData) {
-            loadData();
-        }
-    }
-
     @Override
     public void onSuccess(WorksListInfo value) {
         rlRefresh.setRefreshing(false);

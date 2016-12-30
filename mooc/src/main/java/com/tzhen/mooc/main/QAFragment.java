@@ -39,6 +39,7 @@ public class QAFragment extends BaseFragment<BaseInfo> {
 
         qaAdapter = new QAAdapter(getChildFragmentManager(), getContext());
         vpContainer.setAdapter(qaAdapter);
+        vpContainer.setOffscreenPageLimit(2);
         tabTop.setupWithViewPager(vpContainer);
     }
 

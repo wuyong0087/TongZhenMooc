@@ -13,7 +13,7 @@ import com.tzhen.mooc.activities.SignUpActivity;
 import com.tzhen.mooc.activities.UserInfoActivity;
 import com.tzhen.mooc.activities.VerificationActivity;
 import com.tzhen.mooc.activities.WorksInfoActivity;
-import com.tzhen.mooc.countrylist.CountryListActivity;
+import com.tzhen.mooc.activities.CountryListActivity;
 import com.tzhen.mooc.fragments.QAListFragment;
 import com.tzhen.mooc.fragments.RegisterStep1Frag;
 import com.tzhen.mooc.fragments.RegisterStep2Frag;
@@ -25,6 +25,9 @@ import com.tzhen.mooc.main.CreateSuccessActivity;
 import com.tzhen.mooc.main.MLMFragment;
 import com.tzhen.mooc.main.MeFragment;
 import com.tzhen.mooc.main.QAFragment;
+import com.tzhen.mooc.main.contacts.FansListFrag;
+import com.tzhen.mooc.main.contacts.FollowsListFrag;
+import com.tzhen.mooc.main.contacts.FriendsListFrag;
 import com.tzhen.mooc.main.mlm.FeaturedWorksListFrag;
 import com.tzhen.mooc.main.mlm.MyCollectionWorksListFrag;
 import com.tzhen.mooc.main.mlm.SharedWorksListFrag;
@@ -98,4 +101,10 @@ public interface ApplicationComponent {
     void inject(SetNewPwdFragment setNewPwdFragment);
 
     void inject(ListedQAListFrag listedQAListFrag);
+
+    void inject(FriendsListFrag friendsListFrag);
+
+    void inject(FansListFrag fansListFrag);
+
+    void inject(FollowsListFrag followsListFrag);
 }

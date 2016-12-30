@@ -268,7 +268,6 @@ public class RestApiTest {
     @Test
     public void video_info(){
         TestSubscriber<WorksInfoJson> subscriber = new TestSubscriber<>();
-
         int vid = 1;
         restApi.video_info(vid, tempUid).subscribe(subscriber);
 

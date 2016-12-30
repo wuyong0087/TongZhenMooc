@@ -36,11 +36,12 @@ public abstract class LazyLoadFrag<T> extends BaseFragment<T> {
     protected void onInvisibility() {
     }
 
-    protected abstract void lazyLoad();
+    protected abstract void loadData();
 
-    @Override
-    public void onDestroyView() {
-        super.onDestroyView();
-        hasLoadData = false;
+    protected void lazyLoad() {
+        if (!isVisible || !isPrepared || hasLoadData) {
+            return;
+        }
+        loadData();
     }
 }

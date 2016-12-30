@@ -97,7 +97,8 @@ public class QAListFragment extends LazyLoadFrag<QuestionListInfo> implements QA
         isPrepared = true;
     }
 
-    private void loadData() {
+    @Override
+    public void loadData() {
         tvTips.setVisibility(View.GONE);
         presenter.attachView(this, isLoad ? currentPage + 1 : currentPage, AppConfig.PAGE_MAX_ITEM);
     }

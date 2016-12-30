@@ -22,7 +22,7 @@ public class ContactsSectionIndexer implements SectionIndexer {
 	private int mCount; // this is the count for total number of contacts
 
 	// Assumption: the contacts array has been sorted
-	public ContactsSectionIndexer(List<CountryItemInterface> contacts) {
+	public ContactsSectionIndexer(List<ItemInterface> contacts) {
 		mCount = contacts.size();
 
 		initPositions(contacts);
@@ -62,7 +62,7 @@ public class ContactsSectionIndexer implements SectionIndexer {
 	}
 
 	// initialize the position index
-	public void initPositions(List<CountryItemInterface> contacts) {
+	public void initPositions(List<ItemInterface> contacts) {
 
 		int sectionCount = mSections.length;
 		mPositions = new int[sectionCount];
@@ -73,7 +73,7 @@ public class ContactsSectionIndexer implements SectionIndexer {
 		// names
 		int itemIndex = 0;
 
-		for (CountryItemInterface contact : contacts) {
+		for (ItemInterface contact : contacts) {
 
 			String indexableItem = contact.getItemForIndex();
 			int sectionIndex = getSectionIndex(indexableItem); // find out which

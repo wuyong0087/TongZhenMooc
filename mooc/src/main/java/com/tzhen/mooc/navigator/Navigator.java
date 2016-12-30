@@ -3,6 +3,7 @@ package com.tzhen.mooc.navigator;
 import android.content.Context;
 
 import com.tzhen.mooc.activities.ChatActivity_;
+import com.tzhen.mooc.activities.CountryListActivity_;
 import com.tzhen.mooc.activities.CourseCenterActivity_;
 import com.tzhen.mooc.activities.CourseInfoActivity_;
 import com.tzhen.mooc.activities.ForgotPwdActivity_;
@@ -12,7 +13,6 @@ import com.tzhen.mooc.activities.MyProFileActivity_;
 import com.tzhen.mooc.activities.SignUpActivity_;
 import com.tzhen.mooc.activities.UserInfoActivity_;
 import com.tzhen.mooc.activities.WorksInfoActivity_;
-import com.tzhen.mooc.countrylist.CountryListActivity_;
 
 import javax.inject.Inject;
 

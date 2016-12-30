@@ -38,7 +38,7 @@
         android:textSize="12sp" />
 
     <TextView
-        android:id="@+id/tv_curse"
+        android:id="@+id/tv_course"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentRight="true"

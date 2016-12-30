@@ -153,7 +153,7 @@ public class UserInfoActivity extends BaseActivity<UserInfo> implements UserInfo
 
     private void follow() {
         String uid = persistence.retrieve(Persistence.KEY_USER_ID, String.class);
-        presenter.follow(this, oid, uid, val);
+        presenter.follow(this, oid, uid, val ^ 1);
     }
 
     @Override
@@ -161,7 +161,7 @@ public class UserInfoActivity extends BaseActivity<UserInfo> implements UserInfo
         if (ResultCodes.OK == baseInfo.getResult()){
             String tips = getString(val == StatusCode.YES ? R.string.un_follow_success : R.string.follow_success);
             showMsg(tips);
-            val = val == StatusCode.YES ? 0 : 1;
+            val = val ^ 1;
         } else{
             showMsg(baseInfo.getErrorMsg());
         }

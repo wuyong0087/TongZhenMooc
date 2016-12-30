@@ -1,4 +1,4 @@
-package com.tzhen.mooc.countrylist;
+package com.tzhen.mooc.activities;
 
 import android.content.Context;
 import android.os.AsyncTask;
@@ -18,7 +18,7 @@ import com.tzhen.commen.activity.BaseActivity;
 import com.tzhen.mooc.R;
 import com.tzhen.mooc.countrylist.adapter.CityAdapter;
 import com.tzhen.mooc.countrylist.model.CountryItem;
-import com.tzhen.mooc.countrylist.widget.CountryItemInterface;
+import com.tzhen.mooc.countrylist.widget.ItemInterface;
 import com.tzhen.mooc.countrylist.widget.ContactListViewImpl;
 import com.tzhen.mooc.countrylist.widget.pinyin.PinYin;
 import com.tzhen.mooc.events.CountryEvent;
@@ -33,14 +33,14 @@ import java.lang.reflect.Type;
 import java.util.ArrayList;
 import java.util.List;
 
-@EActivity(R.layout.activity_citylist)
+@EActivity(R.layout.activity_city_list)
 public class CountryListActivity extends BaseActivity<CityListInfo> implements TextWatcher {
     private Context context_ = CountryListActivity.this;
 
     @ViewById(R.id.toolbar)
     Toolbar toolbar;
 
-    @ViewById(R.id.lv_citys)
+    @ViewById(R.id.lv_cities)
     ContactListViewImpl lvCityList;
 
     @ViewById(R.id.input_search_query)
@@ -53,8 +53,8 @@ public class CountryListActivity extends BaseActivity<CityListInfo> implements T
 
     private final static String TAG = CountryListActivity.class.getSimpleName();
 
-    List<CountryItemInterface> countryList;
-    List<CountryItemInterface> filterList;
+    List<ItemInterface> countryList;
+    List<ItemInterface> filterList;
     private SearchListTask curSearchTask = null;
 
     private EventBus eventBus;
@@ -73,10 +73,10 @@ public class CountryListActivity extends BaseActivity<CityListInfo> implements T
 
         setToolbarTitle(getString(R.string.country_list));
         filterList = new ArrayList<>();
-        countryList = getCityList(getCountries());
+        countryList = getCountryList(getCountries());
         CityAdapter adapter = new CityAdapter(this, R.layout.item_city, countryList);
 
-        lvCityList = (ContactListViewImpl) this.findViewById(R.id.lv_citys);
+        lvCityList = (ContactListViewImpl) this.findViewById(R.id.lv_cities);
         lvCityList.setFastScrollEnabled(true);
         lvCityList.setAdapter(adapter);
 
@@ -84,7 +84,7 @@ public class CountryListActivity extends BaseActivity<CityListInfo> implements T
             @Override
             public void onItemClick(AdapterView parent, View v, int position,
                                     long id) {
-                List<CountryItemInterface> searchList = inSearchMode ? filterList
+                List<ItemInterface> searchList = inSearchMode ? filterList
                         : countryList;
 
                 postCountryEvent(searchList.get(position).getCountryInfo());
@@ -133,7 +133,7 @@ public class CountryListActivity extends BaseActivity<CityListInfo> implements T
 
             if (inSearchMode) {
                 // get all the items matching this
-                for (CountryItemInterface item : countryList) {
+                for (ItemInterface item : countryList) {
                     CountryItem contact = (CountryItem) item;
 
                     boolean isPinyin = contact.getFullName().toUpperCase().indexOf(keyword) > -1;
@@ -170,8 +170,8 @@ public class CountryListActivity extends BaseActivity<CityListInfo> implements T
         }
     }
 
-    public List<CountryItemInterface> getCityList(List<CountryInfo> countryInfoList) {
-        List<CountryItemInterface> list = new ArrayList<CountryItemInterface>();
+    public List<ItemInterface> getCountryList(List<CountryInfo> countryInfoList) {
+        List<ItemInterface> list = new ArrayList<ItemInterface>();
         for (CountryInfo country : countryInfoList) {
             list.add(new CountryItem(country.getName(), PinYin.getPinYin(country.getName()), country.getId()));
         }

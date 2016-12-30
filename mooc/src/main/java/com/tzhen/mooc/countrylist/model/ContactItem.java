@@ -4,18 +4,20 @@ import com.tongzhen.mooc.entities.CountryInfo;
 import com.tongzhen.mooc.entities.UserInfo;
 import com.tzhen.mooc.countrylist.widget.ItemInterface;
 
-public class CountryItem implements ItemInterface
+public class ContactItem implements ItemInterface
 {
-	private int id;
-	private String countryName;
+	private String uid;
+	private String userName;
 	private String fullName;
+	private String header;
 
-	public CountryItem(String countryName, String fullName, int id)
+	public ContactItem(String countryName, String fullName, String uid, String header)
 	{
 		super();
-		this.countryName = countryName;
-		this.id = id;
+		this.userName = countryName;
+		this.uid = uid;
 		this.setFullName(fullName);
+		this.header = header;
 	}
 
 	@Override
@@ -27,22 +29,22 @@ public class CountryItem implements ItemInterface
 	@Override
 	public CountryInfo getCountryInfo()
 	{
-		return new CountryInfo.Builder().setId(id).setName(countryName).build();
+		return null;
 	}
 
 	@Override
 	public UserInfo getUserInfo() {
-		return null;
+		return new UserInfo.Builder().setUid(uid).setName(userName).setHead(header).build();
 	}
 
-	public String getCountryName()
+	public String getUserName()
 	{
-		return countryName;
+		return userName;
 	}
 
-	public void setCountryName(String countryName)
+	public void setUserName(String userName)
 	{
-		this.countryName = countryName;
+		this.userName = userName;
 	}
 
 	public String getFullName()
@@ -55,11 +57,11 @@ public class CountryItem implements ItemInterface
 		this.fullName = fullName;
 	}
 
-	public int getId() {
-		return id;
+	public String getUid() {
+		return uid;
 	}
 
-	public void setId(int id) {
-		this.id = id;
+	public void setUid(String uid) {
+		this.uid = uid;
 	}
 }
